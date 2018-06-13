@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<modDesc descVersion="39">
+	<author>Ls-Modcompany - kevink98/Eribus</author>
+    <version>1.0.0.0</version>
+    <title>
+        <de>MP-Management</de>
+        <en>MP-Management</en>
+    </title>
+    <description>
+        <de><![CDATA[Mit dem MpManager wird euch die Möglichkeit geschaffen im Multiplayer mit eigenen Konten zu spielen. Ihr könnt eure Ein- und Ausgaben dem jeweiligen Hof richtig zuordnen. 
+Somit entfällt eine externe Kontenverwaltung.
+
+Der Manager leitet euch zu Beginn durch die Konfiguration. Änderungen können im Nachhinein über das Adminmenü gemacht werden.
+
+Eine ausführliche Anleitung findet Ihr unter https://mpmanagerweb.ls-modcompany.com/. Dort könnt Ihr auch auch registrieren und den MpManagerWeb benützen. Weitere Infos findet Ihr in der Anleitung.
+
+Diese Version ist eine Weiterentwicklung der FarminTablet-App. Falls Ihr mit dieser momentan zockt, dann deaktivert bitte diese und entfernt sie aus dem Modordner.
+
+Ein großer Dank geht an die LS-Farmer und die Landeier!
+
+Wir wünschen euch damit viel Spaß!]]></de>
+		<en><![CDATA[The MpManager gives you the opportunity to play multiplayer with your own accounts. You can correctly assign your inputs and expenses to the respective farm.
+This eliminates the need for external account management.
+
+The manager will guide you through the configuration at the beginning. Changes can be made in retrospect via the admin menu.
+
+Detailed instructions can be found at https://mpmanagerweb.ls-modcompany.com/. There you can also register and use the MpManagerWeb. More information can be found in the instructions.
+
+This version is an evolution of the FarminTablet-App. If you are currently playing with it, disable it and remove it from the modfolder.
+
+A big thank to the LS-Farmer and the Landeier!
+
+We wish you a lot of fun!]]></en>
+
+<it><![CDATA[MpManager ti dà l'opportunità di giocare in multiplayer con i tuoi account. È possibile assegnare correttamente gli input e le spese alla rispettiva farm.
+Ciò elimina la necessità di gestione degli account esterni.
+
+Il manager ti guiderà attraverso la configurazione all'inizio. Le modifiche possono essere apportate in retrospettiva dal menu di amministrazione.
+
+Istruzioni dettagliate sono disponibili su https://mpmanagerweb.ls-modcompany.com/. Qui è anche possibile registrare e utilizzare MpManagerWeb. Maggiori informazioni possono essere trovate nelle istruzioni.
+
+Questa versione è un'evoluzione dell'applicazione FarminTablet. Se stai giocando con esso, disabilitalo e rimuovilo dal modfolder.
+
+Un grande ringraziamento alla LS-Farmer e alla Landeier!
+
+Vi auguriamo tanto divertimento!]]></it>
+<es><![CDATA[El MpManager te brinda la oportunidad de jugar al modo multijugador con tus propias cuentas. Puede asignar correctamente sus entradas y gastos a la granja respectiva.
+Esto elimina la necesidad de una administración de cuenta externa.
+
+El gerente lo guiará a través de la configuración al principio. Los cambios se pueden hacer en retrospectiva a través del menú de administración.
+
+Las instrucciones detalladas se pueden encontrar en https://mpmanagerweb.ls-modcompany.com/. Allí también puede registrarse y usar MpManagerWeb. Se puede encontrar más información en las instrucciones.
+
+Esta versión es una evolución de la aplicación FarminTablet. Si actualmente está jugando con él, desactívelo y quítelo de la carpeta de mods.
+
+¡Muchas gracias a la LS-Farmer y la Landeier!
+
+¡Te deseamos mucha diversión!]]></es>
+    </description>
+    <iconFilename>mpManagement.dds</iconFilename>
+    <multiplayer supported="true"/>
+	<l10n>
+		<text name="input_MPMANAGER"><en>MpManager</en></text>
+	</l10n>
+	<extraSourceFiles>	
+		<sourceFile filename="mpManager.lua" /> 
+	</extraSourceFiles>
+    <inputBindings>
+        <input name="MPMANAGER" category="ONFOOT" key1="KEY_lctrl KEY_m" key2="" button="" device="" mouse=""/>
+    </inputBindings>
+</modDesc>

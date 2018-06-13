@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<GUI onOpen="onOpen" onClose="onClose" onCreate="onCreate">	
+    <GuiElement type="empty" profile="newLayer" />
+    <GuiElement type="bitmap" profile="mpManagerCheckUiBackground">	
+        <GuiElement type="bitmap" profile="mpManagerCheckUiBackgroundMain">				
+			<GuiElement type="bitmap" profile="mpManagerCheckUiBackgroundHeader">
+				<GuiElement type="text" profile="headerText" text="$l10n_mpManagerCheck_header" />
+            </GuiElement>							
+            <GuiElement type="bitmap" profile="mpManagerCheckBitmapBg">
+				<GuiElement type="bitmap" profile="mpManagerCheckBitmapBgQuestion" />
+			</GuiElement>						
+			<GuiElement type="text" profile="mpManagerCheckText" id="infoText"/>	
+			<GuiElement type="flowLayout" profile="buttonBox" id="buttonsPC" >
+                <GuiElement type="button" profile="buttonBack" size="390px 40px" text="$l10n_mpManagerCheck_buttonNo"  onClick="onClickBack" focusId="1"/>
+				<GuiElement type="button" profile="buttonOK" size="390px 40px" text="$l10n_mpManagerCheck_buttonYes"  onClick="onClickOk" focusId="2"/>
+            </GuiElement>			
+		</GuiElement>
+    </GuiElement>
+</GUI>

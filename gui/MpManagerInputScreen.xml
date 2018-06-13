@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<GUI onOpen="onOpen" onClose="onClose" onCreate="onCreate">	
+    <GuiElement type="empty" profile="newLayer" />
+    <GuiElement type="bitmap" profile="mpManagerInfoUiBackground">	
+        <GuiElement type="bitmap" profile="mpManagerInfoUiBackgroundMain">				
+			<GuiElement type="bitmap" profile="mpManagerInfoUiBackgroundHeader">
+					<GuiElement type="text" profile="headerText" id="infoHeader" />
+            </GuiElement>									
+			<GuiElement type="text" profile="mpManagerInputTextInfo" id="infoText"/>			
+			
+			<GuiElement type="textInput" profile="mpManagerInputTextinput" id="textInput" onEnterPressed="onEnterPressed" focusId="1" focusChangeBottom="2" visible="false" />
+			
+			<GuiElement type="toggleButton2" profile="mpManagerInputChooseButton" id="textTable" focusId="5" >
+				<GuiElement type="button" profile="mpManagerInputChooseButtonLeft" />
+				<GuiElement type="button" profile="mpManagerInputChooseButtonRight" />
+				<GuiElement type="text"   profile="mpManagerInputChooseButtonText" />
+				<GuiElement type="bitmap" profile="mpManagerInputChooseButtonBg" />
+			</GuiElement>			
+			
+            <GuiElement type="flowLayout" profile="buttonBox" id="buttonsPC" >
+                <GuiElement type="button" profile="buttonBack" size="390px 40px" text="$l10n_button_back"  onClick="onClickBack" />
+				<GuiElement type="button" profile="buttonOK" size="390px 40px" id="okButton" onClick="onClickOk" focusId="2"/>
+            </GuiElement>
+		</GuiElement>
+    </GuiElement>
+</GUI>

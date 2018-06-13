@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<GUI onOpen="onOpen" onClose="onClose" onCreate="onCreate">	
+    <GuiElement type="bitmap" profile="mpManagerConfigUiBackground" id="mainScreen">	
+        <GuiElement type="bitmap" profile="mpManagerConfigUiBackgroundMain">	
+			<GuiElement type="bitmap" profile="mpManagerConfigUiBackgroundHeader">
+				<GuiElement type="text" profile="headerText" text="$l10n_mpManagerConfig_header" />
+				<GuiElement type="text" profile="mpManagerConfigUiBackgroundHeaderSteps" id="gui_steps" />
+            </GuiElement>	
+			
+			<GuiElement type="empty" profile="mpManagerConfigPage" id="gui_page_1">
+				<GuiElement type="text" profile="mpManagerConfigUiBackgroundHeaderStepsHeader" text="$l10n_mpManagerConfig_step1_header" />
+				<GuiElement type="text" profile="mpManagerConfigUiBackgroundHeaderStep_1_text" text="$l10n_mpManagerConfig_step1_text" />
+			</GuiElement>
+			
+			<GuiElement type="empty" profile="mpManagerConfigPage" id="gui_page_2">				
+				<GuiElement type="text" profile="mpManagerConfigUiBackgroundHeaderStepsHeader" text="$l10n_mpManagerConfig_step2_header" />
+				<GuiElement type="text" profile="mpManagerConfigUiBackgroundHeaderStepsInfo" text="$l10n_mpManagerConfig_step2_info" />
+				<GuiElement type="slider" profile="mpManagerConfigPageSliderVertical">
+					<GuiElement type="button" profile="sliderButtonUp"   focusId="sliderUp"/>
+					<GuiElement type="button" profile="sliderButtonDown" focusId="sliderDown" />
+					<GuiElement type="list" profile="mpManagerConfigPageList" id="adminList" onSelectionChanged="onSelectionChangedAdminList" focusId="300" focusChangeTop="1" focusChangeLeft="1" focusChangeRight="302" focusChangeBottom="301" >
+						<GuiElement type="listItem" profile="mpManagerConfigPageListItem" id="adminListTemplate">
+							<GuiElement type="text" profile="mpManagerConfigPageListItemText" onCreate="onCreateAdminListText" />
+						</GuiElement>	
+					</GuiElement>
+					<GuiElement type="flowLayout" profile="mpManagerConfigPageButtonsBox" >
+						<GuiElement type="button" profile="buttonRemove" size="340px 40px" margin="0px 0px 20px 0px" text="$l10n_mpManagerConfig_step2_removeAdmin" onClick="onClickRemoveAdmin" focusId="200" focusChangeTop="3" focusChangeBottom="7" focusChangeRight="7" focusInit="onOpen"/>
+						<GuiElement type="button" profile="buttonAdd"   size="340px 40px" text="$l10n_mpManagerConfig_step2_addAdmin" onClick="onClickAddAdmin" focusId="201" focusChangeTop="6" focusChangeBottom="1" focusChangeLeft="6"/>
+					</GuiElement>
+				</GuiElement>
+			</GuiElement>
+			
+			<GuiElement type="empty" profile="mpManagerConfigPage" id="gui_page_3">			
+				<GuiElement type="text" profile="mpManagerConfigUiBackgroundHeaderStepsHeader" text="$l10n_mpManagerConfig_step3_header" />
+				<GuiElement type="text" profile="mpManagerConfigUiBackgroundHeaderStepsInfo" text="$l10n_mpManagerConfig_step3_info" />
+				<GuiElement type="slider" profile="mpManagerConfigPageSliderVertical">
+					<GuiElement type="button" profile="sliderButtonUp"   focusId="sliderUp"/>
+					<GuiElement type="button" profile="sliderButtonDown" focusId="sliderDown" />
+					<GuiElement type="list" profile="mpManagerConfigPageList" id="userList" onSelectionChanged="onSelectionChangedUserList" focusId="300" focusChangeTop="1" focusChangeLeft="1" focusChangeRight="302" focusChangeBottom="301" >
+						<GuiElement type="listItem" profile="mpManagerConfigPageListItem" id="userListTemplate">
+							<GuiElement type="text" profile="mpManagerConfigPageListItemText" onCreate="onCreateUserListText" />
+						</GuiElement>	
+					</GuiElement>
+					<GuiElement type="flowLayout" profile="mpManagerConfigPageButtonsBox" >
+						<GuiElement type="button" profile="buttonRemove" size="340px 40px" margin="0px 0px 20px 0px" text="$l10n_mpManagerConfig_step3_removePlayer" onClick="onClickRemoveUser" focusId="200" focusChangeTop="3" focusChangeBottom="7" focusChangeRight="7" focusInit="onOpen"/>
+						<GuiElement type="button" profile="buttonAdd"   size="340px 40px" text="$l10n_mpManagerConfig_step3_addPlayer" onClick="onClickAddUser" focusId="201" focusChangeTop="6" focusChangeBottom="1" focusChangeLeft="6"/>
+					</GuiElement>
+				</GuiElement>
+			</GuiElement>
+			
+			<GuiElement type="empty" profile="mpManagerConfigPage" id="gui_page_4">			
+				<GuiElement type="text" profile="mpManagerConfigUiBackgroundHeaderStepsHeader" text="$l10n_mpManagerConfig_step4_header" />
+				<GuiElement type="text" profile="mpManagerConfigUiBackgroundHeaderStepsInfo" text="$l10n_mpManagerConfig_step4_info" />
+				<GuiElement type="slider" profile="mpManagerConfigPageSliderVertical">
+					<GuiElement type="button" profile="sliderButtonUp"   focusId="sliderUp"/>
+					<GuiElement type="button" profile="sliderButtonDown" focusId="sliderDown" />
+					<GuiElement type="list" profile="mpManagerConfigPageList" id="farmList" onSelectionChanged="onSelectionChangedFarmList" focusId="300" focusChangeTop="1" focusChangeLeft="1" focusChangeRight="302" focusChangeBottom="301" >
+						<GuiElement type="listItem" profile="mpManagerConfigPageListItem" id="farmListTemplate">
+							<GuiElement type="text" profile="mpManagerConfigPageListItemText" onCreate="onCreateFarmListText" />
+						</GuiElement>	
+					</GuiElement>
+					<GuiElement type="flowLayout" profile="mpManagerConfigPageButtonsBox" >
+						<GuiElement type="button" profile="buttonRemove" size="340px 40px" margin="0px 0px 20px 0px" text="$l10n_mpManagerConfig_step4_removeFarm" onClick="onClickRemoveFarm" focusId="200" focusChangeTop="3" focusChangeBottom="7" focusChangeRight="7" focusInit="onOpen"/>
+						<GuiElement type="button" profile="buttonAdd"   size="340px 40px" text="$l10n_mpManagerConfig_step4_addFarm" onClick="onClickAddFarm" focusId="201" focusChangeTop="6" focusChangeBottom="1" focusChangeLeft="6"/>
+					</GuiElement>
+				</GuiElement>
+			</GuiElement>
+			
+			<GuiElement type="empty" profile="mpManagerConfigPage" id="gui_page_5">			
+				<GuiElement type="text" profile="mpManagerConfigUiBackgroundHeaderStepsHeader" text="$l10n_mpManagerConfig_step5_header" />
+				<GuiElement type="text" profile="mpManagerConfigUiBackgroundHeaderStepsInfo" text="$l10n_mpManagerConfig_step5_info" />
+				<GuiElement type="slider" profile="mpManagerConfigPageSliderVertical">
+					<GuiElement type="button" profile="sliderButtonUp"   focusId="sliderUp"/>
+					<GuiElement type="button" profile="sliderButtonDown" focusId="sliderDown" />
+					<GuiElement type="list" profile="mpManagerConfigPageList" id="farmUserList" onSelectionChanged="onSelectionChangedFarmUserList" focusId="300" focusChangeTop="1" focusChangeLeft="1" focusChangeRight="302" focusChangeBottom="301" >
+						<GuiElement type="listItem" profile="mpManagerConfigPageListItem" id="farmUserListTemplate">
+							<GuiElement type="text" profile="mpManagerConfigPageListItemText" onCreate="onCreateFarmUserListTextUser" />
+							<GuiElement type="text" profile="mpManagerConfigPageListItemText1" onCreate="onCreateFarmUserListTextFarm" />
+						</GuiElement>	
+					</GuiElement>
+					<GuiElement type="flowLayout" profile="mpManagerConfigPageButtonsBox2" >
+						<GuiElement type="button" profile="buttonReload" size="340px 40px" margin="0px 0px 0px 0px" text="$l10n_mpManagerConfig_step5_editSort" onClick="onClickFarmUser" focusId="200" focusChangeTop="3" focusChangeBottom="7" focusChangeRight="7" focusInit="onOpen"/>
+					</GuiElement>
+				</GuiElement>
+			</GuiElement>
+			
+			<GuiElement type="empty" profile="mpManagerConfigPage" id="gui_page_6">			
+				<GuiElement type="text" profile="mpManagerConfigUiBackgroundHeaderStepsHeader" text="$l10n_mpManagerConfig_step6_header" />
+				<GuiElement type="text" profile="mpManagerConfigUiBackgroundHeaderStepsInfo" text="$l10n_mpManagerConfig_step6_info" />
+				<GuiElement type="slider" profile="mpManagerConfigPageSliderVertical">
+					<GuiElement type="button" profile="sliderButtonUp"   focusId="sliderUp"/>
+					<GuiElement type="button" profile="sliderButtonDown" focusId="sliderDown" />
+					<GuiElement type="list" profile="mpManagerConfigPageList" id="farmleaderList" onSelectionChanged="onSelectionChangedFarmleaderList" focusId="300" focusChangeTop="1" focusChangeLeft="1" focusChangeRight="302" focusChangeBottom="301" >
+						<GuiElement type="listItem" profile="mpManagerConfigPageListItem" id="farmleaderListTemplate">
+							<GuiElement type="text" profile="mpManagerConfigPageListItemText" onCreate="onCreateFarmleaderListTextFarm" />
+							<GuiElement type="text" profile="mpManagerConfigPageListItemText1" onCreate="onCreateFarmleaderListTextLeader" />
+						</GuiElement>	
+					</GuiElement>
+					<GuiElement type="flowLayout" profile="mpManagerConfigPageButtonsBox2" >
+						<GuiElement type="button" profile="buttonReload" size="340px 40px" margin="0px 0px 0px 0px" text="$l10n_mpManagerConfig_step6_editLeader" onClick="onClickFarmleader" focusId="200" focusChangeTop="3" focusChangeBottom="7" focusChangeRight="7" focusInit="onOpen"/>
+					</GuiElement>
+				</GuiElement>
+			</GuiElement>
+			
+			<GuiElement type="flowLayout" profile="buttonBox" id="gui_buttons_firstStep" >
+				<GuiElement type="button" profile="buttonDelete" size="489px 40px" text="$l10n_mpManagerConfig_breakConfig" onClick="onClickBreak" focusId="200" focusChangeTop="3" focusChangeBottom="7" focusChangeRight="7" focusInit="onOpen"/>
+				<GuiElement type="button" profile="buttonOK"   size="490px 40px" text="$l10n_mpManagerConfig_startConfig" onClick="onClickContinue" focusId="201" focusChangeTop="6" focusChangeBottom="1" focusChangeLeft="6"/>
+			</GuiElement>
+			<GuiElement type="flowLayout" profile="buttonBox" id="gui_buttons_steps" visible="false" >
+				<GuiElement type="button" profile="buttonBack" size="326px 40px" text="$l10n_mpManagerConfig_continueBackConfig" onClick="onClickBack"     focusId="202" focusChangeTop="3" focusChangeBottom="7" focusChangeRight="7" focusInit="onOpen"/>
+				<GuiElement type="button" profile="buttonDelete"   size="326px 40px" text="$l10n_mpManagerConfig_breakConfig" onClick="onClickBreak" focusId="203" focusChangeTop="6" focusChangeBottom="1" focusChangeLeft="6" />
+				<GuiElement type="button" profile="buttonOK"   size="326px 40px" text="$l10n_mpManagerConfig_continueConfig" onClick="onClickContinue" focusId="24" focusChangeTop="6" focusChangeBottom="1" focusChangeLeft="6" />
+			</GuiElement>
+		</GuiElement>
+    </GuiElement>
+</GUI>

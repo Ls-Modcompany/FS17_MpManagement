@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<GUI onOpen="onOpen" onClose="onClose" onCreate="onCreate">	
+    <GuiElement type="empty" profile="newLayer" />
+    <GuiElement type="bitmap" profile="mpManagerSelectionUiBackground">	
+        <GuiElement type="bitmap" profile="mpManagerSelectionUiBackgroundMain">				
+			<GuiElement type="bitmap" profile="mpManagerSelectionlUiBackgroundHeader">
+				<GuiElement type="text" profile="headerText" id="gui_header" />
+            </GuiElement>			
+			
+			<GuiElement type="empty" profile="mpManagerSelectionUiBackgroundMain" id="gui_page_1" >
+				<GuiElement type="flowLayout" profile="mpManagerSelectionHeaderItems" >
+					<GuiElement type="bitmap" profile="mpManagerSelectionHeaderItemsItem3" >
+						<GuiElement type="text"   profile="mpManagerSelectionHeaderItemsItem3Text" id="gui_page_1_header1" />
+						<GuiElement type="bitmap" profile="mpManagerSelectionHeaderItemsItemSep3"/>
+					</GuiElement>	
+				</GuiElement>
+				<GuiElement type="slider" profile="mpManagerSelectionSlider" id="mpManager_selection_slider1">
+					<GuiElement type="button" profile="mpManagerSelectionSliderUp"   focusId="mpManager_selection_slider1U"/>
+					<GuiElement type="button" profile="mpManagerSelectionSliderDown" focusId="mpManager_selection_slider1D" />					
+					<GuiElement type="list" profile="mpManagerSelectionList" id="gui_page_1_list" onDoubleClick="onClickOk" onCreate="onCreateList" focusId="200" focusChangeTop="1" focusChangeBottom="100">
+						<GuiElement type="listItem" profile="mpManager_items_listItem" id="gui_page_1_list_template">
+							<GuiElement type="flowLayout" profile="mpManager_listItem_layout" >
+								<GuiElement type="bitmap" profile="mpManagerSelectionHeaderItemsItem2_3">
+									<GuiElement type="text"  profile="mpManagerSelectionText3" onCreate="onCreateList1Text1" />
+								</GuiElement>							
+							</GuiElement>
+						</GuiElement>								
+					</GuiElement>
+				</GuiElement> 
+			</GuiElement>			
+		
+			<GuiElement type="empty" profile="mpManagerSelectionUiBackgroundMain" id="gui_page_3">
+				<GuiElement type="flowLayout" profile="mpManagerSelectionHeaderItems" >
+					<GuiElement type="bitmap" profile="mpManagerSelectionHeaderItemsItem1" >
+						<GuiElement type="text"   profile="mpManagerSelectionHeaderItemsItem1Text" id="gui_page_3_header1" />
+						<GuiElement type="bitmap" profile="mpManagerSelectionHeaderItemsItemSep1"/>
+					</GuiElement>
+					<GuiElement type="bitmap" profile="mpManagerSelectionHeaderItemsItem2" >
+						<GuiElement type="text"   profile="mpManagerSelectionHeaderItemsItem2Text" id="gui_page_3_header2" />
+						<GuiElement type="bitmap" profile="mpManagerSelectionHeaderItemsItemSep2"/>
+					</GuiElement>
+					<GuiElement type="bitmap" profile="mpManagerSelectionHeaderItemsItem2" >
+						<GuiElement type="text"   profile="mpManagerSelectionHeaderItemsItem2Text" id="gui_page_3_header3" />
+						<GuiElement type="bitmap" profile="mpManagerSelectionHeaderItemsItemSep2"/>
+					</GuiElement>	
+				</GuiElement>
+				<GuiElement type="slider" profile="mpManagerSelectionSlider" id="mpManager_selection_slider3">
+					<GuiElement type="button" profile="mpManagerSelectionSliderUp"   focusId="mpManager_selection_slider3U"/>
+					<GuiElement type="button" profile="mpManagerSelectionSliderDown" focusId="mpManager_selection_slider3D" />					
+					<GuiElement type="list" profile="mpManagerSelectionList" id="gui_page_3_list" onDoubleClick="onClickOk" onCreate="onCreateList" focusId="200" focusChangeTop="1" focusChangeBottom="100">
+						<GuiElement type="listItem" profile="mpManager_items_listItem" id="gui_page_3_list_template">
+							<GuiElement type="flowLayout" profile="mpManager_listItem_layout" >
+								<GuiElement type="bitmap" profile="mpManagerSelectionHeaderItemsItem1_2">
+									<GuiElement type="text"  profile="mpManagerSelectionText1" onCreate="onCreateList3Text1" />
+								</GuiElement>
+								<GuiElement type="bitmap" profile="mpManagerSelectionHeaderItemsItem2_2">
+									<GuiElement type="text"  profile="mpManagerSelectionText2" onCreate="onCreateList3Text2" />
+								</GuiElement>
+								<GuiElement type="bitmap" profile="mpManagerSelectionHeaderItemsItem2_2">
+									<GuiElement type="text"  profile="mpManagerSelectionText2" onCreate="onCreateList3Text3" />
+								</GuiElement>							
+							</GuiElement>
+						</GuiElement>							
+					</GuiElement>
+				</GuiElement>
+			</GuiElement>			
+		
+			<GuiElement type="button" profile="mpManagerSelectionButton1" id="buttonBack" text="$l10n_mpManager_Selection_button01" onClick="onClickBack" focusId="1" focusInit="onOpen"/>
+			<GuiElement type="button" profile="mpManagerSelectionButton2" id="buttonOK" text="$l10n_mpManager_Selection_button02" onClick="onClickOk" focusId="2" focusInit="onOpen"/>
+		 		 
+		</GuiElement>
+    </GuiElement>
+</GUI>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<GUI onOpen="onOpen" onClose="onClose" onCreate="onCreate">	
+    <GuiElement type="empty" profile="newLayer" />
+    <GuiElement type="bitmap" profile="mpManagerInfoUiBackground">	
+        <GuiElement type="bitmap" profile="mpManagerInfoUiBackgroundMain">				
+			<GuiElement type="bitmap" profile="mpManagerInfoUiBackgroundHeader">
+				<GuiElement type="text" profile="headerText" text="$l10n_mpManagerInfo_header" />
+            </GuiElement>							
+            <GuiElement type="bitmap" profile="mpManagerInfoBitmapBg">
+				<GuiElement type="bitmap" profile="mpManagerInfoBitmapBgInfo" />
+			</GuiElement>						
+			<GuiElement type="text" profile="mpManagerInfoText" id="infoText"/>			
+			<GuiElement type="button" profile="buttonOK" id="buttonOK" size="780px 40px" text="$l10n_mpManagerInfo_button" onClick="onClickOk" focusId="1" focusInit="onOpen"/>
+		</GuiElement>
+    </GuiElement>
+</GUI>

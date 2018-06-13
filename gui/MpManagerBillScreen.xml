@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<GUI onOpen="onOpen" onClose="onClose" onCreate="onCreate">	
+    <GuiElement type="empty" profile="newLayer" />
+    <GuiElement type="bitmap" profile="mpManagerBillUiBackground">	
+        <GuiElement type="bitmap" profile="mpManagerBillUiBackgroundMain">				
+			<GuiElement type="bitmap" profile="mpManagerBillUiBackgroundHeader">
+				<GuiElement type="text" profile="headerText" text="$l10n_mpManager_Bill_header" />
+            </GuiElement>						
+			
+			<GuiElement type="bitmap" profile="mpManagerBillPaper" id="gui_paperBackground" />	
+			<GuiElement type="bitmap" profile="mpManagerBillLogo" id="gui_paperLogo" />	
+			<GuiElement type="bitmap" profile="mpManagerBillUiSeperator03" />			
+			<GuiElement type="bitmap" profile="mpManagerBillUiSeperator02" />	
+			
+			<GuiElement type="text" profile="mpManagerBillText_ad_1" id="gui_addr_farmleader" />
+			<GuiElement type="text" profile="mpManagerBillText_ad_2" id="gui_addr_farm" />
+			<GuiElement type="text" profile="mpManagerBillText_billHeaderNum" id="gui_addr_billNum" />
+			<GuiElement type="text" profile="mpManagerBillText_ad_3" id="gui_addr_from_name" />
+			<GuiElement type="text" profile="mpManagerBillText_ad_4" id="gui_addr_from_farm" />
+			<GuiElement type="text" profile="mpManagerBillText_ad_5" id="gui_addr_date" />			
+			
+			<GuiElement type="text" profile="mpManagerBillText_billHeader" text="$l10n_mpManager_Bill_header06" />
+			<GuiElement type="text" profile="mpManagerBillText_billInfo01" text="$l10n_mpManager_Bill_info01" />
+			<GuiElement type="text" profile="mpManagerBillText_billInfo02" text="$l10n_mpManager_Bill_info02" />	
+			
+			<GuiElement type="flowLayout" profile="mpManagerBillUiPage1_header" >
+				<GuiElement type="bitmap" profile="mpManagerBillUiPage1_headerItem1" >
+					<GuiElement type="text"   profile="mpManager_items_textBlack" text="$l10n_mpManager_Bill_listHeader01" />
+				</GuiElement>
+				<GuiElement type="bitmap" profile="mpManagerBillUiPage1_headerItem2" >
+					<GuiElement type="text"   profile="mpManager_items_textBlack" text="$l10n_mpManager_Bill_listHeader02" />
+				</GuiElement>	
+				<GuiElement type="bitmap" profile="mpManagerBillUiPage1_headerItem3" >
+					<GuiElement type="text"   profile="mpManager_items_textBlack" text="$l10n_mpManager_Bill_listHeader03" />
+				</GuiElement>	
+				<GuiElement type="bitmap" profile="mpManagerBillUiPage1_headerItem4" >
+					<GuiElement type="text"   profile="mpManager_items_textBlack" text="$l10n_mpManager_Bill_listHeader04" />
+				</GuiElement>		
+			</GuiElement>
+			<GuiElement type="list" profile="mpManagerBillUiPage1_list" id="mpManagerBillUiPage1_list" focusId="200" focusChangeTop="1" focusChangeBottom="100">
+				<GuiElement type="listItem" profile="mpManagerBillUiPage1_listItem" id="gui_bill_itemTemplate">
+					<GuiElement type="flowLayout" profile="mpManagerBillUiPage1_items" >							
+						<GuiElement type="bitmap" profile="mpManagerBillUiPage1_listItemItem1">
+							<GuiElement type="text"  profile="mpManagerBillUiPage1_listItemItemText" onCreate="onCreate_item_pos" />
+						</GuiElement>
+						<GuiElement type="bitmap" profile="mpManagerBillUiPage1_listItemItem2">
+							<GuiElement type="text"  profile="mpManagerBillUiPage1_listItemItemText" onCreate="onCreate_item_num" />
+						</GuiElement>
+						<GuiElement type="bitmap" profile="mpManagerBillUiPage1_listItemItem3">
+							<GuiElement type="text"  profile="mpManagerBillUiPage1_listItemItemText" onCreate="onCreate_item_priceOne" />
+						</GuiElement>
+						<GuiElement type="bitmap" profile="mpManagerBillUiPage1_listItemItem4">
+							<GuiElement type="text"  profile="mpManagerBillUiPage1_listItemItemText" onCreate="onCreate_item_priceAll" />
+						</GuiElement>
+					</GuiElement>
+					<GuiElement type="text"  profile="mpManagerBillUiPage1_listItemItemTextDesc" onCreate="onCreate_item_desc1" />
+					<GuiElement type="text"  profile="mpManagerBillUiPage1_listItemItemTextDesc2" onCreate="onCreate_item_desc2" />
+					<GuiElement type="bitmap" profile="mpManagerBillUiSeperator01" />	
+				</GuiElement>				
+			</GuiElement>
+			
+			<GuiElement type="bitmap" profile="mpManagerBillArrow1" id="gui_arrow1" />	
+			<GuiElement type="bitmap" profile="mpManagerBillArrow2" id="gui_arrow2" />	
+				
+			
+			<GuiElement type="flowLayout" profile="mpManagerBillUiPage1_sum" >							
+				<GuiElement type="text"  profile="mpManagerBillUiPage1_sumText1" text="$l10n_mpManager_Bill_listHeader05"/>
+				<GuiElement type="text"  profile="mpManagerBillUiPage1_sumText2" id="gui_fullPrice"/>
+			</GuiElement>		
+						
+			<GuiElement type="bitmap" profile="mpManagerPayedLogo" id="gui_payedLogo" />	
+			
+			<!-- right side -->					
+			<GuiElement type="empty" id="gui_rightSide_createBill" position="0px -70px">
+				<GuiElement type="text" profile="mpManagerBillText_billHeader01" text="$l10n_mpManager_Bill_header01" />
+				
+				<GuiElement type="bitmap" profile="mpManagerBillText_billSelectionHeader">
+					<GuiElement type="multiTextOption" profile="mpManagerBillText_billSelection" onClick="onClickBillSelectionAddr" id="gui_billSelectionAdr" focusId="102" focusChangeRight="2" focusChangeBottom="10" focusChangeTop="102">
+						<GuiElement type="button" profile="mpManagerBillText_billSelectionLeft" />
+						<GuiElement type="button" profile="mpManagerBillText_billSelectionRight"/>
+						<GuiElement type="text" profile="mpManager_selectHeaderText" />
+					</GuiElement>
+				</GuiElement>
+				
+				<GuiElement type="text" profile="mpManagerBillText_billHeader02" text="$l10n_mpManager_Bill_header02" />
+				
+				
+				<GuiElement type="text" profile="mpManagerBillText_billHeader03" text="$l10n_mpManager_Bill_header03" />			
+				<GuiElement type="bitmap" profile="mpManagerBillText_Background01">	
+					<GuiElement type="text" profile="mpManagerBillText_billText01" id="gui_rS_work" />
+				</GuiElement>
+				<GuiElement type="button" profile="mpManagerButton1" id="gui_button_work" position="470px 450px" size="390px 30px" text="$l10n_mpManager_Bill_button04" onClick="onClickOpenWork" focusId="1" focusInit="onOpen"/>
+				
+				<GuiElement type="text" profile="mpManagerBillText_billHeader04" text="$l10n_mpManager_Bill_header04" />			
+				<GuiElement type="bitmap" profile="mpManagerBillText_Background02">	
+					<GuiElement type="text" profile="mpManagerBillText_billText01" id="gui_rS_place" />
+				</GuiElement>
+				<GuiElement type="button" profile="mpManagerButton1" id="gui_button_place" position="470px 340px" size="390px 30px" text="$l10n_mpManager_Bill_button05" onClick="onClickOpenPlace" focusId="1" focusInit="onOpen"/>
+				
+				<GuiElement type="text" profile="mpManagerBillText_billHeader05" text="$l10n_mpManager_Bill_header05" id="gui_rS_num_header" />			
+				<GuiElement type="bitmap" profile="mpManagerBillText_Background03" id="gui_rS_num_background">	
+					<GuiElement type="text" profile="mpManagerBillText_billText01" id="gui_rS_num" />
+				</GuiElement>
+				<GuiElement type="button" profile="mpManagerButton1" id="gui_button_num" position="470px 230px" size="390px 30px" text="$l10n_mpManager_Bill_button06" onClick="onClickOpenNum" focusId="1" focusInit="onOpen"/>
+			
+				
+				<GuiElement type="bitmap" profile="mpManagerBillText_Background04" />	
+				<GuiElement type="button" profile="mpManagerButton5" id="gui_button_addEntry" position="470px 185px" size="390px 30px" text="$l10n_mpManager_Bill_button07" onClick="onClickAddEntry" focusId="1" focusInit="onOpen"/>
+				<GuiElement type="button" profile="mpManagerButton4" id="gui_button_reset" position="470px 140px" size="390px 30px" text="$l10n_mpManager_Bill_button01" onClick="onClickResest" focusId="2" focusInit="onOpen"/>
+				<GuiElement type="button" profile="mpManagerButton3" id="gui_button_apply" position="470px 105px" size="390px 30px" text="$l10n_mpManager_Bill_button02" onClick="onClickApply" focusId="3" focusInit="onOpen"/>
+			</GuiElement>
+			
+			
+			<GuiElement type="empty" id="gui_rightSide_showBill" position="0px -70px">
+				<GuiElement type="button" profile="mpManagerButton4" id="gui_button_delete" position="470px 105px" size="390px 30px" text="$l10n_mpManager_Bill_button09" onClick="onClickDelete" focusId="2" focusInit="onOpen"/>
+				<GuiElement type="button" profile="mpManagerButton6" id="gui_button_transfer" position="470px 105px" size="390px 30px" text="$l10n_mpManager_Bill_button08" onClick="onClickTransfer" focusId="3" focusInit="onOpen"/>
+			</GuiElement>
+			
+			<GuiElement type="button" profile="mpManagerButton2" id="gui_button_back" position="470px 20px" size="390px 30px" textOffset="0px 10px" text="$l10n_mpManager_Bill_button03" onClick="onClickBack" focusId="4" focusInit="onOpen"/>
+		 
+		 
+		</GuiElement>
+    </GuiElement>
+</GUI>

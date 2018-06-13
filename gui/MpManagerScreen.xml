@@ -1,0 +1,834 @@
+<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<GUI onOpen="onOpen" onClose="onClose" onCreate="onCreate">	
+    <GuiElement type="bitmap" profile="mpManagerUiBackground">	
+        <GuiElement type="bitmap" profile="mpManagerUiBackgroundMain">		
+			 <GuiElement type="bitmap" profile="mpManagerUiBackgroundMainHeader">
+                <GuiElement type="text"   profile="headerText" text="Mp-Manager" />
+            </GuiElement>	
+			
+			<GuiElement type="bitmap" profile="mpManagerMenu">			
+				<!-- <GuiElement type="toggleButton" name="1" onCreate="onCreate_mainMenueToggleButton" onClick="onClick_mainMenueToggleButton">
+					<GuiElement type="button" profile="button_konto_a" onCreate="onCreate_button_konto"  focusId="3" />
+					<GuiElement type="button" profile="button_konto" onCreate="onCreate_button_konto" focusId="2" />
+				</GuiElement> -->
+				<!-- <GuiElement type="toggleButton" name="2" onCreate="onCreate_mainMenueToggleButton" onClick="onClick_mainMenueToggleButton">
+					<GuiElement type="button" profile="button_orders_a" onCreate="onCreate_button_orders" focusId="3" />
+					<GuiElement type="button" profile="button_orders" onCreate="onCreate_button_orders" focusId="3" />
+				</GuiElement> -->
+				<GuiElement type="toggleButton" name="3" onCreate="onCreate_mainMenueToggleButton" onClick="onClick_mainMenueToggleButton">
+					<GuiElement type="button" profile="button_moneyoutput_a" onCreate="onCreate_button_moneyoutput" focusId="4" />
+					<GuiElement type="button" profile="button_moneyoutput" onCreate="onCreate_button_moneyoutput" focusId="4" />
+				</GuiElement>
+				<GuiElement type="toggleButton" name="4" onCreate="onCreate_mainMenueToggleButton" onClick="onClick_mainMenueToggleButton">
+					<GuiElement type="button" profile="button_moneyinput_a" onCreate="onCreate_button_moneyinput" focusId="5" />
+					<GuiElement type="button" profile="button_moneyinput" onCreate="onCreate_button_moneyinput" focusId="5" />
+				</GuiElement>
+				<!-- <GuiElement type="toggleButton" name="5" onCreate="onCreate_mainMenueToggleButton" onClick="onClick_mainMenueToggleButton">
+					<GuiElement type="button" profile="button_billTransferOverview_a" onCreate="onCreate_button_billTransferOverview" focusId="6" />
+					<GuiElement type="button" profile="button_billTransferOverview" onCreate="onCreate_button_billTransferOverview" focusId="6" />
+				</GuiElement> -->
+				<GuiElement type="toggleButton" name="6" onCreate="onCreate_mainMenueToggleButton" onClick="onClick_mainMenueToggleButton">
+					<GuiElement type="button" profile="button_bill_a" onCreate="onCreate_button_bill" focusId="7" />
+					<GuiElement type="button" profile="button_bill" onCreate="onCreate_button_bill" focusId="7" />
+				</GuiElement>
+				<GuiElement type="toggleButton" name="7" onCreate="onCreate_mainMenueToggleButton" onClick="onClick_mainMenueToggleButton">
+					<GuiElement type="button" profile="button_transfer_a" onCreate="onCreate_button_transfer" focusId="8" />
+					<GuiElement type="button" profile="button_transfer" onCreate="onCreate_button_transfer" focusId="8" />
+				</GuiElement>
+				<GuiElement type="toggleButton" name="8" onCreate="onCreate_mainMenueToggleButton" onClick="onClick_mainMenueToggleButton">
+					<GuiElement type="button" profile="button_newBill_a" onCreate="onCreate_button_newBill" focusId="9" />
+					<GuiElement type="button" profile="button_newBill" onCreate="onCreate_button_newBill" focusId="9" />
+				</GuiElement>
+				<GuiElement type="toggleButton" name="9" onCreate="onCreate_mainMenueToggleButton" onClick="onClick_mainMenueToggleButton">
+					<GuiElement type="button" profile="button_newTransfer_a" onCreate="onCreate_button_newTransfer" focusId="10" />
+					<GuiElement type="button" profile="button_newTransfer" onCreate="onCreate_button_newTransfer" focusId="10" />
+				</GuiElement>
+				<GuiElement type="toggleButton" name="10" onCreate="onCreate_mainMenueToggleButton" onClick="onClick_mainMenueToggleButton">
+					<GuiElement type="button" profile="button_home_a" onCreate="onCreate_button_home" focusId="11" />
+					<GuiElement type="button" profile="button_home" onCreate="onCreate_button_home" focusId="11" />
+				</GuiElement>
+				<GuiElement type="toggleButton" name="11" onCreate="onCreate_mainMenueToggleButton" onClick="onClick_mainMenueToggleButton">
+					<GuiElement type="button" profile="button_admin_a" onCreate="onCreate_button_admin" focusId="12" />
+					<GuiElement type="button" profile="button_admin" onCreate="onCreate_button_admin" focusId="12" />
+				</GuiElement>
+				<GuiElement type="toggleButton" name="12" onCreate="onCreate_mainMenueToggleButton" onClick="onClick_mainMenueToggleButton">
+					<GuiElement type="button" profile="button_settings_a" onCreate="onCreate_button_settings" focusId="13" />
+					<GuiElement type="button" profile="button_settings" onCreate="onCreate_button_settings" focusId="13" />
+				</GuiElement>
+				<!-- <GuiElement type="toggleButton" name="13" onCreate="onCreate_mainMenueToggleButton" onClick="onClick_mainMenueToggleButton">
+					<GuiElement type="button" profile="button_web_a" onCreate="onCreate_button_web" focusId="14" />
+					<GuiElement type="button" profile="button_web" onCreate="onCreate_button_web" focusId="14" />
+				</GuiElement> -->
+            </GuiElement>	
+			
+			<!-- Konto -->
+			<GuiElement type="empty" onCreate="onCreate_page" profile="mpManagerPage" name="mpManagerPage_1">
+				<GuiElement type="toggleButton2" profile="mpManager_konto_chooseYear" id="mpManager_konto_chooseYear" focusId="5" >
+					<GuiElement type="button" profile="mpManagerInputChooseButtonLeft" />
+					<GuiElement type="button" profile="mpManagerInputChooseButtonRight" />
+					<GuiElement type="text"   profile="mpManagerInputChooseButtonText" />
+					<GuiElement type="bitmap" profile="mpManager_konto_chooseYearBG" />
+				</GuiElement>				
+				<GuiElement type="flowLayout" profile="mpManager_konto_headerItems" >
+					<GuiElement type="bitmap" profile="mpManager_items_6" >
+						<GuiElement type="text"   profile="mpManager_items_text" text="$l10n_mpManager_konto_items_farm" />
+						<GuiElement type="bitmap" profile="mpManager_items_6_itemSeperator"/>
+					</GuiElement>
+					<GuiElement type="bitmap" profile="mpManager_items_6" >
+						<GuiElement type="text"   profile="mpManager_items_text" text="$l10n_mpManager_konto_items_farmleader" />
+						<GuiElement type="bitmap" profile="mpManager_items_6_itemSeperator"/>
+					</GuiElement>
+					<GuiElement type="bitmap" profile="mpManager_items_6" >
+						<GuiElement type="text"   profile="mpManager_items_text" text="$l10n_mpManager_konto_items_inputs" />
+						<GuiElement type="bitmap" profile="mpManager_items_6_itemSeperator"/>
+					</GuiElement>
+					<GuiElement type="bitmap" profile="mpManager_items_6" >
+						<GuiElement type="text"   profile="mpManager_items_text" text="$l10n_mpManager_konto_items_outputs" />
+						<GuiElement type="bitmap" profile="mpManager_items_6_itemSeperator"/>
+					</GuiElement>
+					<GuiElement type="bitmap" profile="mpManager_items_6" >
+						<GuiElement type="text"   profile="mpManager_items_text" text="$l10n_mpManager_konto_items_outputsWage" />
+						<GuiElement type="bitmap" profile="mpManager_items_6_itemSeperator"/>
+					</GuiElement>
+					<GuiElement type="bitmap" profile="mpManager_items_6" >
+						<GuiElement type="text"   profile="mpManager_items_text" text="$l10n_mpManager_konto_items_yearBalance" />
+						<GuiElement type="bitmap" profile="mpManager_items_6_itemSeperator"/>
+					</GuiElement>					
+				</GuiElement>	
+				<GuiElement type="slider" profile="mpManager_konto_items_slider" id="mpManager_konto_slider">
+					<GuiElement type="button" profile="sliderButtonUp"   focusId="sliderUpPrices"/>
+					<GuiElement type="button" profile="sliderButtonDown" focusId="sliderDownPrices" />					
+					<GuiElement type="list" profile="mpManager_konto_list" id="mpManager_konto_list" onCreate="onCreateList" focusId="200" focusChangeTop="1" focusChangeBottom="100">
+						<GuiElement type="listItem" profile="mpManager_items_listItem" id="mpManager_konto_listTemplate">
+							<GuiElement type="flowLayout" profile="mpManager_listItem_layout" >
+								<GuiElement type="bitmap" profile="mpManager_konto_item">
+									<GuiElement type="text"  profile="mpManager_listItemText" onCreate="onCreateKontoItemFarm" />
+								</GuiElement>
+								<GuiElement type="bitmap" profile="mpManager_konto_item">
+									<GuiElement type="text"  profile="mpManager_listItemText" onCreate="onCreateKontoItemFarmleader" />
+								</GuiElement>
+								<GuiElement type="bitmap" profile="mpManager_konto_item">
+									<GuiElement type="text"  profile="mpManager_listItemTextGreen" onCreate="onCreateKontoItemInputs" />
+								</GuiElement>
+								<GuiElement type="bitmap" profile="mpManager_konto_item">
+									<GuiElement type="text"  profile="mpManager_listItemTextRed" onCreate="onCreateKontoItemOutputs" />
+								</GuiElement>
+								<GuiElement type="bitmap" profile="mpManager_konto_item">
+									<GuiElement type="text"  profile="mpManager_listItemTextRed" onCreate="onCreateKontoItemOutputsWage" />
+								</GuiElement>
+								<GuiElement type="bitmap" profile="mpManager_konto_item">
+									<GuiElement type="text"  profile="mpManager_listItemText" onCreate="onCreateKontoItemBalance" />
+								</GuiElement>								
+							</GuiElement>
+						</GuiElement>			
+					</GuiElement>
+				</GuiElement>			
+            </GuiElement>	
+			
+			<!-- MoneyOutput -->
+			<GuiElement type="empty" onCreate="onCreate_page" profile="mpManagerPage" name="mpManagerPage_3">			
+				<GuiElement type="flowLayout" profile="mpManager_money_headerItems" >
+					<GuiElement type="bitmap" profile="mpManager_money_items_date" >
+						<GuiElement type="text"   profile="mpManager_items_text" text="$l10n_mpManager_moneyoutput_items_datum" />
+						<GuiElement type="bitmap" profile="mpManager_money_items_date_itemSeperator"/>
+					</GuiElement>
+					<GuiElement type="bitmap" profile="mpManager_money_items_name" >
+						<GuiElement type="text"   profile="mpManager_items_text" text="$l10n_mpManager_moneyoutput_items_name" />
+						<GuiElement type="bitmap" profile="mpManager_money_items_name_itemSeperator"/>
+					</GuiElement>
+					<GuiElement type="bitmap" profile="mpManager_money_items_category" >
+						<GuiElement type="text"   profile="mpManager_items_text" text="$l10n_mpManager_moneyoutput_items_category" />
+						<GuiElement type="bitmap" profile="mpManager_money_items_category_itemSeperator"/>
+					</GuiElement>
+					<GuiElement type="bitmap" profile="mpManager_money_items_addInfo" >
+						<GuiElement type="text"   profile="mpManager_items_text" text="$l10n_mpManager_moneyoutput_items_addInfos" />
+						<GuiElement type="bitmap" profile="mpManager_money_items_addInfo_itemSeperator"/>
+					</GuiElement>
+					<GuiElement type="bitmap" profile="mpManager_money_items_sellTo" >
+						<GuiElement type="text"   profile="mpManager_items_text" text="$l10n_mpManager_moneyoutput_items_sellTo" />
+						<GuiElement type="bitmap" profile="mpManager_money_items_sellTo_itemSeperator"/>
+					</GuiElement>
+					<GuiElement type="bitmap" profile="mpManager_money_items_num" >
+						<GuiElement type="text"   profile="mpManager_items_text" text="$l10n_mpManager_moneyoutput_items_num" />
+						<GuiElement type="bitmap" profile="mpManager_money_items_num_itemSeperator"/>
+					</GuiElement>		
+					<GuiElement type="bitmap" profile="mpManager_money_items_balance" >
+						<GuiElement type="text"   profile="mpManager_items_text" text="$l10n_mpManager_moneyoutput_items_balance" />
+						<GuiElement type="bitmap" profile="mpManager_money_items_balance_itemSeperator"/>
+					</GuiElement>			
+				</GuiElement>
+				
+				<GuiElement type="slider" profile="mpManager_items_slider" id="mpManager_moneyOutput_slider">
+					<GuiElement type="button" profile="sliderButtonUp"   focusId="sliderUpPrices"/>
+					<GuiElement type="button" profile="sliderButtonDown" focusId="sliderDownPrices" />					
+					<GuiElement type="list" profile="mpManager_items_list" id="mpManager_items_moneyOutput_list" focusId="200" focusChangeTop="1" focusChangeBottom="100">
+						<GuiElement type="listItem" profile="mpManager_items_listItem" id="mpManager_moneyOutput_listTemplate">
+							<GuiElement type="flowLayout" profile="mpManager_listItem_layout" >							
+								<GuiElement type="bitmap" profile="mpManager_money_listItem_date">
+									<GuiElement type="text"  profile="mpManager_listItemText" onCreate="onCreateMoneyOutputDate" />
+								</GuiElement>
+								<GuiElement type="bitmap" profile="mpManager_money_listItem_name">
+									<GuiElement type="text"  profile="mpManager_listItemText" onCreate="onCreateMoneyOutputName" />
+								</GuiElement>
+								<GuiElement type="bitmap" profile="mpManager_money_listItem_category">
+									<GuiElement type="text"  profile="mpManager_listItemText" onCreate="onCreateMoneyOutputCategory" />
+								</GuiElement>
+								<GuiElement type="bitmap" profile="mpManager_money_listItem_addInfo">
+									<GuiElement type="text"  profile="mpManager_listItemText" onCreate="onCreateMoneyOutputAddInfo" />
+								</GuiElement>
+								<GuiElement type="bitmap" profile="mpManager_money_listItem_sellTo">
+									<GuiElement type="text"  profile="mpManager_listItemText" onCreate="onCreateMoneyOutputSellTo" />
+								</GuiElement>
+								<GuiElement type="bitmap" profile="mpManager_money_listItem_num">
+									<GuiElement type="text"  profile="mpManager_listItemText" onCreate="onCreateMoneyOutputNum" />
+								</GuiElement>
+								<GuiElement type="bitmap" profile="mpManager_money_listItem_balance">
+									<GuiElement type="text"  profile="mpManager_listItemTextRed" onCreate="onCreateMoneyOutputBalance" />
+								</GuiElement>								
+							</GuiElement>
+						</GuiElement>			
+					</GuiElement>
+				</GuiElement>		
+				
+							
+            </GuiElement>
+			
+			<!-- MoneyInput -->
+			<GuiElement type="empty" onCreate="onCreate_page" profile="mpManagerPage" name="mpManagerPage_4">			
+				<GuiElement type="flowLayout" profile="mpManager_money_headerItems" >
+					<GuiElement type="bitmap" profile="mpManager_money_items_date" >
+						<GuiElement type="text"   profile="mpManager_items_text" text="$l10n_mpManager_moneyinput_items_datum" />
+						<GuiElement type="bitmap" profile="mpManager_money_items_date_itemSeperator"/>
+					</GuiElement>
+					<GuiElement type="bitmap" profile="mpManager_money_items_name" >
+						<GuiElement type="text"   profile="mpManager_items_text" text="$l10n_mpManager_moneyinput_items_name" />
+						<GuiElement type="bitmap" profile="mpManager_money_items_name_itemSeperator"/>
+					</GuiElement>
+					<GuiElement type="bitmap" profile="mpManager_money_items_category" >
+						<GuiElement type="text"   profile="mpManager_items_text" text="$l10n_mpManager_moneyinput_items_category" />
+						<GuiElement type="bitmap" profile="mpManager_money_items_category_itemSeperator"/>
+					</GuiElement>
+					<GuiElement type="bitmap" profile="mpManager_money_items_addInfo" >
+						<GuiElement type="text"   profile="mpManager_items_text" text="$l10n_mpManager_moneyinput_items_addInfos" />
+						<GuiElement type="bitmap" profile="mpManager_money_items_addInfo_itemSeperator"/>
+					</GuiElement>
+					<GuiElement type="bitmap" profile="mpManager_money_items_sellTo" >
+						<GuiElement type="text"   profile="mpManager_items_text" text="$l10n_mpManager_moneyinput_items_sellTo" />
+						<GuiElement type="bitmap" profile="mpManager_money_items_sellTo_itemSeperator"/>
+					</GuiElement>
+					<GuiElement type="bitmap" profile="mpManager_money_items_num" >
+						<GuiElement type="text"   profile="mpManager_items_text" text="$l10n_mpManager_moneyinput_items_num" />
+						<GuiElement type="bitmap" profile="mpManager_money_items_num_itemSeperator"/>
+					</GuiElement>		
+					<GuiElement type="bitmap" profile="mpManager_money_items_balance" >
+						<GuiElement type="text"   profile="mpManager_items_text" text="$l10n_mpManager_moneyinput_items_balance" />
+						<GuiElement type="bitmap" profile="mpManager_money_items_balance_itemSeperator"/>
+					</GuiElement>			
+				</GuiElement>
+				
+				<GuiElement type="slider" profile="mpManager_items_slider" id="mpManager_moneyInput_slider">
+					<GuiElement type="button" profile="sliderButtonUp"   focusId="sliderUpPrices"/>
+					<GuiElement type="button" profile="sliderButtonDown" focusId="sliderDownPrices" />					
+					<GuiElement type="list" profile="mpManager_items_list" id="mpManager_items_moneyInput_list" focusId="200" focusChangeTop="1" focusChangeBottom="100">
+						<GuiElement type="listItem" profile="mpManager_items_listItem" id="mpManager_moneyInput_listTemplate">
+							<GuiElement type="flowLayout" profile="mpManager_listItem_layout" >							
+								<GuiElement type="bitmap" profile="mpManager_money_listItem_date">
+									<GuiElement type="text"  profile="mpManager_listItemText" onCreate="onCreateMoneyInputDate" />
+								</GuiElement>
+								<GuiElement type="bitmap" profile="mpManager_money_listItem_name">
+									<GuiElement type="text"  profile="mpManager_listItemText" onCreate="onCreateMoneyInputName" />
+								</GuiElement>
+								<GuiElement type="bitmap" profile="mpManager_money_listItem_category">
+									<GuiElement type="text"  profile="mpManager_listItemText" onCreate="onCreateMoneyInputCategory" />
+								</GuiElement>
+								<GuiElement type="bitmap" profile="mpManager_money_listItem_addInfo">
+									<GuiElement type="text"  profile="mpManager_listItemText" onCreate="onCreateMoneyInputAddinfo" />
+								</GuiElement>
+								<GuiElement type="bitmap" profile="mpManager_money_listItem_sellTo">
+									<GuiElement type="text"  profile="mpManager_listItemText" onCreate="onCreateMoneyInputSellto" />
+								</GuiElement>
+								<GuiElement type="bitmap" profile="mpManager_money_listItem_num">
+									<GuiElement type="text"  profile="mpManager_listItemText" onCreate="onCreateMoneyInputNum" />
+								</GuiElement>
+								<GuiElement type="bitmap" profile="mpManager_money_listItem_balance">
+									<GuiElement type="text"  profile="mpManager_listItemTextGreen" onCreate="onCreateMoneyInputBalanace" />
+								</GuiElement>								
+							</GuiElement>
+						</GuiElement>			
+					</GuiElement>
+				</GuiElement>	
+            </GuiElement>	
+			
+			<!-- BillOverview -->
+			<GuiElement type="empty" onCreate="onCreate_page" profile="mpManagerPage" name="mpManagerPage_6">			
+				<GuiElement type="flowLayout" profile="mpManager_home_headerItems" >
+					<GuiElement type="bitmap" profile="mpManager_items_6" >
+						<GuiElement type="text"   profile="mpManager_items_text" text="$l10n_mpManager_Bills_item1" />
+						<GuiElement type="bitmap" profile="mpManager_items_6_itemSeperator"/>
+					</GuiElement>
+					<GuiElement type="bitmap" profile="mpManager_items_6" >
+						<GuiElement type="text"   profile="mpManager_items_text" text="$l10n_mpManager_Bills_item2" />
+						<GuiElement type="bitmap" profile="mpManager_items_6_itemSeperator"/>
+					</GuiElement>
+					<GuiElement type="bitmap" profile="mpManager_items_6" >
+						<GuiElement type="text"   profile="mpManager_items_text" text="$l10n_mpManager_Bills_item3" />
+						<GuiElement type="bitmap" profile="mpManager_items_6_itemSeperator"/>
+					</GuiElement>
+					<GuiElement type="bitmap" profile="mpManager_items_6" >
+						<GuiElement type="text"   profile="mpManager_items_text" text="$l10n_mpManager_Bills_item4" />
+						<GuiElement type="bitmap" profile="mpManager_items_6_itemSeperator"/>
+					</GuiElement>
+					<GuiElement type="bitmap" profile="mpManager_items_6" >
+						<GuiElement type="text"   profile="mpManager_items_text" text="$l10n_mpManager_Bills_item5" />
+						<GuiElement type="bitmap" profile="mpManager_items_6_itemSeperator"/>
+					</GuiElement>
+					<GuiElement type="bitmap" profile="mpManager_items_6" >
+						<GuiElement type="text"   profile="mpManager_items_text" text="$l10n_mpManager_Bills_item6" />
+						<GuiElement type="bitmap" profile="mpManager_items_6_itemSeperator"/>
+					</GuiElement>					
+				</GuiElement>
+			
+				<GuiElement type="slider" profile="mpManager_items_slider" id="mpManager_bills_slider">
+					<GuiElement type="button" profile="sliderButtonUp"   focusId="sliderUpBills"/>
+					<GuiElement type="button" profile="sliderButtonDown" focusId="sliderDownBills" />					
+					<GuiElement type="list" profile="mpManager_items_list" id="gui_bills_list" onDoubleClick="onDoubleClickBillsList" focusId="201	" focusChangeTop="1" focusChangeBottom="100">
+						<GuiElement type="listItem" profile="mpManager_items_listItem" id="gui_bills_list_template">
+							<GuiElement type="flowLayout" profile="mpManager_listItem_layout" >							
+								<GuiElement type="bitmap" profile="mpManager_items_6">
+									<GuiElement type="text"  profile="mpManager_listItemTextMiddleCenter" onCreate="onCreateBillsId" />
+								</GuiElement>
+								<GuiElement type="bitmap" profile="mpManager_items_6">
+									<GuiElement type="text"  profile="mpManager_listItemTextMiddleCenter" onCreate="onCreateBillsAddress" />
+								</GuiElement>
+								<GuiElement type="bitmap" profile="mpManager_items_6">
+									<GuiElement type="text"  profile="mpManager_listItemTextMiddleCenter" onCreate="onCreateBillsSender" />
+								</GuiElement>
+								<GuiElement type="bitmap" profile="mpManager_items_6">
+									<GuiElement type="text"  profile="mpManager_listItemTextMiddleCenter" onCreate="onCreateBillsNums" />
+								</GuiElement>
+								<GuiElement type="bitmap" profile="mpManager_items_6">
+									<GuiElement type="text"  profile="mpManager_listItemTextMiddleCenter" onCreate="onCreateBillsPrice" />
+								</GuiElement>
+								<GuiElement type="bitmap" profile="mpManager_items_6">
+									<GuiElement type="text"  profile="mpManager_listItemTextMiddleCenter" onCreate="onCreateBillsState" />
+								</GuiElement>							
+							</GuiElement>
+						</GuiElement>			
+					</GuiElement>
+				</GuiElement>
+            </GuiElement>	
+			
+			<!-- TransferOverview -->
+			<GuiElement type="empty" onCreate="onCreate_page" profile="mpManagerPage" name="mpManagerPage_7">			
+				<GuiElement type="flowLayout" profile="mpManager_home_headerItems" >
+					<GuiElement type="bitmap" profile="mpManager_items_6" >
+						<GuiElement type="text"   profile="mpManager_items_text" text="$l10n_mpManager_Transfer_item1" />
+						<GuiElement type="bitmap" profile="mpManager_items_6_itemSeperator"/>
+					</GuiElement>
+					<GuiElement type="bitmap" profile="mpManager_items_6" >
+						<GuiElement type="text"   profile="mpManager_items_text" text="$l10n_mpManager_Transfer_item2" />
+						<GuiElement type="bitmap" profile="mpManager_items_6_itemSeperator"/>
+					</GuiElement>
+					<GuiElement type="bitmap" profile="mpManager_items_6" >
+						<GuiElement type="text"   profile="mpManager_items_text" text="$l10n_mpManager_Transfer_item3" />
+						<GuiElement type="bitmap" profile="mpManager_items_6_itemSeperator"/>
+					</GuiElement>
+					<GuiElement type="bitmap" profile="mpManager_items_6" >
+						<GuiElement type="text"   profile="mpManager_items_text" text="$l10n_mpManager_Transfer_item4" />
+						<GuiElement type="bitmap" profile="mpManager_items_6_itemSeperator"/>
+					</GuiElement>
+					<GuiElement type="bitmap" profile="mpManager_items_6" >
+						<GuiElement type="text"   profile="mpManager_items_text" text="$l10n_mpManager_Transfer_item5" />
+						<GuiElement type="bitmap" profile="mpManager_items_6_itemSeperator"/>
+					</GuiElement>
+					<GuiElement type="bitmap" profile="mpManager_items_6" >
+						<GuiElement type="text"   profile="mpManager_items_text" text="$l10n_mpManager_Transfer_item6" />
+						<GuiElement type="bitmap" profile="mpManager_items_6_itemSeperator"/>
+					</GuiElement>					
+				</GuiElement>
+			
+				<GuiElement type="slider" profile="mpManager_items_slider" id="mpManager_transfer_slider">
+					<GuiElement type="button" profile="sliderButtonUp"   focusId="sliderUpBills"/>
+					<GuiElement type="button" profile="sliderButtonDown" focusId="sliderDownBills" />					
+					<GuiElement type="list" profile="mpManager_items_list" id="gui_transfer_list" onDoubleClick="onDoubleClickTransferList" focusId="201	" focusChangeTop="1" focusChangeBottom="100">
+						<GuiElement type="listItem" profile="mpManager_items_listItem" id="gui_transfer_list_template">
+							<GuiElement type="flowLayout" profile="mpManager_listItem_layout" >							
+								<GuiElement type="bitmap" profile="mpManager_items_6">
+									<GuiElement type="text"  profile="mpManager_listItemTextMiddleCenter" onCreate="onCreateTransferId" />
+								</GuiElement>
+								<GuiElement type="bitmap" profile="mpManager_items_6">
+									<GuiElement type="text"  profile="mpManager_listItemTextMiddleCenter" onCreate="onCreateTransferDate" />
+								</GuiElement>
+								<GuiElement type="bitmap" profile="mpManager_items_6">
+									<GuiElement type="text"  profile="mpManager_listItemTextMiddleCenter" onCreate="onCreateTransferEmpf" />
+								</GuiElement>
+								<GuiElement type="bitmap" profile="mpManager_items_6">
+									<GuiElement type="text"  profile="mpManager_listItemTextMiddleCenter" onCreate="onCreateTransferSender" />
+								</GuiElement>
+								<GuiElement type="bitmap" profile="mpManager_items_6">
+									<GuiElement type="text"  profile="mpManager_listItemTextMiddleCenter" onCreate="onCreateTransferZweck" />
+								</GuiElement>
+								<GuiElement type="bitmap" profile="mpManager_items_6">
+									<GuiElement type="text"  profile="mpManager_listItemTextMiddleCenter" onCreate="onCreateTransferMoney" />
+								</GuiElement>							
+							</GuiElement>
+						</GuiElement>			
+					</GuiElement>
+				</GuiElement>
+            </GuiElement>	
+			
+			<!-- Home -->
+			<GuiElement type="empty" onCreate="onCreate_page" profile="mpManagerPage" name="mpManagerPage_10">			
+				<GuiElement type="flowLayout" profile="mpManager_home_headerItems" >
+					<GuiElement type="bitmap" profile="mpManager_items_6" >
+						<GuiElement type="text"   profile="mpManager_items_text" text="$l10n_mpManager_home_items_farm" />
+						<GuiElement type="bitmap" profile="mpManager_items_6_itemSeperator"/>
+					</GuiElement>
+					<GuiElement type="bitmap" profile="mpManager_items_6" >
+						<GuiElement type="text"   profile="mpManager_items_text" text="$l10n_mpManager_home_items_farmleader" />
+						<GuiElement type="bitmap" profile="mpManager_items_6_itemSeperator"/>
+					</GuiElement>
+					<GuiElement type="bitmap" profile="mpManager_items_6" >
+						<GuiElement type="text"   profile="mpManager_items_text" text="$l10n_mpManager_home_items_numPlayers" />
+						<GuiElement type="bitmap" profile="mpManager_items_6_itemSeperator"/>
+					</GuiElement>
+					<GuiElement type="bitmap" profile="mpManager_items_6" >
+						<GuiElement type="text"   profile="mpManager_items_text" text="$l10n_mpManager_home_items_vehicles" />
+						<GuiElement type="bitmap" profile="mpManager_items_6_itemSeperator"/>
+					</GuiElement>
+					<GuiElement type="bitmap" profile="mpManager_items_6" >
+						<GuiElement type="text"   profile="mpManager_items_text" text="$l10n_mpManager_home_items_animals" />
+						<GuiElement type="bitmap" profile="mpManager_items_6_itemSeperator"/>
+					</GuiElement>
+					<GuiElement type="bitmap" profile="mpManager_items_6" >
+						<GuiElement type="text"   profile="mpManager_items_text" text="$l10n_mpManager_home_items_balance" />
+						<GuiElement type="bitmap" profile="mpManager_items_6_itemSeperator"/>
+					</GuiElement>					
+				</GuiElement>
+							
+				<GuiElement type="slider" profile="mpManager_items_slider" id="mpManager_home_slider">
+					<GuiElement type="button" profile="sliderButtonUp"   focusId="sliderUpPrices"/>
+					<GuiElement type="button" profile="sliderButtonDown" focusId="sliderDownPrices" />					
+					<GuiElement type="list" profile="mpManager_items_list" id="mpManager_items_home_list" focusId="200" focusChangeTop="1" focusChangeBottom="100">
+						<GuiElement type="listItem" profile="mpManager_items_listItem" id="mpManager_home_listTemplate">
+							<GuiElement type="flowLayout" profile="mpManager_listItem_layout" >							
+								<GuiElement type="bitmap" profile="mpManager_items_6">
+									<GuiElement type="text"  profile="mpManager_listItemTextMiddleCenter" onCreate="onCreateMoneyHomeFarmname" />
+								</GuiElement>
+								<GuiElement type="bitmap" profile="mpManager_items_6">
+									<GuiElement type="text"  profile="mpManager_listItemTextMiddleCenter" onCreate="onCreateMoneyHomeFarmleader" />
+								</GuiElement>
+								<GuiElement type="bitmap" profile="mpManager_items_6">
+									<GuiElement type="text"  profile="mpManager_listItemTextMiddleCenter" onCreate="onCreateMoneyHomeNumplayer" />
+								</GuiElement>
+								<GuiElement type="bitmap" profile="mpManager_items_6">
+									<GuiElement type="text"  profile="mpManager_listItemTextMiddleCenter" onCreate="onCreateMoneyHomeVehicles" />
+								</GuiElement>
+								<GuiElement type="bitmap" profile="mpManager_items_6">
+									<GuiElement type="text"  profile="mpManager_listItemTextMiddleCenter" onCreate="onCreateMoneyHomeAnimals" />
+								</GuiElement>
+								<GuiElement type="bitmap" profile="mpManager_items_6">
+									<GuiElement type="text"  profile="mpManager_listItemTextMiddleCenter" onCreate="onCreateMoneyHomeBalance" />
+								</GuiElement>							
+							</GuiElement>
+						</GuiElement>			
+					</GuiElement>
+				</GuiElement>
+            </GuiElement>	
+			
+			<!-- Admin -->
+			<GuiElement type="empty" onCreate="onCreate_page" profile="mpManagerPage" name="mpManagerPage_11" id="mpManager_admin_logInPage">				
+				<GuiElement type="bitmap" profile="mpManager_selectHeader">
+					<GuiElement type="multiTextOption" profile="mpManager_selectHeaderSelector" onClick="onClickAdminPageSelection" id="mpManager_admin_menu" focusId="102" focusChangeRight="2" focusChangeBottom="10" focusChangeTop="102">
+						<GuiElement type="button" profile="mpManager_selectHeaderSelectorLeft" />
+						<GuiElement type="button" profile="mpManager_selectHeaderSelectorRight"/>
+						<GuiElement type="text" profile="mpManager_selectHeaderText" />
+					</GuiElement>
+				</GuiElement>
+				<GuiElement type="empty" onCreate="onCreate_admin_menu" name="1" >				
+					<GuiElement type="bitmap" profile="mpManager_admin_item_1">
+						<GuiElement type="text" profile="mpManager_admin_itemsHeaderText" text="$l10n_mpManager_AdminHeader1"/>
+						<GuiElement type="text" profile="mpManager_admin_itemsHeaderTextInfo" text="$l10n_mpManager_AdminHeader1_text"/>
+					</GuiElement>
+					<GuiElement type="textInput" profile="mpManager_admin_pwInput" id="mpManager_admin_pw" focusId="1" focusChangeBottom="2" />
+					<GuiElement type="button" profile="mpManager_admin_pwInputOk" onClick="onClickAdminAdminPwOk" text="$l10n_mpManager_AdminHeader1_button" focusId="100" />
+					<GuiElement type="bitmap" profile="mpManager_admin_item_2">
+						<GuiElement type="text" profile="mpManager_admin_itemsHeaderText" text="$l10n_mpManager_AdminHeader2"/>
+						<GuiElement type="text" profile="mpManager_admin_itemsHeaderTextInfo" text="$l10n_mpManager_AdminHeader2_text"/>
+					</GuiElement>
+					<GuiElement type="textInput" profile="mpManager_admin_newAdminInput" id="mpManager_admin_newAdmin" focusId="1" focusChangeBottom="2" />
+					<GuiElement type="button" profile="mpManager_admin_newAdminInputOk" onClick="onClickAdminAdminNewAdminOk" text="$l10n_mpManager_AdminHeader2_button" focusId="100" />
+					<GuiElement type="bitmap" profile="mpManager_admin_item_3">
+						<GuiElement type="text" profile="mpManager_admin_itemsHeaderText" text="$l10n_mpManager_AdminHeader3"/>
+						<GuiElement type="text" profile="mpManager_admin_itemsHeaderTextInfo" text="$l10n_mpManager_AdminHeader3_text"/>
+					</GuiElement>
+					<GuiElement type="flowLayout" profile="mpManager_admin_adminTabl_header" >
+						<GuiElement type="bitmap" profile="mpManager_admin_adminTabl_item" >
+							<GuiElement type="text"   profile="mpManager_items_text" text="$l10n_mpManager_AdminHeader3_header1" />
+							<GuiElement type="bitmap" profile="mpManager_admin_adminTabl_itemSeperator"/>
+						</GuiElement>
+						<GuiElement type="bitmap" profile="mpManager_admin_adminTabl_item" >
+							<GuiElement type="text"   profile="mpManager_items_text" text="$l10n_mpManager_AdminHeader3_header2" />
+							<GuiElement type="bitmap" profile="mpManager_admin_adminTabl_itemSeperator"/>
+						</GuiElement>				
+					</GuiElement>
+					<GuiElement type="slider" profile="mpManager_admin_admin_slider" id="mpManager_admin_admin_slider">
+						<GuiElement type="button" profile="mpManager_admin_admin_sliderUp"   focusId="sliderUpPrices"/>
+						<GuiElement type="button" profile="mpManager_admin_admin_sliderDown" focusId="sliderDownPrices" />					
+						<GuiElement type="list" profile="mpManager_admin_admin_list" onSelectionChanged="onSelectionChangedAdminAdminList" id="mpManager_admin_admin_list" focusId="2200" focusChangeTop="1" focusChangeBottom="100">
+							<GuiElement type="listItem" profile="mpManager_admin_admin_listItem" id="mpManager_admin_admin_listItemTemplate">
+								<GuiElement type="flowLayout" profile="mpManager_listItem_layout" >
+									<GuiElement type="bitmap" profile="mpManager_admin_adminTabl_item" >
+										<GuiElement type="text"   profile="mpManager_listItemTextMiddleCenter" onCreate="onCreateAdminAdminName" />
+									</GuiElement>
+									<GuiElement type="bitmap" profile="mpManager_admin_adminTabl_item" >
+										<GuiElement type="text"   profile="mpManager_listItemTextMiddleCenter" onCreate="onCreateAdminAdminFarm" />
+									</GuiElement>				
+								</GuiElement>
+							</GuiElement>							
+						</GuiElement>		
+					</GuiElement>
+					<GuiElement type="button" profile="mpManager_admin_deleteAdminOk" onClick="onClickAdminAdminDeleteAdminOk" text="$l10n_mpManager_AdminHeader3_button" focusId="100" />
+				</GuiElement>	
+				<GuiElement type="empty" onCreate="onCreate_admin_menu" name="2" >				
+					<GuiElement type="bitmap" profile="mpManager_admin_item_1">
+						<GuiElement type="text" profile="mpManager_admin_itemsHeaderText" text="$l10n_mpManager_AdminHeader4"/>
+						<GuiElement type="text" profile="mpManager_admin_itemsHeaderTextInfo" text="$l10n_mpManager_AdminHeader4_text"/>
+					</GuiElement>
+					<GuiElement type="textInput" profile="mpManager_admin_pwInput" id="mpManager_admin_player_newName" focusId="1" focusChangeBottom="2" />
+					<GuiElement type="multiTextOption" profile="mpManager_admin_player_newPlayer" onClick="onClickAdminPageSelection2" id="mpManager_admin_player_farm" focusId="102" focusChangeRight="2" focusChangeBottom="10" focusChangeTop="102">
+						<GuiElement type="button" profile="mpManager_admin_player_SelectorLeft" />
+						<GuiElement type="button" profile="mpManager_admin_player_SelectorRight"/>
+						<GuiElement type="text" profile="mpManager_selectHeaderText" />
+						<GuiElement type="bitmap" profile="mpManager_admin_player_newPlayerBg" />
+					</GuiElement>
+					<GuiElement type="button" profile="mpManager_admin_player_newPlayerOk" onClick="onClickAdminPlayerNewPlayerOk" text="$l10n_mpManager_AdminHeader4_button" focusId="100" />
+					<GuiElement type="bitmap" profile="mpManager_admin_item_2">
+						<GuiElement type="text" profile="mpManager_admin_itemsHeaderText" text="$l10n_mpManager_AdminHeader5"/>
+						<GuiElement type="text" profile="mpManager_admin_itemsHeaderTextInfo" text="$l10n_mpManager_AdminHeader5_text"/>
+					</GuiElement>
+					<GuiElement type="flowLayout" profile="mpManager_admin_playerTabl_header" >
+						<GuiElement type="bitmap" profile="mpManager_admin_playerTabl_item" >
+							<GuiElement type="text"   profile="mpManager_items_text" text="$l10n_mpManager_AdminHeader5_header1" />
+							<GuiElement type="bitmap" profile="mpManager_admin_playerTabl_itemSeperator"/>
+						</GuiElement>
+						<GuiElement type="bitmap" profile="mpManager_admin_playerTabl_item" >
+							<GuiElement type="text"   profile="mpManager_items_text" text="$l10n_mpManager_AdminHeader5_header2" />
+							<GuiElement type="bitmap" profile="mpManager_admin_playerTabl_itemSeperator"/>
+						</GuiElement>		
+						<GuiElement type="bitmap" profile="mpManager_admin_playerTabl_item" >
+							<GuiElement type="text"   profile="mpManager_items_text" text="$l10n_mpManager_AdminHeader5_header3" />
+							<GuiElement type="bitmap" profile="mpManager_admin_playerTabl_itemSeperator"/>
+						</GuiElement>				
+					</GuiElement>
+					<GuiElement type="slider" profile="mpManager_admin_player_slider" id="mpManager_admin_player_slider">
+						<GuiElement type="button" profile="mpManager_admin_admin_sliderUp"   focusId="sliderUpPrices"/>
+						<GuiElement type="button" profile="mpManager_admin_admin_sliderDown" focusId="sliderDownPrices" />					
+						<GuiElement type="list" profile="mpManager_admin_player_list" onSelectionChanged="onSelectionChangedAdminPlayerList" id="mpManager_admin_player_list" focusId="2200" focusChangeTop="1" focusChangeBottom="100">
+							<GuiElement type="listItem" profile="mpManager_admin_admin_listItem" id="mpManager_admin_player_listItemTemplate">
+								<GuiElement type="flowLayout" profile="mpManager_listItem_layout" >
+									<GuiElement type="bitmap" profile="mpManager_admin_playerTabl_item" >
+										<GuiElement type="text"   profile="mpManager_listItemTextMiddleCenter" onCreate="onCreateAdminPlayerName" />
+									</GuiElement>
+									<GuiElement type="bitmap" profile="mpManager_admin_playerTabl_item" >
+										<GuiElement type="text"   profile="mpManager_listItemTextMiddleCenter" onCreate="onCreateAdminPlayerFarm" />
+									</GuiElement>	
+									<GuiElement type="bitmap" profile="mpManager_admin_playerTabl_item" >
+										<GuiElement type="text"   profile="mpManager_listItemTextMiddleCenter" onCreate="onCreateAdminPlayerIsAdmin" />
+									</GuiElement>				
+								</GuiElement>
+							</GuiElement>
+						</GuiElement>	
+					</GuiElement>
+					<GuiElement type="button" profile="mpManager_admin_changePlayerChange2" onClick="onClickAdminPlayerChangeName" text="$l10n_mpManager_AdminHeader5_button1" focusId="100" />
+					<GuiElement type="button" profile="mpManager_admin_changePlayerChange3" onClick="onClickAdminPlayerChangeFarm" text="$l10n_mpManager_AdminHeader5_button2" focusId="100" />
+					<GuiElement type="button" profile="mpManager_admin_changePlayerDelete" onClick="onClickAdminPlayerDelete" text="$l10n_mpManager_AdminHeader5_button3" focusId="100" />
+				</GuiElement>
+				<GuiElement type="empty" onCreate="onCreate_admin_menu" name="3" >				
+					<GuiElement type="bitmap" profile="mpManager_admin_item_1">
+						<GuiElement type="text" profile="mpManager_admin_itemsHeaderText" text="$l10n_mpManager_AdminHeader6"/>
+						<GuiElement type="text" profile="mpManager_admin_itemsHeaderTextInfo" text="$l10n_mpManager_AdminHeader6_text"/>
+					</GuiElement>
+					<GuiElement type="textInput" profile="mpManager_admin_pwInput" id="mpManager_admin_farm_newFarm" focusId="1" focusChangeBottom="2" />
+					<GuiElement type="multiTextOption" profile="mpManager_admin_player_newPlayer" onClick="onClickAdminPageSelection3" id="mpManager_admin_farm_leader" focusId="102" focusChangeRight="2" focusChangeBottom="10" focusChangeTop="102">
+						<GuiElement type="button" profile="mpManager_admin_player_SelectorLeft" />
+						<GuiElement type="button" profile="mpManager_admin_player_SelectorRight"/>
+						<GuiElement type="text" profile="mpManager_selectHeaderText" />
+						<GuiElement type="bitmap" profile="mpManager_admin_player_newPlayerBg" />
+					</GuiElement>
+					<GuiElement type="button" profile="mpManager_admin_player_newPlayerOk" onClick="onClickAdminFarmNewFarm" text="$l10n_mpManager_AdminHeader6_button" focusId="100" />
+					<GuiElement type="bitmap" profile="mpManager_admin_item_2">
+						<GuiElement type="text" profile="mpManager_admin_itemsHeaderText" text="$l10n_mpManager_AdminHeader7"/>
+						<GuiElement type="text" profile="mpManager_admin_itemsHeaderTextInfo" text="$l10n_mpManager_AdminHeader7_text"/>
+					</GuiElement>
+					<GuiElement type="flowLayout" profile="mpManager_admin_playerTabl_header" >
+						<GuiElement type="bitmap" profile="mpManager_admin_playerTabl_item" >
+							<GuiElement type="text"   profile="mpManager_items_text" text="$l10n_mpManager_AdminHeader7_header1" />
+							<GuiElement type="bitmap" profile="mpManager_admin_playerTabl_itemSeperator"/>
+						</GuiElement>
+						<GuiElement type="bitmap" profile="mpManager_admin_playerTabl_item" >
+							<GuiElement type="text"   profile="mpManager_items_text" text="$l10n_mpManager_AdminHeader7_header2" />
+							<GuiElement type="bitmap" profile="mpManager_admin_playerTabl_itemSeperator"/>
+						</GuiElement>		
+						<GuiElement type="bitmap" profile="mpManager_admin_playerTabl_item" >
+							<GuiElement type="text"   profile="mpManager_items_text" text="$l10n_mpManager_AdminHeader7_header3" />
+							<GuiElement type="bitmap" profile="mpManager_admin_playerTabl_itemSeperator"/>
+						</GuiElement>				
+					</GuiElement>
+					<GuiElement type="slider" profile="mpManager_admin_player_slider" id="mpManager_admin_farm_slider">
+						<GuiElement type="button" profile="mpManager_admin_admin_sliderUp"   focusId="sliderUpPrices"/>
+						<GuiElement type="button" profile="mpManager_admin_admin_sliderDown" focusId="sliderDownPrices" />					
+						<GuiElement type="list" profile="mpManager_admin_admin_list" onSelectionChanged="onSelectionChangedAdminFarmList" id="mpManager_admin_farm_list" focusId="2200" focusChangeTop="1" focusChangeBottom="100">
+							<GuiElement type="listItem" profile="mpManager_admin_admin_listItem" id="mpManager_admin_farm_listItemTemplate">
+								<GuiElement type="flowLayout" profile="mpManager_listItem_layout" >
+									<GuiElement type="bitmap" profile="mpManager_admin_playerTabl_item" >
+										<GuiElement type="text"   profile="mpManager_listItemTextMiddleCenter" onCreate="onCreateAdminFarmName" />
+									</GuiElement>
+									<GuiElement type="bitmap" profile="mpManager_admin_playerTabl_item" >
+										<GuiElement type="text"   profile="mpManager_listItemTextMiddleCenter" onCreate="onCreateAdminFarmLeader" />
+									</GuiElement>	
+									<GuiElement type="bitmap" profile="mpManager_admin_playerTabl_item" >
+										<GuiElement type="text"   profile="mpManager_listItemTextMiddleCenter" onCreate="onCreateAdminFarmCapital" />
+									</GuiElement>				
+								</GuiElement>
+							</GuiElement>
+						</GuiElement>	
+					</GuiElement>
+					<GuiElement type="button" profile="mpManager_admin_changePlayerChange1" onClick="onClickAdminFarmChangeName" text="$l10n_mpManager_AdminHeader7_button1" focusId="100" />
+					<GuiElement type="button" profile="mpManager_admin_changePlayerChange2" onClick="onClickAdminFarmChangeLeader" text="$l10n_mpManager_AdminHeader7_button2" focusId="100" />
+					<GuiElement type="button" profile="mpManager_admin_changePlayerChange3" onClick="onClickAdminFarmChangeCaptial" text="$l10n_mpManager_AdminHeader7_button3" focusId="100" />
+					<GuiElement type="button" profile="mpManager_admin_changePlayerDelete" onClick="onClickAdminFarmDelete" text="$l10n_mpManager_AdminHeader7_button4" focusId="100" />
+				</GuiElement>
+				<GuiElement type="empty" onCreate="onCreate_admin_menu" name="4" >	
+					<GuiElement type="multiTextOption" profile="mpManager_admin_settings_1_1_multiText" onClick="onClickAdminSettings_assignabelsBuildings" id="mpManager_admin_settings_assignabelsBuildings" focusId="102" focusChangeRight="2" focusChangeBottom="10" focusChangeTop="102">
+						<GuiElement type="button" profile="mpManager_admin_settings_SelectorLeft" />
+						<GuiElement type="button" profile="mpManager_admin_settings_SelectorRight"/>
+						<GuiElement type="text" profile="mpManager_admin_settings_text"/>
+						<GuiElement type="bitmap" profile="mpManager_admin_settings_multiTextBg" />
+						<GuiElement type="text" profile="mpManager_admin_settings_multiTextHeader" text="$l10n_settings_1_header"/>
+					</GuiElement>
+					
+					<GuiElement type="multiTextOption" profile="mpManager_admin_settings_2_1_multiText" onClick="onClickAdminSettings_bills_create" id="mpManager_admin_settings_bills_create" focusId="102" focusChangeRight="2" focusChangeBottom="10" focusChangeTop="102">
+						<GuiElement type="button" profile="mpManager_admin_settings_SelectorLeft" />
+						<GuiElement type="button" profile="mpManager_admin_settings_SelectorRight"/>
+						<GuiElement type="text" profile="mpManager_admin_settings_text"/>
+						<GuiElement type="bitmap" profile="mpManager_admin_settings_multiTextBg" />
+						<GuiElement type="text" profile="mpManager_admin_settings_multiTextHeader" text="$l10n_settings_21_header"/>
+					</GuiElement>
+					<GuiElement type="multiTextOption" profile="mpManager_admin_settings_2_2_multiText" onClick="onClickAdminSettings_bills_pay" id="mpManager_admin_settings_bills_pay" focusId="102" focusChangeRight="2" focusChangeBottom="10" focusChangeTop="102">
+						<GuiElement type="button" profile="mpManager_admin_settings_SelectorLeft" />
+						<GuiElement type="button" profile="mpManager_admin_settings_SelectorRight"/>
+						<GuiElement type="text" profile="mpManager_admin_settings_text"/>
+						<GuiElement type="bitmap" profile="mpManager_admin_settings_multiTextBg" />
+						<GuiElement type="text" profile="mpManager_admin_settings_multiTextHeader" text="$l10n_settings_22_header"/>
+					</GuiElement>
+					<GuiElement type="multiTextOption" profile="mpManager_admin_settings_2_3_multiText" onClick="onClickAdminSettings_transfers_create" id="mpManager_admin_settings_transfers_create" focusId="102" focusChangeRight="2" focusChangeBottom="10" focusChangeTop="102">
+						<GuiElement type="button" profile="mpManager_admin_settings_SelectorLeft" />
+						<GuiElement type="button" profile="mpManager_admin_settings_SelectorRight"/>
+						<GuiElement type="text" profile="mpManager_admin_settings_text"/>
+						<GuiElement type="bitmap" profile="mpManager_admin_settings_multiTextBg" />
+						<GuiElement type="text" profile="mpManager_admin_settings_multiTextHeader" text="$l10n_settings_23_header"/>
+					</GuiElement>
+				</GuiElement>
+				<GuiElement type="empty" onCreate="onCreate_admin_menu" name="5" >				
+					<GuiElement type="bitmap" profile="mpManager_admin_item_1">
+						<GuiElement type="text" profile="mpManager_admin_itemsHeaderText" text="$l10n_mpManager_AdminHeader8"/>
+						<GuiElement type="text" profile="mpManager_admin_itemsHeaderTextInfo" text="$l10n_mpManager_AdminHeader8_text"/>
+					</GuiElement>
+				<GuiElement type="button" profile="buttonDelete" onClick="onClickAdminSettings5_1" size="600px 35px" position="300px 400px" text="$l10n_mpManager_AdminHeader8_button1" focusId="100" />			
+				<GuiElement type="button" profile="buttonDelete" onClick="onClickAdminSettings5_2" size="600px 35px" position="300px 350px" text="$l10n_mpManager_AdminHeader8_button2" focusId="100" />			
+				<GuiElement type="button" profile="buttonDelete" onClick="onClickAdminSettings5_3" size="600px 35px" position="300px 300px" text="$l10n_mpManager_AdminHeader8_button3" focusId="100" />			
+				<GuiElement type="button" profile="buttonDelete" onClick="onClickAdminSettings5_4" size="600px 35px" position="300px 250px" text="$l10n_mpManager_AdminHeader8_button4" focusId="100" />			
+					
+				</GuiElement>
+				
+				<GuiElement type="flowLayout" profile="mpManager_admin_menuStateBg" id="mpManager_admin_pageStateBox">
+					<GuiElement type="bitmap" profile="mpManager_admin_menuState" onCreate="onCreateAdminPageState" />
+				</GuiElement>
+            </GuiElement>	
+			
+			<!-- Settings -->
+			<GuiElement type="empty" onCreate="onCreate_page" profile="mpManagerPage" name="mpManagerPage_12">				
+				<GuiElement type="bitmap" profile="mpManager_selectHeader">
+					<GuiElement type="multiTextOption" profile="mpManager_selectHeaderSelector" onClick="onClickSettingsPageSelection" id="mpManager_settings_menu" focusId="102" focusChangeRight="2" focusChangeBottom="10" focusChangeTop="102">
+						<GuiElement type="button" profile="mpManager_selectHeaderSelectorLeft" />
+						<GuiElement type="button" profile="mpManager_selectHeaderSelectorRight"/>
+						<GuiElement type="text" profile="mpManager_selectHeaderText" />
+					</GuiElement>
+				</GuiElement>
+				
+				<GuiElement type="empty" onCreate="onCreate_settings_menu" name="1" >				
+					<GuiElement type="bitmap" profile="mpManager_admin_item_1">
+						<GuiElement type="text" profile="mpManager_admin_itemsHeaderText" text="$l10n_mpManager_SettingsHeader1"/>
+						<GuiElement type="text" profile="mpManager_admin_itemsHeaderTextInfo" text="$l10n_mpManager_SettingsHeader1_text"/>
+					</GuiElement>
+					<GuiElement type="flowLayout" profile="mpManager_admin_add1_header" >
+						<GuiElement type="bitmap" profile="mpManager_admin_add1_item1" >
+							<GuiElement type="text"   profile="mpManager_items_text" text="$l10n_mpManager_SettingsHeader1_header1" />
+							<GuiElement type="bitmap" profile="mpManager_admin_add1_itemSeperator1"/>
+						</GuiElement>
+						<GuiElement type="bitmap" profile="mpManager_admin_add1_item2" >
+							<GuiElement type="text"   profile="mpManager_items_text" text="$l10n_mpManager_SettingsHeader1_header2" />
+							<GuiElement type="bitmap" profile="mpManager_admin_add1_itemSeperator2"/>
+						</GuiElement>				
+					</GuiElement>
+					<GuiElement type="slider" profile="mpManager_admin_add1_slider" id="mpManager_settings1_slider">
+						<GuiElement type="button" profile="mpManager_admin_admin_sliderUp"   focusId="sliderUpPrices"/>
+						<GuiElement type="button" profile="mpManager_admin_admin_sliderDown" focusId="sliderDownPrices" />					
+						<GuiElement type="list" profile="mpManager_admin_add1_list" onSelectionChanged="onSelectionChangedSettings1List" id="mpManager_settings1_list" focusId="2200" focusChangeTop="1" focusChangeBottom="100">
+							<GuiElement type="listItem" profile="mpManager_admin_add1_listItem" id="mpManager_settings1_listItemTemplate">
+								<GuiElement type="flowLayout" profile="mpManager_listItem_layout2" >
+									<GuiElement type="bitmap" profile="mpManager_admin_add1_item1_1" >
+										<GuiElement type="text" profile="mpManager_listItemTextMiddleCenter" onCreate="onCreateSettings1Name" />
+									</GuiElement>
+									<GuiElement type="bitmap" profile="mpManager_admin_add1_item2_1" >
+										<GuiElement type="text" profile="mpManager_listItemTextMiddleCenter" onCreate="onCreateSettings1Farm" />
+									</GuiElement>		
+								</GuiElement>
+							</GuiElement>
+						</GuiElement>	
+					</GuiElement>
+					<GuiElement type="button" profile="mpManager_admin_changePlayerChange4" onClick="onCreateSettings1Change" text="$l10n_mpManager_AdminHeader7_button5" focusId="100" />
+				</GuiElement>
+				
+				<GuiElement type="empty" onCreate="onCreate_settings_menu" name="2" >				
+					<GuiElement type="bitmap" profile="mpManager_admin_item_1">
+						<GuiElement type="text" profile="mpManager_admin_itemsHeaderText" text="$l10n_mpManager_SettingsHeader2"/>
+						<GuiElement type="text" profile="mpManager_admin_itemsHeaderTextInfo" text="$l10n_mpManager_SettingsHeader2_text"/>
+					</GuiElement>
+					<GuiElement type="flowLayout" profile="mpManager_admin_add1_header" >
+						<GuiElement type="bitmap" profile="mpManager_admin_add1_item1" >
+							<GuiElement type="text"   profile="mpManager_items_text" text="$l10n_mpManager_SettingsHeader2_header1" />
+							<GuiElement type="bitmap" profile="mpManager_admin_add1_itemSeperator1"/>
+						</GuiElement>
+						<GuiElement type="bitmap" profile="mpManager_admin_add1_item2" >
+							<GuiElement type="text"   profile="mpManager_items_text" text="$l10n_mpManager_SettingsHeader2_header2" />
+							<GuiElement type="bitmap" profile="mpManager_admin_add1_itemSeperator2"/>
+						</GuiElement>				
+					</GuiElement>
+					<GuiElement type="slider" profile="mpManager_admin_add1_slider" id="mpManager_settings2_slider">
+						<GuiElement type="button" profile="mpManager_admin_admin_sliderUp"   focusId="sliderUpPrices"/>
+						<GuiElement type="button" profile="mpManager_admin_admin_sliderDown" focusId="sliderDownPrices" />					
+						<GuiElement type="list" profile="mpManager_admin_add1_list" onSelectionChanged="onSelectionChangedSettings2List" id="mpManager_settings2_list" focusId="2200" focusChangeTop="1" focusChangeBottom="100">
+							<GuiElement type="listItem" profile="mpManager_admin_add1_listItem" id="mpManager_settings2_listItemTemplate">
+								<GuiElement type="flowLayout" profile="mpManager_listItem_layout2" >
+									<GuiElement type="bitmap" profile="mpManager_admin_add1_item1_1" >
+										<GuiElement type="text" profile="mpManager_listItemTextMiddleCenter" onCreate="onCreateSettings2Name" />
+									</GuiElement>
+									<GuiElement type="bitmap" profile="mpManager_admin_add1_item2_1" >
+										<GuiElement type="text" profile="mpManager_listItemTextMiddleCenter" onCreate="onCreateSettings2Farm" />
+									</GuiElement>		
+								</GuiElement>
+							</GuiElement>
+						</GuiElement>	
+					</GuiElement>
+					<GuiElement type="button" profile="mpManager_admin_changePlayerChange4" onClick="onCreateSettings2Change" text="$l10n_mpManager_AdminHeader7_button5" focusId="100" />
+				</GuiElement>
+				
+				<GuiElement type="empty" onCreate="onCreate_settings_menu" name="3" >				
+					<GuiElement type="bitmap" profile="mpManager_admin_item_1">
+						<GuiElement type="text" profile="mpManager_admin_itemsHeaderText" text="$l10n_mpManager_SettingsHeader3"/>
+						<GuiElement type="text" profile="mpManager_admin_itemsHeaderTextInfo" text="$l10n_mpManager_SettingsHeader3_text"/>
+					</GuiElement>					
+					
+					<GuiElement type="textInput" profile="mpManager_settings_1_1_textInput" id="mpManager_settings_husbandry1" focusId="1" focusChangeBottom="2" >
+						<GuiElement type="text" profile="mpManager_settings_text" id="mpManager_settings_husbandry1_text" />
+						<GuiElement type="button" profile="mpManager_settings_button" onClick="onClickMpManager_settings_husbandry" name="1" text="$l10n_mpManager_settings_husbandry" focusId="100" />
+					</GuiElement>
+					<GuiElement type="textInput" profile="mpManager_settings_1_2_textInput" id="mpManager_settings_husbandry2" focusId="1" focusChangeBottom="2" >
+						<GuiElement type="text" profile="mpManager_settings_text" id="mpManager_settings_husbandry2_text" />
+						<GuiElement type="button" profile="mpManager_settings_button" onClick="onClickMpManager_settings_husbandry" name="2" text="$l10n_mpManager_settings_husbandry" focusId="100" />
+					</GuiElement>
+					<GuiElement type="textInput" profile="mpManager_settings_1_3_textInput" id="mpManager_settings_husbandry3" focusId="1" focusChangeBottom="2" >
+						<GuiElement type="text" profile="mpManager_settings_text" id="mpManager_settings_husbandry3_text" />
+						<GuiElement type="button" profile="mpManager_settings_button" onClick="onClickMpManager_settings_husbandry" name="3" text="$l10n_mpManager_settings_husbandry" focusId="100" />
+					</GuiElement>
+					<GuiElement type="textInput" profile="mpManager_settings_2_1_textInput" id="mpManager_settings_husbandry4" focusId="1" focusChangeBottom="2" >
+						<GuiElement type="text" profile="mpManager_settings_text" id="mpManager_settings_husbandry4_text" />
+						<GuiElement type="button" profile="mpManager_settings_button" onClick="onClickMpManager_settings_husbandry" name="4" text="$l10n_mpManager_settings_husbandry" focusId="100" />
+					</GuiElement>				
+					<GuiElement type="textInput" profile="mpManager_settings_2_2_textInput" id="mpManager_settings_husbandry5" focusId="1" focusChangeBottom="2" >
+						<GuiElement type="text" profile="mpManager_settings_text" id="mpManager_settings_husbandry5_text" />
+						<GuiElement type="button" profile="mpManager_settings_button" onClick="onClickMpManager_settings_husbandry" name="5" text="$l10n_mpManager_settings_husbandry" focusId="100" />
+					</GuiElement>
+					<GuiElement type="textInput" profile="mpManager_settings_2_3_textInput" id="mpManager_settings_husbandry6" focusId="1" focusChangeBottom="2" >
+						<GuiElement type="text" profile="mpManager_settings_text" id="mpManager_settings_husbandry6_text" />
+						<GuiElement type="button" profile="mpManager_settings_button" onClick="onClickMpManager_settings_husbandry" name="6" text="$l10n_mpManager_settings_husbandry" focusId="100" />
+					</GuiElement>			
+					<GuiElement type="textInput" profile="mpManager_settings_3_1_textInput" id="mpManager_settings_husbandry7" focusId="1" focusChangeBottom="2" >
+						<GuiElement type="text" profile="mpManager_settings_text" id="mpManager_settings_husbandry7_text" />
+						<GuiElement type="button" profile="mpManager_settings_button" onClick="onClickMpManager_settings_husbandry" name="7" text="$l10n_mpManager_settings_husbandry" focusId="100" />
+					</GuiElement>				
+					<GuiElement type="textInput" profile="mpManager_settings_3_2_textInput" id="mpManager_settings_husbandry8" focusId="1" focusChangeBottom="2" >
+						<GuiElement type="text" profile="mpManager_settings_text" id="mpManager_settings_husbandry8_text" />
+						<GuiElement type="button" profile="mpManager_settings_button" onClick="onClickMpManager_settings_husbandry" name="8" text="$l10n_mpManager_settings_husbandry" focusId="100" />
+					</GuiElement>
+					
+					<GuiElement type="bitmap" profile="mpManager_settings_infoBg" id="mpManager_settings3_infoBox">
+						<GuiElement type="text" profile="mpManager_settings_infoText" id="mpManager_settings3_infoText"/>
+					</GuiElement>		
+				</GuiElement>
+				
+				<GuiElement type="empty" onCreate="onCreate_settings_menu" name="4" >				
+					<GuiElement type="bitmap" profile="mpManager_admin_item_1">
+						<GuiElement type="text" profile="mpManager_admin_itemsHeaderText" text="$l10n_mpManager_SettingsHeader4"/>
+						<GuiElement type="text" profile="mpManager_admin_itemsHeaderTextInfo" text="$l10n_mpManager_SettingsHeader4_text"/>
+					</GuiElement>
+					<GuiElement type="flowLayout" profile="mpManager_admin_add1_header" >
+						<GuiElement type="bitmap" profile="mpManager_admin_add1_item1" >
+							<GuiElement type="text"   profile="mpManager_items_text" text="$l10n_mpManager_SettingsHeader4_header1" />
+							<GuiElement type="bitmap" profile="mpManager_admin_add1_itemSeperator1"/>
+						</GuiElement>
+						<GuiElement type="bitmap" profile="mpManager_admin_add1_item2" >
+							<GuiElement type="text"   profile="mpManager_items_text" text="$l10n_mpManager_SettingsHeader4_header2" />
+							<GuiElement type="bitmap" profile="mpManager_admin_add1_itemSeperator2"/>
+						</GuiElement>				
+					</GuiElement>
+					<GuiElement type="slider" profile="mpManager_admin_add1_slider" id="mpManager_settings4_slider">
+						<GuiElement type="button" profile="mpManager_admin_admin_sliderUp"   focusId="sliderUpPrices"/>
+						<GuiElement type="button" profile="mpManager_admin_admin_sliderDown" focusId="sliderDownPrices" />					
+						<GuiElement type="list" profile="mpManager_admin_add1_list" onDoubleClick="onCreateSettings4Change" onSelectionChanged="onSelectionChangedSettings4List" id="mpManager_settings4_list" focusId="2200" focusChangeTop="1" focusChangeBottom="100">
+							<GuiElement type="listItem" profile="mpManager_admin_add1_listItem" id="mpManager_settings4_listItemTemplate">
+								<GuiElement type="flowLayout" profile="mpManager_listItem_layout2" >
+									<GuiElement type="bitmap" profile="mpManager_admin_add1_item1_1" >
+										<GuiElement type="text" profile="mpManager_listItemTextMiddleCenter" onCreate="onCreateSettings4Typ" />
+									</GuiElement>
+									<GuiElement type="bitmap" profile="mpManager_admin_add1_item2_1" >
+										<GuiElement type="text" profile="mpManager_listItemTextMiddleCenter" onCreate="onCreateSettings4Price" />
+									</GuiElement>		
+								</GuiElement>
+							</GuiElement>
+						</GuiElement>	
+					</GuiElement>
+					<GuiElement type="button" profile="mpManager_admin_changePlayerChange4" onClick="onCreateSettings4Change" text="$l10n_mpManager_AdminHeader7_button6" focusId="100" />
+				</GuiElement>
+				
+				
+				
+				
+				<GuiElement type="flowLayout" profile="mpManager_admin_menuStateBg" id="mpManager_settings_pageStateBox">
+					<GuiElement type="bitmap" profile="mpManager_admin_menuState" onCreate="onCreateSettingsPageState" />
+				</GuiElement>				
+            </GuiElement>	
+			
+			
+			
+			
+			
+			
+			<!-- Settings -->
+			<GuiElement type="empty" onCreate="onCreate_page" profile="mpManagerPage" name="mpManagerPage_13">		
+				<GuiElement type="text" profile="mpManagerWebHeader" text="$l10n_mpManager_web_header"/>	
+				<GuiElement type="text" profile="mpManagerWebText" text="$l10n_mpManager_web_text"/>	
+				<GuiElement type="button" profile="buttonOK" onClick="onClickWeb" size="600px 35px" position="300px 100px" text="$l10n_mpManager_web_button" focusId="100" />					
+            </GuiElement>	
+			
+			
+			
+			
+			
+			<GuiElement type="empty" onCreate="onCreate_loaded" visible="false" />
+			<GuiElement type="button" profile="buttonBack" onClick="onClickBack" size="1200px 35px" text="$l10n_mpManager_button" focusId="100" />
+		</GuiElement>
+    </GuiElement>
+</GUI>

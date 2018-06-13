@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<GUI onOpen="onOpen" onClose="onClose" onCreate="onCreate">	
+    <GuiElement type="empty" profile="newLayer" />
+    <GuiElement type="bitmap" profile="mpManagerTransferUiBackground">	
+        <GuiElement type="bitmap" profile="mpManagerTransferUiBackgroundMain">				
+			<GuiElement type="bitmap" profile="mpManagerTransferUiBackgroundHeader">
+				<GuiElement type="text" profile="headerText" text="$l10n_mpManager_Transfer_text00" />
+            </GuiElement>						
+			
+			<GuiElement type="bitmap" profile="mpManagerTransferPaper" id="gui_transferBackground" />	
+			<GuiElement type="bitmap" profile="mpManagerTransferLogo" id="gui_paperLogo" />	
+			
+			<GuiElement type="flowLayout" profile="mpManagerTransferText0102" >
+				<GuiElement type="text" profile="mpManagerTransferText01" text="$l10n_mpManager_Transfer_text01" />
+				<GuiElement type="text" profile="mpManagerTransferText02" text="$l10n_mpManager_Transfer_text02" />
+			</GuiElement>
+			
+			<GuiElement type="text" profile="mpManagerTransferText03" text="$l10n_mpManager_Transfer_text03" />
+			<GuiElement type="text" profile="mpManagerTransferText04" text="$l10n_mpManager_Transfer_text04" />
+			<GuiElement type="text" profile="mpManagerTransferText05" text="$l10n_mpManager_Transfer_text05" />
+			<GuiElement type="text" profile="mpManagerTransferText06" text="$l10n_mpManager_Transfer_text06" />
+			<GuiElement type="text" profile="mpManagerTransferText07" text="$l10n_mpManager_Transfer_text07" />
+			<GuiElement type="text" profile="mpManagerTransferText08" text="$l10n_mpManager_Transfer_text08" />
+			<GuiElement type="text" profile="mpManagerTransferText09" text="$l10n_mpManager_Transfer_text09" />
+			
+			
+			<GuiElement type="text" profile="mpManagerTransferText10" id="gui_empf" />
+			<GuiElement type="text" profile="mpManagerTransferText11" id="gui_ver1" />
+			<GuiElement type="text" profile="mpManagerTransferText12" id="gui_ver2" />
+			<GuiElement type="text" profile="mpManagerTransferText13" id="gui_money" />
+			<GuiElement type="text" profile="mpManagerTransferText14" id="gui_date" />
+			<GuiElement type="text" profile="mpManagerTransferText15" id="gui_unterschrift" />
+			
+			<GuiElement type="empty" id="gui_rightSide_createTransfer" position="0px -70px">	
+				<GuiElement type="text" profile="mpManagerTransferText16" text="$l10n_mpManager_Transfer_text16" />				
+				<GuiElement type="bitmap" profile="mpManagerTransferText_tranferSelectionHeader">
+					<GuiElement type="multiTextOption" profile="mpManagerTransferText_tranferSelection" onClick="onClickEmpChange" id="gui_SelectionEmpf" focusId="102" focusChangeRight="2" focusChangeBottom="10" focusChangeTop="102">
+						<GuiElement type="button" profile="mpManagerTransferText_tranferSelectionLeft" />
+						<GuiElement type="button" profile="mpManagerTransferText_tranferSelectionRight"/>
+						<GuiElement type="text" profile="mpManager_selectHeaderText" />
+					</GuiElement>
+				</GuiElement>
+				<GuiElement type="text" profile="mpManagerTransferText17" text="$l10n_mpManager_Transfer_text17" />			
+				<GuiElement type="textInput" profile="mpManagerTransferTextinput01" id="gui_input_zweck" onTextChanged="onTextChanged_zweck" focusId="1" focusChangeBottom="2" />
+				<GuiElement type="text" profile="mpManagerTransferText18" text="$l10n_mpManager_Transfer_text18" />			
+				<GuiElement type="textInput" profile="mpManagerTransferTextinput02" id="gui_input_zweckAdd" onTextChanged="onTextChanged_zweckAdd" focusId="1" focusChangeBottom="2" />
+				<GuiElement type="text" profile="mpManagerTransferText19" text="$l10n_mpManager_Transfer_text19" />			
+				<GuiElement type="textInput" profile="mpManagerTransferTextinput03" id="gui_input_money" onTextChanged="onTextChanged_zweckMoney" focusId="1" focusChangeBottom="2" />
+			
+			</GuiElement>
+			
+			<GuiElement type="bitmap" profile="mpManagerTransfer_Background01" id="gui_seperator" />	
+			
+			<GuiElement type="button" profile="mpManagerButton4" id="gui_button_delete" position="500px 60px" size="390px 30px" text="$l10n_mpManager_Transfer_button03" onClick="onClickDelete" focusId="3" focusInit="onOpen"/>
+			<GuiElement type="button" profile="mpManagerButton3" id="gui_button_apply" position="500px 60px" size="390px 30px" text="$l10n_mpManager_Transfer_button01" onClick="onClickApply" focusId="3" focusInit="onOpen"/>
+			<GuiElement type="button" profile="mpManagerButton2" id="gui_button_back" position="500px 20px" size="390px 30px" textOffset="0px 10px" text="$l10n_mpManager_Transfer_button02" onClick="onClickBack" focusId="4" focusInit="onOpen"/>
+		 
+		 
+		</GuiElement>
+    </GuiElement>
+</GUI>

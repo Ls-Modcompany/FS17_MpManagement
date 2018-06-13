@@ -1,0 +1,39 @@
+<data>
+	<works>
+		<work name="additionalCost" price="100" unit="Stk"/>
+		
+		<work name="bale1" price="50" unit="Stk"/>
+		<work name="bale2" price="50" unit="Stk"/>
+		<work name="bale3" price="50" unit="Stk"/>
+		
+		<work name="field1" price="850" unit="ha"/>
+		<work name="field2" price="500" unit="ha"/>
+		<work name="field3" price="150" unit="ha"/>
+		<work name="field4" price="250" unit="ha"/>
+		<work name="field5" price="200" unit="ha"/>
+		<work name="field6" price="550" unit="ha"/>	
+		<work name="field7" price="1350" unit="ha"/>
+		<work name="field8" price="1400" unit="ha"/>
+		<work name="field9" price="4000" unit="ha"/>
+		<work name="field10" price="400" unit="ha"/>
+		<work name="field11" price="600" unit="ha"/>
+		<work name="field12" price="50" unit="Stk"/>	
+		
+		<work name="add1" price="800" unit="Std"/>
+		<work name="add2" price="800" unit="Std"/>
+		<work name="add3" price="1500" unit="Std"/>
+		<work name="add4" price="1200" unit="Std"/>
+		<work name="add5" price="1500" unit="Std"/>
+		
+		<work name="trees1" price="900" unit="Std"/>
+		<work name="trees2" price="900" unit="Std"/>
+		<work name="trees3" price="900" unit="Std"/>
+		
+		<work name="drive1" price="1000" unit="Std"/>
+		<work name="drive2" price="900" unit="Std"/>
+		<work name="drive3" price="100" unit="Stk"/>
+		<work name="drive4" price="1000" unit="Std"/>
+		<work name="drive5" price="50" unit="Std"/>
+		<work name="drive6" price="1000" unit="Std"/>
+	</works>
+</data>

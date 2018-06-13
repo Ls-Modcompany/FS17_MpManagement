@@ -1,0 +1,452 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<l10n><elements>
+<e k="mpManagerConfig_header" v="MP-Manager - Konfiguration"/>
+<e k="mpManagerConfig_step1_header" v='Willkommen beim "MP-Manager!"'/>
+<e k="mpManagerConfig_step1_headerStep" v="Schritt:"/>
+<e k="mpManagerConfig_step1_text" v='Vor dem ersten Start des "MP-Manager” sind einige Einstellungen vorzunehmen. 
+	Der Konfigurationsassistent leitet dich auf den folgenden Seiten Schritt für Schritt durch die Konfiguration.
+	Support bei Fragen und Problemen erhältst du auf “ls-modcompany.com”.
+	Um die Konfiguration zu starten, klicke unten auf "Konfiguration starten".
+	
+	Wir wünschen viel Spaß!'/>
+<e k="mpManagerConfig_breakConfig" v="Konfiguration abbrechen"/>
+<e k="mpManagerConfig_startConfig" v="Konfiguration starten"/>
+<e k="mpManagerConfig_continueConfig" v="Weiter"/>
+<e k="mpManagerConfig_continueBackConfig" v="Zurück"/>
+
+<e k="mpManagerConfig_step2_header" v="Administration"/>
+<e k="mpManagerConfig_step2_info" v="Lege fest, wer die Admins des Spiels sind. Wichtig: verwende beim Anlegen den Ingamenamen der Administratoren."/>	
+<e k="mpManagerConfig_step2_removeAdmin" v="markierten Admin entfernen"/>
+<e k="mpManagerConfig_step2_addAdmin" v="Admin hinzufügen"/>
+
+<e k="mpManagerConfig_step3_header" v="Mitspieler"/>
+<e k="mpManagerConfig_step3_info" v="Lege alle Mitspieler an. Wichtig: verwende beim Anlegen den Ingamenamen der Mitspieler."/>		
+<e k="mpManagerConfig_step3_removePlayer" v="markierten Mitspieler entfernen"/>
+<e k="mpManagerConfig_step3_addPlayer" v="Mitspieler hinzufügen"/>
+
+<e k="mpManagerConfig_step4_header" v="Höfe"/>
+<e k="mpManagerConfig_step4_info" v="Lege alle vorhandenen Höfe an."/>		
+<e k="mpManagerConfig_step4_removeFarm" v="markierten Hof entfernen"/>
+<e k="mpManagerConfig_step4_addFarm" v="Hof hinzufügen"/>
+
+<e k="mpManagerConfig_step5_header" v="Hofeinteilung"/>
+<e k="mpManagerConfig_step5_info" v="Lege fest, welcher Mitspieler welchem Hof angehörig ist."/>		
+<e k="mpManagerConfig_step5_editSort" v="Zuweisung bearbeiten"/>
+
+<e k="mpManagerConfig_step6_header" v="Hofleitung"/>
+<e k="mpManagerConfig_step6_info" v="Lege fest, welcher Mitspieler die Hofleitung übernehmen soll."/>		
+<e k="mpManagerConfig_step6_editLeader" v="Hofleiter ändern"/>
+
+<e k="mpManagerConfig_AddAdmin_header" v="MP-Manager - Neuer Administrator"/>
+<e k="mpManagerConfig_AddAdmin_text" v="Lege einen neuen Admin an ..."/>
+<e k="mpManagerConfig_AddAdmin_textInfo" v="'%s' wurde erfolgreich als Admin angelegt."/>
+<e k="mpManagerConfig_AddAdmin_textInfo2" v="'%s' ist bereits Admin."/>
+<e k="mpManagerConfig_AddAdmin_textInfo3" v="Gebe einen Namen ein!"/>
+<e k="mpManagerConfig_AddAdmin_button" v="Weiter"/>
+<e k="mpManagerConfig_RemoveAdmin_text" v="'%s' als Administrator entfernen?"/>
+
+<e k="mpManagerConfig_AdminPw_header" v="MP-Manager - Adminpasswort"/>
+<e k="mpManagerConfig_AdminPw_text" v="Lege das Passwort für den Administratorenbereich fest."/>
+<e k="mpManagerConfig_AdminPw_textInfo" v="'%s' wurde erfolgreich als Passwort angelegt."/>
+<e k="mpManagerConfig_AdminPw_button" v="Weiter"/>
+
+<e k="mpManagerConfig_AddUser_header" v="MP-Manager - Neuer Mitspieler"/>
+<e k="mpManagerConfig_AddUser_text" v="Lege einen neuen Mitspieler an ..."/>
+<e k="mpManagerConfig_AddUser_textInfo" v="'%s' wurde erfolgreich als Mitspieler angelegt."/>
+<e k="mpManagerConfig_AddUser_textInfo2" v="'%s' ist bereits angelegt."/>
+<e k="mpManagerConfig_AddUser_textInfo3" v="Gebe einen Namen ein!"/>
+<e k="mpManagerConfig_AddUser_button" v="Weiter"/>
+<e k="mpManagerConfig_RemoveUser_text" v="'%s' als Mitspieler entfernen?"/>
+
+<e k="mpManagerConfig_AddFarm_header" v="MP-Manager - Neuer Hof"/>
+<e k="mpManagerConfig_AddFarm_text" v="Lege einen neuen Hof an ..."/>
+<e k="mpManagerConfig_AddFarm_textInfo" v="Hof '%s' wurde erfolgreich angelegt."/>
+<e k="mpManagerConfig_AddFarm_textInfo2" v="'%s' ist bereits vorhanden."/>
+<e k="mpManagerConfig_AddFarm_textInfo3" v="Gebe einen Namen ein!"/>
+<e k="mpManagerConfig_AddFarm_button" v="Weiter"/>
+<e k="mpManagerConfig_RemoveFarm_text" v="Hof '%s' entfernen?"/>
+
+<e k="mpManagerConfig_FarmUser_header" v="MP-Manager - Hofeinteilung"/>
+<e k="mpManagerConfig_FarmUser_text" v="Lege fest, welchem Hof %s angehören soll."/>
+<e k="mpManagerConfig_FarmUser_textInfo" v="Hofzuteilung für '%s' wurde erfolgreich geändert."/>
+<e k="mpManagerConfig_FarmUser_button" v="Weiter"/>
+
+<e k="mpManagerConfig_FarmLeader_header" v="MP-Manager - Hofleitung"/>
+<e k="mpManagerConfig_FarmLeader_text" v="Lege den Hofleiter von %s fest."/>
+<e k="mpManagerConfig_FarmLeader_textInfo" v="Hofleiter für '%s' wurde erfolgreich geändert."/>
+<e k="mpManagerConfig_FarmLeader_error1" v="Für Hof %s kann keinen Hofleiter festgelegt werden. Diesem Hof sind keine Mitspieler zugeteilt."/>
+<e k="mpManagerConfig_FarmLeader_button" v="Weiter"/>
+
+<e k="mpManagerConfig_FarmMoney_header" v="MP-Manager - Startkapital"/>
+<e k="mpManagerConfig_FarmMone_text" v="Lege das Startkapital der Höfe fest"/>
+<e k="mpManagerConfig_FarmMone_textInfo" v="Startkapital wurde auf %s festgelegt."/>
+<e k="mpManagerConfig_FarmMone_button" v="Weiter"/>
+
+<e k="mpManagerConfig_error1" v="Es wurden keine Administratoren angelegt."/>
+<e k="mpManagerConfig_error2" v="Es wurden keine Mitspieler angelegt."/>
+<e k="mpManagerConfig_error3" v="Fehler bei Mitspieler %s."/>
+<e k="mpManagerConfig_error4" v="Es wurden keine Höfe angelegt."/>
+<e k="mpManagerConfig_error5" v="Fehler bei Hof %s."/>
+<e k="mpManagerConfig_error6" v="Du musst ein Passwort eingeben!"/>
+<e k="mpManagerConfig_error7" v="%s konfiguriert momentan den MP-Manager."/>
+<e k="mpManagerConfig_error8" v="Du musst ein Startkapital eingeben!"/>
+
+<e k="mpManagerConfig_finish" v="Herzlichen Glückwunsch! 
+Der MP-Manager wurde erfolgreich konfiguriert."/>
+<e k="mpManagerInfo_header" v="MP-Manager - Information"/>
+<e k="mpManagerInfo_button" v="OK"/>
+<e k="mpManagerCheck_header" v="MP-Manager"/>
+<e k="mpManagerCheck_buttonYes" v="Ja"/>
+<e k="mpManagerCheck_buttonNo" v="Nein"/>
+
+<e k="mpManager_button" v="Schließen"/>
+
+<!-- Konto -->
+<e k="mpManager_konto_items_farm" v="Hof"/>
+<e k="mpManager_konto_items_farmleader" v="Hofleiter"/>
+<e k="mpManager_konto_items_inputs" v="Einnahmen"/>
+<e k="mpManager_konto_items_outputs" v="Ausgaben"/>
+<e k="mpManager_konto_items_outputsWage" v="Ausgaben Lohnarbeiten"/>
+<e k="mpManager_konto_items_yearBalance" v="Jahresbilanz"/>
+
+<!-- MoneyOutput -->
+<e k="mpManager_moneyoutput_items_datum" v="Datum/Uhrzeit"/>
+<e k="mpManager_moneyoutput_items_name" v="Name"/>
+<e k="mpManager_moneyoutput_items_category" v="Kategorie"/>
+<e k="mpManager_moneyoutput_items_addInfos" v="Information"/>
+<e k="mpManager_moneyoutput_items_sellTo" v="Einkauf von/Gesendet an"/>
+<e k="mpManager_moneyoutput_items_num" v="Anzahl/Liter/Nummer"/>
+<e k="mpManager_moneyoutput_items_balance" v="Gesamtpreis"/>
+
+<!-- MoneyInput -->
+<e k="mpManager_moneyinput_items_datum" v="Datum/Uhrzeit"/>
+<e k="mpManager_moneyinput_items_name" v="Name"/>
+<e k="mpManager_moneyinput_items_category" v="Kategorie"/>
+<e k="mpManager_moneyinput_items_addInfos" v="Information"/>
+<e k="mpManager_moneyinput_items_sellTo" v="Einnahmen/Empfangen von"/>
+<e k="mpManager_moneyinput_items_num" v="Anzahl/Liter/Nummer"/>
+<e k="mpManager_moneyinput_items_balance" v="Gesamtpreis"/>
+<e k="mpManager_moneyinput_automaticIncome" v="Automatische Zahlung"/>
+<e k="mpManager_moneyinput_automaticIncome2" v="Automatische Zahlung - Lagerkosten"/>
+
+<!-- Home -->
+<e k="mpManager_home_items_farm" v="Hof"/>
+<e k="mpManager_home_items_farmleader" v="Hofleiter"/>
+<e k="mpManager_home_items_numPlayers" v="Anzahl Mitarbeiter"/>
+<e k="mpManager_home_items_vehicles" v="Fahrzeuge im Besitz"/>
+<e k="mpManager_home_items_animals" v="Tiere im Besitz"/>
+<e k="mpManager_home_items_balance" v="Kontostand"/>
+
+<!-- Admin -->
+<e k="mpManager_AdminLogin_header" v="Administration - Login"/>
+<e k="mpManager_AdminLogin_text" v="Logge dich mit dem Adminpasswort in den Administratorenbereich ein."/>
+<e k="mpManager_AdminLogin_text2" v="Passwort inkorrekt."/>
+<e k="mpManager_AdminLogin_button" v="Login"/>
+
+<e k="mpManager_AdminMenu_1" v="Administration"/>
+<e k="mpManager_AdminMenu_2" v="Mitspieler"/>
+<e k="mpManager_AdminMenu_3" v="Höfe"/>
+<e k="mpManager_AdminMenu_4" v="Sonstiges 1"/>
+<e k="mpManager_AdminMenu_5" v="Sonstiges 2"/>
+
+<e k="mpManager_AdminHeader1" v="Passwort"/>
+<e k="mpManager_AdminHeader1_text" v="Lege das Passwort für den Administratorenbereich fest."/>
+<e k="mpManager_AdminHeader1_button" v="Passwort bestätigen"/>
+
+<e k="mpManager_AdminHeader2" v="Neuer Administratoren"/>
+<e k="mpManager_AdminHeader2_text" v="Lege einen neuen Administratoren an. (Bitte Name eingeben)"/>
+<e k="mpManager_AdminHeader2_button" v="Administrator anlegen"/>
+
+<e k="mpManager_AdminHeader3" v="Administratoren entfernen"/>
+<e k="mpManager_AdminHeader3_text" v="Entferne Administratoren."/>
+<e k="mpManager_AdminHeader3_button" v="Markierten Administrator löschen"/>
+<e k="mpManager_AdminHeader3_header1" v="Name"/>
+<e k="mpManager_AdminHeader3_header2" v="Hof"/>
+
+<e k="mpManager_AdminHeader4" v="Neuer Mitspieler"/>
+<e k="mpManager_AdminHeader4_text" v="Lege einen neuen Mitspieler an. (Bitte Name eingeben und zugehörigen Hof wählen.)"/>
+<e k="mpManager_AdminHeader4_button" v="Mitspieler anlegen"/>
+
+<e k="mpManager_AdminHeader5" v="Mitspieler löschen und ändern"/>
+<e k="mpManager_AdminHeader5_text" v="Entferne Mitspieler oder ändere den Namen bzw. den zugeörigen Hof."/>
+<e k="mpManager_AdminHeader5_text1" v="Ja"/>
+<e k="mpManager_AdminHeader5_text2" v="Nein"/>
+<e k="mpManager_AdminHeader5_button1" v="Name ändern"/>
+<e k="mpManager_AdminHeader5_button2" v="Hof ändern"/>
+<e k="mpManager_AdminHeader5_button3" v="Mitspieler löschen"/>
+<e k="mpManager_AdminHeader5_header1" v="Name"/>
+<e k="mpManager_AdminHeader5_header2" v="Hof"/>
+<e k="mpManager_AdminHeader5_header3" v="Admin"/>
+
+<e k="mpManager_AdminHeader6" v="Neuer Hof"/>
+<e k="mpManager_AdminHeader6_text" v="Lege einen neuen Hof an. (Bitte Name eingeben und Hofleiter wählen.)"/>
+<e k="mpManager_AdminHeader6_button" v="Hof anlegen"/>
+
+<e k="mpManager_AdminHeader7" v="Höfe löschen und ändern"/>
+<e k="mpManager_AdminHeader7_text" v="Entferne Höfe oder ändere den Namen bzw. den Hofleiter."/>
+<e k="mpManager_AdminHeader7_button1" v="Name ändern"/>
+<e k="mpManager_AdminHeader7_button2" v="Hofleiter ändern"/>
+<e k="mpManager_AdminHeader7_button3" v="Kaptial ändern"/>
+<e k="mpManager_AdminHeader7_button4" v="Hof löschen"/>
+<e k="mpManager_AdminHeader7_button5" v="Hof ändern"/>
+<e k="mpManager_AdminHeader7_button6" v="Preis ändern"/>
+<e k="mpManager_AdminHeader7_header1" v="Name"/>
+<e k="mpManager_AdminHeader7_header2" v="Hofleiter"/>
+<e k="mpManager_AdminHeader7_header3" v="Kaptial"/>
+
+<e k="mpManager_AdminHeader8" v="Datenlöschung"/>
+<e k="mpManager_AdminHeader8_text" v="Lösche einzelne Daten, wenn es Fehler gibt oder es sich schon zu viele Daten angesammelt haben."/>
+<e k="mpManager_AdminHeader8_button1" v="Einkaufslisten"/>
+<e k="mpManager_AdminHeader8_button2" v="Verkaufslisten"/>
+<e k="mpManager_AdminHeader8_button3" v="Rechnungen"/>
+<e k="mpManager_AdminHeader8_button4" v="Überweisungen"/>
+
+<e k="mpManager_AdminInfo1" v="Du musst ein Passwort eingeben!"/>
+<e k="mpManager_AdminInfo2" v="Passwort wurde erfolgreich geändert!"/>
+<e k="mpManager_AdminInfo3" v="Du musst ein Name eingeben!"/>
+<e k="mpManager_AdminInfo4" v="%s ist jetzt Administrator."/>
+<e k="mpManager_AdminInfo5" v="Du bist kein Administrator!"/>
+<e k="mpManager_AdminInfo6" v="%s ist jetzt ein neuer Mitspieler."/>
+<e k="mpManager_AdminInfo7" v="%s ist Hofleiter und deswegen nicht entfernt werden."/>
+<e k="mpManager_AdminInfo8" v="Name wurde auf %s geändert."/>
+<e k="mpManager_AdminInfo9" v="Hof wurde auf %s geändert."/>
+<e k="mpManager_AdminInfo10" v="%s ist Hofleiter und kann deswegen nicht geändert werden."/>
+<e k="mpManager_AdminInfo11" v="Hofname wurde auf %s geändert."/>
+<e k="mpManager_AdminInfo12" v="Kein freier Mitspieler."/>
+<e k="mpManager_AdminInfo13" v="Hofleiter ist jetzt %s"/>
+<e k="mpManager_AdminInfo14" v="Es muss mindestens ein Hof geben!"/>
+<e k="mpManager_AdminInfo15" v="%s ist jetzt ein neuer Hof."/>
+<e k="mpManager_AdminInfo16" v="Es ist kein Hofleiter verfügbar!"/>
+<e k="mpManager_AdminInfo17" v="Kaptial erfolgreich geändert!"/>
+<e k="mpManager_AdminInfo18" v="Eingabe ungültig!"/>
+<e k="mpManager_AdminInfo19" v="Nur Hofleiter dürfen Rechnungen schreiben!"/>
+<e k="mpManager_AdminInfo20" v="Nur Hofleiter dürfen Überweisung ausstellen!"/>
+<e k="mpManager_AdminInfo21" v="Du bist kein Hofleiter!"/>
+
+<e k="mpManager_AdminCheck1" v="'%s' als Administrator entfernen?"/>
+<e k="mpManager_AdminCheck2" v="'%s' als Mitspieler entfernen?"/>
+<e k="mpManager_AdminCheck3" v="'%s' als Hof entfernen?"/>
+<e k="mpManager_AdminCheck4" v="Alle Einkaufslisten löschen?"/>
+<e k="mpManager_AdminCheck5" v="Alle Verkaufslisten löschen?"/>
+<e k="mpManager_AdminCheck6" v="Alle Rechnungen löschen?"/>
+<e k="mpManager_AdminCheck7" v="Alle Überweisungen löschen?"/>
+
+<e k="mpManager_AdminInput1_header" v="MP-Manager - Mitspieler ändern"/>
+<e k="mpManager_AdminInput1_text" v="Ändere den Namen des Mitspielers"/>
+<e k="mpManager_AdminInput1_button" v="Ok"/>
+<e k="mpManager_AdminInput2_header" v="MP-Manager - Mitspieler ändern"/>
+<e k="mpManager_AdminInput2_text" v="Ändere den zugehörigen Hof von %s"/>
+<e k="mpManager_AdminInput2_button" v="Ok"/>
+
+<e k="mpManager_AdminInput3_header" v="MP-Manager - Hof ändern"/>
+<e k="mpManager_AdminInput3_text" v="Ändere den Hofleiter des Hofes"/>
+<e k="mpManager_AdminInput3_button" v="Ok"/>
+
+<e k="mpManager_AdminInput4_header" v="MP-Manager - Hofleiter ändern"/>
+<e k="mpManager_AdminInput4_text" v="Ändere den Hofleiter des Hofes"/>
+<e k="mpManager_AdminInput4_button" v="Ok"/>
+
+<e k="mpManager_AdminInput5_header" v="MP-Manager - Kapital ändern"/>
+<e k="mpManager_AdminInput5_text" v="Ändere das Kaptial des Hofes"/>
+<e k="mpManager_AdminInput5_button" v="Ok"/>
+
+<!-- Assignables -->
+<e k="Assignables_notAssigned" v="Jeder"/>
+<e k="Assignables_milkSell" v="Automatischer Milchverkauf"/>
+<e k="Assignables_noVehicleEnter" v="Dieses Fahrzeug gehört dir nicht!"/>
+
+<!-- MoneyStats -->
+<e k="workerCost" v="Helferkosten"/>
+<e k="worker" v="Mitarbeiter"/>
+
+<!-- Settings Admin -->
+<e k="settings_1_header" v="Auszahlung Einnahmen eingeteilter Gebäude"/>
+<e k="settings_1_1" v="Stündlich"/>
+<e k="settings_1_2" v="Täglich"/>
+
+<e k="settings_20_1" v="Jeder"/>
+<e k="settings_20_2" v="Hofleiter"/>
+<e k="settings_21_header" v="Rechnungen erstellen"/>
+<e k="settings_22_header" v="Rechnungen zahlen"/>
+<e k="settings_23_header" v="Überweisung erstellen"/>
+
+<!-- Settings -->
+<e k="mpManager_SettingsMenu_1" v="Einteilungen - Objekte"/>
+<e k="mpManager_SettingsMenu_2" v="Einteilungen - Fahrzeuge"/>
+<e k="mpManager_SettingsMenu_3" v="Einteilungen - Tiere"/>
+<e k="mpManager_SettingsMenu_4" v="Einteilungen - Hofpreise"/>
+
+<e k="mpManager_SettingsHeader1" v="Einteilungen - Objekte"/>
+<e k="mpManager_SettingsHeader1_text" v="Teile ein wer Einnahmen von Objekten bekommt. Bei 'Jeder' bekommt jeder Hof den gleichen Anteil."/>
+<e k="mpManager_SettingsHeader1_header1" v="Objekte"/>
+<e k="mpManager_SettingsHeader1_header2" v="Zugehörigkeit"/>
+
+<e k="mpManager_SettingsHeader2" v="Einteilungen - Fahrzeuge und Geräte"/>
+<e k="mpManager_SettingsHeader2_text" v="Teile ein wem welches Fahrzeug gehört. Bei 'Jeder' kann jeder das Fahrzeug benützen."/>
+<e k="mpManager_SettingsHeader2_header1" v="Fahrzeug"/>
+<e k="mpManager_SettingsHeader2_header2" v="Zugehörigkeit"/>
+
+<e k="mpManager_SettingsHeader3" v="Einteilungen - Tiere"/>
+<e k="mpManager_SettingsHeader3_text" v="Lege fest wie viele Tiere du hast."/>
+<e k="mpManager_SettingsHeader3_text1" v="Anzahl nicht zugewiesenen Tiere:"/>
+<e k="mpManager_settings_husbandry" v="Ok"/>
+
+<e k="mpManager_SettingsHeader4" v="Hofpreise"/>
+<e k="mpManager_SettingsHeader4_text" v="Lege eigene Hofpreise fest!"/>
+<e k="mpManager_SettingsHeader4_header1" v="Art"/>
+<e k="mpManager_SettingsHeader4_header2" v="Preis"/>
+
+<e k="mpManager_SettingsInput1_header" v="MP-Manager - Gebäudezuordnung ändern"/>
+<e k="mpManager_SettingsInput1_text" v="Ändere die Gebäudezuordnung von %s"/>
+<e k="mpManager_SettingsInput1_button" v="Ändern"/>
+
+<e k="mpManager_SettingsInput2_header" v="MP-Manager - Fahrzeugzuordnung ändern"/>
+<e k="mpManager_SettingsInput2_text" v="Ändere die Fahrzeugzuordnung von %s"/>
+<e k="mpManager_SettingsInput2_button" v="Ändern"/>
+
+<e k="mpManager_SettingsInput4_header" v="MP-Manager - Hofpreise ändern"/>
+<e k="mpManager_SettingsInput4_text" v="Ändere die Hofpreise von %s"/>
+<e k="mpManager_SettingsInput4_button" v="Ändern"/>
+
+<e k="mpManager_SettingsInfo1" v="Wert erfolgreich geändert!"/>
+<e k="mpManager_SettingsInfo2" v="Bitte gebe eine Zahl ein!"/>
+
+<!-- MoneyAssignment -->
+<e k="mpManager_MoneyAssignment_header" v="Geldzuweisung"/>
+<e k="mpManager_MoneyAssignment_textNeg" v="Hast du gerade etwas verkauft? Wenn ja, dann bestätige mit 'Ja'! Optional kann auch ein Hof gewählt werden, wohin das Geld gehen soll."/>
+<e k="mpManager_MoneyAssignment_textPos" v="Hast du gerade etwas gekauft? Wenn ja, dann bestätige mit 'Ja'! Optional kann auch ein Hof gewählt werden, wohin das Geld gehen soll."/>
+
+<e k="mpManager_MoneyAssignment_train" v="Verkauf durch Zug"/>
+<e k="mpManager_MoneyAssignment_siloExtension" v="Verkauf Siloerweiterung"/>
+<e k="mpManager_MoneyAssignment_handtool" v="Verkauf Handtool"/>
+<e k="mpManager_MoneyAssignment_placeable" v="Verkauf platzierbares Objekt"/>
+<e k="mpManager_MoneyAssignment_vehicle" v="Verkauf Fahrzeug"/>
+<e k="mpManager_MoneyAssignment_baledestroytrigger" v="Verkauf Ballen"/>
+<e k="mpManager_MoneyAssignment_palletTrigger" v="Verkauf Palette"/>
+<e k="mpManager_MoneyAssignment_pickupObectsSellTrigger" v="Verkauf tragbarer Objekte"/>
+
+<e k="mpManager_Bill_header" v="Neue Rechnung"/>
+<e k="mpManager_Bill_header01" v="Addresse wählen:"/>
+<e k="mpManager_Bill_header02" v="Neuer Eintrag erstellen:"/>
+<e k="mpManager_Bill_header03" v="Leistung:"/>
+<e k="mpManager_Bill_header04" v="Ort:"/>
+<e k="mpManager_Bill_header05" v="Anzahl:"/>
+<e k="mpManager_Bill_header06" v="Rechnung Nr."/>
+<e k="mpManager_Bill_info01" v="Ich bedanke mich für die gute Zusammenarbeit und stelle Dir vereinbarungsmäßig folgende Leistung in Rechnung:"/>
+<e k="mpManager_Bill_info02" v="Rechnungsgenerator LS-Modcompany 2018"/>
+<e k="mpManager_Bill_info03" v="nichts gewählt"/>
+<e k="mpManager_Bill_info04" v="Diese Rechnung wirklich löschen?"/>
+<e k="mpManager_Bill_listHeader01" v="Pos."/>
+<e k="mpManager_Bill_listHeader02" v="Menge"/>
+<e k="mpManager_Bill_listHeader03" v="Einzel/€"/>
+<e k="mpManager_Bill_listHeader04" v="Gesamt/€"/>
+<e k="mpManager_Bill_listHeader05" v="Gesamtsumme:"/>
+<e k="mpManager_Bill_button01" v="Rechnung zurücksetzen"/>
+<e k="mpManager_Bill_button02" v="Rechnung abschicken"/>
+<e k="mpManager_Bill_button03" v="Abbrechen"/>
+<e k="mpManager_Bill_button04" v="Leistung wählen"/>
+<e k="mpManager_Bill_button05" v="Ort wählen"/>
+<e k="mpManager_Bill_button06" v="Anzahl wählen"/>
+<e k="mpManager_Bill_button07" v="Eintrag hinzufügen"/>
+<e k="mpManager_Bill_button08" v="Bezahlen"/>
+<e k="mpManager_Bill_button09" v="Löschen"/>
+
+<e k="mpManager_Bills_item1" v="Rechnungs-Id"/>
+<e k="mpManager_Bills_item2" v="Empänger"/>
+<e k="mpManager_Bills_item3" v="Absender"/>
+<e k="mpManager_Bills_item4" v="Anzahl Einträge"/>
+<e k="mpManager_Bills_item5" v="Gesamtpreis"/>
+<e k="mpManager_Bills_item6" v="Status"/>
+
+<e k="mpManager_Selection_button01" v="Abbrechen"/>
+<e k="mpManager_Selection_button02" v="OK"/>
+
+<e k="billsState_1" v="Unbezahlt"/>
+<e k="billsState_2" v="Bezahlt"/>
+
+<e k="unit_Stk" v="Stück"/>
+<e k="unit_ha" v="Hektar"/>
+<e k="unit_Std" v="Stunden"/>
+<e k="unitS_Stk" v="Stk."/>
+<e k="unitS_ha" v="HA"/>
+<e k="unitS_Std" v="Std."/>
+
+<e k="work_flow_item1" v="Leistung"/>
+<e k="work_flow_item2" v="Einheit"/>
+<e k="work_flow_item3" v="Kosten/Einheit"/>
+<e k="work_flow_item4" v="Ort"/>
+<e k="work_flow_item5" v="Anzahl"/>
+
+<e k="work_additionalCost" v="Zusätzliche Kosten"/>
+
+<e k="work_bale1" v="Ballen kaufen & Liefern"/>
+<e k="work_bale2" v="Ballen verladen & Liefern"/>
+<e k="work_bale3" v="Ballen wickeln"/>
+
+<e k="work_field1" v="Pflügen"/>
+<e k="work_field2" v="Grubbern"/>
+<e k="work_field3" v="Striegeln"/>
+<e k="work_field4" v="Organisches Düngen"/>
+<e k="work_field5" v="Künstliches Düngen"/>
+<e k="work_field6" v="Sähen"/>
+<e k="work_field7" v="Dreschen"/>
+<e k="work_field8" v="Häckseln"/>
+<e k="work_field9" v="Kartoffeln/Zuckerrüben ernten"/>
+<e k="work_field10" v="Mähen - Schwaden"/>
+<e k="work_field11" v="Mähen - Zetten - Schwaden"/>
+<e k="work_field12" v="Pressen"/>
+
+<e k="work_add1" v="Fütterungsarbeiten"/>
+<e k="work_add2" v="Stall putzen"/>
+<e k="work_add3" v="Schnee räumen"/>
+<e k="work_add4" v="Handarbeitskraft"/>
+<e k="work_add5" v="Schaufelarbeiten"/>
+
+<e k="work_trees1" v="Bäume pflanzen"/>
+<e k="work_trees2" v="Bäume fällen"/>
+<e k="work_trees3" v="Baumstumpfen entfernen"/>
+
+<e k="work_drive1" v="Abfahren"/>
+<e k="work_drive2" v="Silo festfahren"/>
+<e k="work_drive3" v="Lieferung"/>
+<e k="work_drive4" v="Transportfahrten"/>
+<e k="work_drive5" v="Viehtransport"/>
+<e k="work_drive6" v="Fahrzeugmiete"/>
+
+<e k="mpManager_Transfer_text00" v="Neue Überweisung"/>
+<e k="mpManager_Transfer_text01" v="SEPA-Überweisung"/>
+<e k="mpManager_Transfer_text02" v="/Zahlschein"/>
+<e k="mpManager_Transfer_text03" v="Für Überweisungen in Deutschland und in andere EU-/EWR- Staaten in Euro."/>
+<e k="mpManager_Transfer_text04" v="Empfänger"/>
+<e k="mpManager_Transfer_text05" v="Verwendungszweck"/>
+<e k="mpManager_Transfer_text06" v="Noch Verwendungszweck"/>
+<e k="mpManager_Transfer_text07" v="Betrag"/>
+<e k="mpManager_Transfer_text08" v="Datum"/>
+<e k="mpManager_Transfer_text09" v="Unterschrift"/>
+<e k="mpManager_Transfer_text16" v="Empänger wählen:"/>
+<e k="mpManager_Transfer_text17" v="Verwendungszweck:"/>
+<e k="mpManager_Transfer_text18" v="Noch Verwendungszweck:"/>
+<e k="mpManager_Transfer_text19" v="Betrag:"/>
+<e k="mpManager_Transfer_text20" v="Überweisung geschrieben"/>
+<e k="mpManager_Transfer_text21" v="Überweisung erhalten"/>
+<e k="mpManager_Transfer_text22" v="Rechnungsnummer %s"/>
+<e k="mpManager_Transfer_text23" v="Diese Überweisung wirklich löschen?"/>
+<e k="mpManager_Transfer_button01" v="Überweisung abschicken"/>
+<e k="mpManager_Transfer_button02" v="Abbrechen"/>
+<e k="mpManager_Transfer_button03" v="Löschen"/>
+<e k="mpManager_Transfer_item1" v="Überweisungs-Id"/>
+<e k="mpManager_Transfer_item2" v="Datum"/>
+<e k="mpManager_Transfer_item3" v="Empfänger"/>
+<e k="mpManager_Transfer_item4" v="Absender"/>
+<e k="mpManager_Transfer_item5" v="Verwendungszweck"/>
+<e k="mpManager_Transfer_item6" v="Betrag"/>
+
+<!-- Web -->
+<e k="mpManager_web_button" v="MpManagerWeb öffnen"/>
+<e k="mpManager_web_header" v="MpManagerWeb"/>
+<e k="mpManager_web_text" v="MpManagerWeb ist für diesen Mod die passende Erweiterung. Dabei handelt es sich um eine eigene Website.
+Dort werden alle Daten übersichtlich dargestellt. So kann man auch unterwegs den aktuellen Stand kontrollieren.
+Probier es aus! Wenn du auf dem Server eingeloggt bist, musst du nur unten auf den Button klicken und dann wird nur noch ein Passwort gebraucht.
+Dieses musst du dann mit dem Link (der schon automatisch eingetragen wird) deinen anderen Mitspielern geben, damit diese sich auch einloggen können."/>
+
+</elements></l10n>

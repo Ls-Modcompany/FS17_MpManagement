@@ -1,0 +1,2230 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<GUIProfiles>  
+	
+	<Presets>
+        <Preset name="colorWhite" value="1 1 1 1" />
+        <Preset name="colorWhite_0" value="1 1 1 0" />
+        <Preset name="colorWhite_30" value="1 1 1 0.3" />
+        <Preset name="colorGreen" value="0.2122 0.5271 0.0307 1" />
+        <Preset name="colorGreen_0" value="0.2122 0.5271 0.0307 0" />
+        <Preset name="colorGreen_50" value="0.2122 0.5271 0.0307 0.5" />
+        <Preset name="colorGreen2" value="0.2705 0.6514 0.0802 1" />
+        <Preset name="colorRed" value="0.8069 0.0097 0.0097 1" />
+        <Preset name="colorRed2" value="0.2832 0.0091 0.0091 1" />
+        <Preset name="colorRed3" value="0.6514 0.0399 0.0399 1" />
+        <Preset name="colorRed4" value="0.45 0.0091 0.0091 1" />
+        <Preset name="colorBlue" value="0.0742 0.4341 0.6939 1" />
+        <Preset name="colorBlue2" value="0.0091 0.0931 0.5841 1" />
+        <Preset name="colorOrange" value="0.9301 0.2874 0.0130 1" />
+        <Preset name="colorOrange2" value="0.7304 0.1746 0.0262 1" />
+        <Preset name="colorOrange2_50" value="0.7304 0.1746 0.0262 0.5" />
+        <Preset name="colorYellow" value="0.9301 0.6404 0.0439 1" />
+        <Preset name="colorBlack" value="0 0 0 1" />
+        <Preset name="colorBlack2" value="0.0075 0.0075 0.0075 1" />
+        <Preset name="colorBlack3" value="0.013 0.013 0.013 1" />
+        <Preset name="colorBlack3_97" value="0.013 0.013 0.013 0.97" />
+        <Preset name="colorBlack3_70" value="0.013 0.013 0.013 0.7" />
+        <Preset name="colorBlack3_0" value="0.013 0.013 0.013 0" />
+
+        <Preset name="colorDarkGrey" value="0.0284 0.0284 0.0284 1"/>
+        <Preset name="colorDarkGrey_0" value="0.0284 0.0284 0.0284 0"/>
+        <Preset name="colorDarkGrey2" value="0.0630 0.0630 0.0630 1"/>
+        <Preset name="colorDarkGrey2_50" value="0.0630 0.0630 0.0630 0.5"/>
+        <Preset name="colorDarkGrey3" value="0.0194 0.0194 0.0194 1"/>
+        <Preset name="colorDarkGrey4" value="0.0723 0.0723 0.0723 1"/>
+        <Preset name="colorDarkGrey5" value="0.1356 0.1356 0.1356 1"/>
+        <Preset name="colorDarkGrey6" value="0.03 0.03 0.03 1"/>
+        <Preset name="colorDarkGrey7" value="0.0212 0.0212 0.0212 1"/>
+        <Preset name="colorDarkGrey8" value="0.2 0.2 0.2 1"/>
+
+        <Preset name="colorLightGrey" value="0.0482 0.0482 0.0482 1" />
+        <Preset name="colorDescriptionText" value="0.2918 0.2918 0.2918 1" />
+        <Preset name="colorDescriptionText2" value="0.6 0.6 0.6 1" />
+        <Preset name="colorDescriptionText3" value="0.1845 0.1845 0.1845 1" />
+        <Preset name="colorDescriptionText4" value="0.6307 0.6307 0.6307 1" />	
+		
+        <Preset name="colorUVs" value="10px 1010px 4px 4px" />
+    </Presets>
+	
+	
+    <Profile name="buttonAdd" parent="pcButton">
+        <Value name="iconUVs" value="460px 380px 35px 35px"/>
+        <Value name="iconColor" value="$preset_colorGreen2"/>
+    </Profile>			
+    <Profile name="buttonRemove" parent="pcButton">
+        <Value name="iconUVs" value="465px 989px 27px 27px"/>
+        <Value name="iconColor" value="$preset_colorRed2"/>
+    </Profile>			
+    <Profile name="button_menu1" parent="buttonBase">
+        <Value name="imageFilename" value="g_baseUIFilename"/>
+        <Value name="size" value="45px 45px"/>
+    </Profile>
+    <Profile name="button_menu2" parent="buttonBase">
+        <Value name="imageFilename" value="g_baseUIFilename"/>
+        <Value name="size" value="45px 45px"/>
+    </Profile>	
+    <Profile name="button_konto" parent="button_menu1">
+        <Value name="imageUVs" value="0.25 0.5 0.25 0.25"/>
+        <Value name="imageFocusedUVs" value="0 0.5 0.25 0.25"/>
+        <Value name="position" value="10px 2.5px" />
+    </Profile>
+    <Profile name="button_konto_a" parent="button_menu1">
+        <Value name="imageUVs" value="0 0.5 0.25 0.25"/>
+        <Value name="position" value="10px 2.5px" />
+    </Profile>
+    <Profile name="button_orders" parent="button_menu1">
+        <Value name="imageUVs" value="0.75 0.5 0.25 0.25"/>
+        <Value name="imageFocusedUVs" value="0.5 0.5 0.25 0.25"/>
+        <Value name="position" value="70px 2.5px" />
+    </Profile>
+    <Profile name="button_orders_a" parent="button_menu1">
+        <Value name="imageUVs" value="0.5 0.5 0.25 0.25"/>
+        <Value name="position" value="70px 2.5px" />
+    </Profile>
+    <Profile name="button_moneyoutput" parent="button_menu1">
+        <Value name="imageUVs" value="0.25 0.75 0.25 0.25"/>
+        <Value name="imageFocusedUVs" value="0 0.75 0.25 0.25"/>
+        <Value name="position" value="130px 2.5px" />
+    </Profile>
+    <Profile name="button_moneyoutput_a" parent="button_menu1">
+        <Value name="imageUVs" value="0 0.75 0.25 0.25"/>
+        <Value name="position" value="130px 2.5px" />
+    </Profile>
+    <Profile name="button_moneyinput" parent="button_menu1">
+        <Value name="imageUVs" value="0.75 0.75 0.25 0.25"/>
+        <Value name="imageFocusedUVs" value="0.5 0.75 0.25 0.25"/>
+        <Value name="position" value="190px 2.5px" />
+    </Profile>
+    <Profile name="button_moneyinput_a" parent="button_menu1">
+        <Value name="imageUVs" value="0.5 0.75 0.25 0.25"/>
+        <Value name="position" value="190px 2.5px" />
+    </Profile>
+    <Profile name="button_billTransferOverview" parent="button_menu2">
+        <Value name="imageUVs" value="0.25 0.5 0.25 0.25"/>
+        <Value name="imageFocusedUVs" value="0 0.5 0.25 0.25"/>
+        <Value name="position" value="310px 2.5px" />
+    </Profile>
+    <Profile name="button_billTransferOverview_a" parent="button_menu2">
+        <Value name="imageUVs" value="0 0.5 0.25 0.25"/>
+        <Value name="position" value="310px 2.5px" />
+    </Profile>
+    <Profile name="button_bill" parent="button_menu2">
+        <Value name="imageUVs" value="0.25 0.25 0.25 0.25"/>
+        <Value name="imageFocusedUVs" value="0 0.25 0.25 0.25"/>
+        <Value name="position" value="370px 2.5px" />
+    </Profile>
+    <Profile name="button_bill_a" parent="button_menu2">
+        <Value name="imageUVs" value="0 0.25 0.25 0.25"/>
+        <Value name="position" value="370px 2.5px" />
+    </Profile>
+    <Profile name="button_transfer" parent="button_menu2">
+        <Value name="imageUVs" value="0.75 0.25 0.25 0.25"/>
+        <Value name="imageFocusedUVs" value="0.5 0.25 0.25 0.25"/>
+        <Value name="position" value="430px 2.5px" />
+    </Profile>
+    <Profile name="button_transfer_a" parent="button_menu2">
+        <Value name="imageUVs" value="0.5 0.25 0.25 0.25"/>
+        <Value name="position" value="430px 2.5px" />
+    </Profile>
+    <Profile name="button_newBill" parent="button_menu2">
+        <Value name="imageUVs" value="0.25 0 0.25 0.25"/>
+        <Value name="imageFocusedUVs" value="0 0 0.25 0.25"/>
+        <Value name="position" value="490px 2.5px" />
+    </Profile>
+    <Profile name="button_newBill_a" parent="button_menu2">
+        <Value name="imageUVs" value="0 0 0.25 0.25"/>
+        <Value name="position" value="490px 2.5px" />
+    </Profile>
+    <Profile name="button_newTransfer" parent="button_menu2">
+        <Value name="imageUVs" value="0.75 0 0.25 0.25"/>
+        <Value name="imageFocusedUVs" value="0.5 0 0.25 0.25"/>
+        <Value name="position" value="550px 2.5px" />
+    </Profile>
+    <Profile name="button_newTransfer_a" parent="button_menu2">
+        <Value name="imageUVs" value="0.5 0 0.25 0.25"/>
+        <Value name="position" value="550px 2.5px" />
+    </Profile>	
+    <Profile name="button_home" parent="button_menu1">
+        <Value name="imageUVs" value="0.25 0 0.25 0.25"/>
+        <Value name="imageFocusedUVs" value="0 0 0.25 0.25"/>
+        <Value name="position" value="960px 2.5px" />
+    </Profile>
+    <Profile name="button_home_a" parent="button_menu1">
+        <Value name="imageUVs" value="0 0 0.25 0.25"/>
+        <Value name="position" value="960px 2.5px" />
+    </Profile>
+    <Profile name="button_admin" parent="button_menu1">
+        <Value name="imageUVs" value="0.75 0 0.25 0.25"/>
+        <Value name="imageFocusedUVs" value="0.5 0 0.25 0.25"/>
+        <Value name="position" value="1020px 2.5px" />
+    </Profile>
+    <Profile name="button_admin_a" parent="button_menu1">
+        <Value name="imageUVs" value="0.5 0 0.25 0.25"/>
+        <Value name="position" value="1020px 2.5px" />
+    </Profile>
+    <Profile name="button_settings" parent="button_menu1">
+        <Value name="imageUVs" value="0.25 0.25 0.25 0.25"/>
+        <Value name="imageFocusedUVs" value="0 0.25 0.25 0.25"/>
+        <Value name="position" value="1080px 2.5px" />
+    </Profile>
+    <Profile name="button_settings_a" parent="button_menu1">
+        <Value name="imageUVs" value="0 0.25 0.25 0.25"/>
+        <Value name="position" value="1080px 2.5px" />
+    </Profile>
+    <Profile name="button_web" parent="button_menu1">
+        <Value name="imageUVs" value="0.75 0.25 0.25 0.25"/>
+        <Value name="imageFocusedUVs" value="0.5 0.25 0.25 0.25"/>
+        <Value name="position" value="1140px 2.5px" />
+    </Profile>
+    <Profile name="button_web_a" parent="button_menu1">
+        <Value name="imageUVs" value="0.5 0.25 0.25 0.25"/>
+        <Value name="position" value="1140px 2.5px" />
+    </Profile>
+	
+	
+	
+	<!-- General -->
+	<Profile name="mpManagerUiBackground" parent="baseReference" >
+        <Value name="screenAlign" value="middleCenter" />
+        <Value name="positionOrigin" value="middleCenter" />
+        <Value name="size" value="1220px 700px"/>
+        <Value name="imageColor" value="$preset_colorBlack3_70"/>
+    </Profile>
+    <Profile name="mpManagerUiBackgroundMain" parent="baseReference" >
+        <Value name="screenAlign" value="middleCenter" />
+        <Value name="positionOrigin" value="middleCenter" />
+        <Value name="size" value="1200px 680px"/>
+        <Value name="imageColor" value="$preset_colorDarkGrey"/>
+    </Profile>	
+    <Profile name="mpManagerUiBackgroundMainHeader" parent="baseReference" >
+        <Value name="screenAlign" value="topCenter" />
+        <Value name="positionOrigin" value="topCenter" />
+        <Value name="position" value="0px 0px" />
+        <Value name="size" value="1200px 40px"/>
+        <Value name="alignmentX" value="center" />
+        <Value name="alignmentY" value="middle" />
+        <Value name="imageColor" value="$preset_colorBlack"/>
+    </Profile>
+	<Profile name="mpManagerMenu" parent="baseReference" >
+        <Value name="screenAlign" value="topCenter" />
+        <Value name="positionOrigin" value="topCenter" />
+        <Value name="position" value="0px -45px" />
+        <Value name="size" value="1200px 50px"/>
+        <Value name="imageColor" value="$preset_colorBlack3_70"/>
+    </Profile>
+    <Profile name="mpManagerPage" parent="baseReference">
+        <Value name="position" value="5px 40px" />
+        <Value name="size" value="1190px 540px"/>
+    </Profile>	
+	
+    <Profile name="mpManager_items_6" parent="mpManager_listItem">
+        <Value name="size" value="194px 25px" />
+        <Value name="margin" value="0px 0px 2px 0px"/>
+        <Value name="screenAlign" value="bottomLeft" />
+        <Value name="positionOrigin" value="bottomLeft" />
+        <Value name="imageColor" value="$preset_colorDarkGrey3" />
+    </Profile>
+    <Profile name="mpManager_items_6_itemSeperator" parent="mpManager_items_6">
+        <Value name="imageColor" value="$preset_colorDarkGrey2" />
+        <Value name="size" value="194px 2px" />
+        <Value name="position" value="0px -2px" />
+    </Profile>
+    <Profile name="mpManager_items_text" parent="textDefault">
+        <Value name="textSize" value="11px" />
+        <Value name="position" value="0px 0px" />
+        <Value name="screenAlign" value="middleCenter" />
+        <Value name="positionOrigin" value="middleCenter" />
+        <Value name="textBold" value="true" />
+    </Profile>	
+    <Profile name="mpManager_items_slider" parent="sliderVertical">
+        <Value name="position" value="0px 0px" />
+        <Value name="size" value="16px 468px" />
+    </Profile>
+    <Profile name="mpManager_listItem" parent="baseReference">
+        <Value name="size" value="245px 25px" />
+        <Value name="screenAlign" value="bottomLeft"/>
+        <Value name="positionOrigin" value="bottomLeft"/>
+        <Value name="imageColor" value="$preset_colorDarkGrey6" />
+        <Value name="imageFocusedColor" value="$preset_colorDarkGrey2_50" />
+        <Value name="imageSelectedColor" value="$preset_colorDarkGrey2" />
+        <Value name="margin" value="0px 0px 2px 0px"/>
+        <Value name="disabled" value="true"/>
+    </Profile>
+    <Profile name="mpManager_listItem2" parent="baseReference">
+        <Value name="size" value="245px 40px" />
+        <Value name="screenAlign" value="bottomLeft"/>
+        <Value name="positionOrigin" value="bottomLeft"/>
+        <Value name="imageColor" value="$preset_colorDarkGrey6" />
+        <Value name="imageFocusedColor" value="$preset_colorDarkGrey2_50" />
+        <Value name="imageSelectedColor" value="$preset_colorDarkGrey2" />
+        <Value name="margin" value="0px 0px 2px 0px"/>
+        <Value name="disabled" value="true"/>
+    </Profile>
+    <Profile name="mpManager_listItemText" parent="baseReference">
+        <Value name="textSize" value="11px" />
+        <Value name="position" value="10px 0px" />
+        <Value name="screenAlign" value="middleLeft" />
+        <Value name="positionOrigin" value="middleLeft" />
+    </Profile>
+    <Profile name="mpManager_listItemText2" parent="baseReference">
+        <Value name="textSize" value="11px" />
+        <Value name="position" value="10px 0px" />
+        <Value name="screenAlign" value="middleLeft" />
+        <Value name="positionOrigin" value="middleLeft" />
+    </Profile>
+    <Profile name="mpManager_listItemTextMiddleCenter" parent="mpManager_listItemText">
+        <Value name="screenAlign" value="middleCenter" />
+        <Value name="positionOrigin" value="middleCenter" />
+        <Value name="position" value="0px 0px" />
+        <Value name="textMaxWidth" value="194px" />
+    </Profile>
+    <Profile name="mpManager_listItemTextMiddleCenter2" parent="mpManager_listItemText2">
+        <Value name="screenAlign" value="middleCenter" />
+        <Value name="positionOrigin" value="middleCenter" />
+        <Value name="position" value="0px 0px" />
+    </Profile>
+    <Profile name="mpManager_listItemTextRed" parent="mpManager_listItemText">
+        <Value name="textColor" value="$preset_colorRed" />
+        <Value name="textSelectedColor" value="$preset_colorRed"/>
+        <Value name="textDisabledColor" value="$preset_colorRed"/>
+        <Value name="textPreSelectedColor" value="$preset_colorRed"/>
+    </Profile>
+    <Profile name="mpManager_listItemTextGreen" parent="mpManager_listItemText">
+        <Value name="textColor" value="$preset_colorGreen" />
+        <Value name="textSelectedColor" value="$preset_colorGreen"/>
+        <Value name="textDisabledColor" value="$preset_colorGreen"/>
+        <Value name="textPreSelectedColor" value="$preset_colorGreen"/>
+    </Profile>	
+    <Profile name="mpManager_listItemTextMiddleCenterTextGreen" parent="mpManager_listItemTextMiddleCenter">
+        <Value name="textColor" value="$preset_colorGreen" />
+        <Value name="textSelectedColor" value="$preset_colorGreen"/>
+        <Value name="textDisabledColor" value="$preset_colorGreen"/>
+        <Value name="textPreSelectedColor" value="$preset_colorGreen"/>
+    </Profile>	
+    <Profile name="mpManager_listItemTextMiddleCenterTextRed" parent="mpManager_listItemTextMiddleCenter">
+        <Value name="textColor" value="$preset_colorRed" />
+        <Value name="textSelectedColor" value="$preset_colorRed"/>
+        <Value name="textDisabledColor" value="$preset_colorRed"/>
+        <Value name="textPreSelectedColor" value="$preset_colorRed"/>
+    </Profile>	
+    <Profile name="mpManager_listItemTextMiddleCenterTextOrange" parent="mpManager_listItemTextMiddleCenter">
+        <Value name="textColor" value="$preset_colorOrange2" />
+        <Value name="textSelectedColor" value="$preset_colorOrange2"/>
+        <Value name="textDisabledColor" value="$preset_colorOrange2"/>
+        <Value name="textPreSelectedColor" value="$preset_colorOrange2"/>
+    </Profile>	
+	<Profile name="mpManager_items_list" parent="list">
+        <Value name="size" value="1175px 500px" />
+        <Value name="screenAlign" value="topRight"/>
+        <Value name="positionOrigin" value="topRight"/>
+        <Value name="position" value="-16px 4px"/>
+        <Value name="listItemHeight" value="25px"/>
+        <Value name="isHorizontalList" value="false"/>
+        <Value name="visibleItems" value="20"/>
+    </Profile>
+    <Profile name="mpManager_items_listItem" parent="list">
+        <Value name="imageColor" value="$preset_colorWhite_0"/>
+        <Value name="imageFocusedColor" value="$preset_colorWhite_0"/>
+        <Value name="imageSelectedColor" value="$preset_colorWhite_0"/>
+        <Value name="size" value="982px 25px"/>
+        <Value name="position" value="0px 0px" />
+        <Value name="screenAlign" value="bottomLeft" />
+        <Value name="positionOrigin" value="bottomLeft" />
+    </Profile>
+    <Profile name="mpManager_listItem_layout" parent="buttonBox">
+        <Value name="size" value="1190px 25px"/>
+        <Value name="position" value="0px 0px" />
+        <Value name="screenAlign" value="topLeft" />
+        <Value name="positionOrigin" value="topLeft" />
+        <Value name="alignmentX" value="left" />
+        <Value name="alignmentY" value="bottom" />
+    </Profile>
+    <Profile name="mpManager_listItem_layout2" parent="buttonBox">
+        <Value name="size" value="1190px 30px"/>
+        <Value name="position" value="0px 0px" />
+        <Value name="screenAlign" value="topLeft" />
+        <Value name="positionOrigin" value="topLeft" />
+        <Value name="alignmentX" value="left" />
+        <Value name="alignmentY" value="bottom" />
+    </Profile>
+		
+	<!-- Home -->
+    <Profile name="mpManager_home_headerItems" parent="buttonBox">
+        <Value name="size" value="1190px 25px"/>
+        <Value name="position" value="0px 0px" />
+        <Value name="screenAlign" value="topLeft" />
+        <Value name="positionOrigin" value="topLeft" />
+        <Value name="alignmentX" value="left" />
+        <Value name="alignmentY" value="bottom" />
+    </Profile>
+	
+	<!-- Konto -->
+    <Profile name="mpManager_konto_chooseYear" parent="baseReference">
+        <Value name="doLockingOnFocus" value="false" />
+        <Value name="position" value="0px -10px" />
+        <Value name="screenAlign" value="topCenter" />
+        <Value name="positionOrigin" value="topCenter" />
+        <Value name="size" value="500px 36px"/>
+    </Profile>	
+    <Profile name="mpManager_konto_chooseYearBG" parent="baseReference">
+        <Value name="imageColor" value="$preset_colorBlack3" />
+        <Value name="position" value="37px 0px" />
+        <Value name="size" value="425px 36px" />
+    </Profile>	
+    <Profile name="mpManager_konto_headerItems" parent="buttonBox">
+        <Value name="size" value="1190px 25px"/>
+        <Value name="position" value="0px -55px" />
+        <Value name="screenAlign" value="topLeft" />
+        <Value name="positionOrigin" value="topLeft" />
+        <Value name="alignmentX" value="left" />
+        <Value name="alignmentY" value="bottom" />
+    </Profile>
+    <Profile name="mpManager_konto_items_slider" parent="sliderVertical">
+        <Value name="position" value="0px 36px" />
+        <Value name="size" value="16px 413px" />
+        <Value name="screenAlign" value="bottomRight" />
+        <Value name="positionOrigin" value="bottomRight" />
+    </Profile>
+    <Profile name="mpManager_konto_list" parent="list">
+        <Value name="size" value="1175px 452px" />
+        <Value name="screenAlign" value="topRight"/>
+        <Value name="positionOrigin" value="topRight"/>
+        <Value name="position" value="-16px 4px"/>
+        <Value name="listItemHeight" value="25px"/>
+        <Value name="isHorizontalList" value="false"/>
+        <Value name="visibleItems" value="18"/>
+    </Profile>
+    <Profile name="mpManager_konto_item" parent="mpManager_listItem">
+        <Value name="size" value="194px 25px" />
+        <Value name="position" value="0px 0px" />
+        <Value name="screenAlign" value="topLeft" />
+        <Value name="positionOrigin" value="topLeft" />
+    </Profile>
+	<!-- Konto End -->
+	
+	<!-- Money In-/Output -->
+	<Profile name="mpManager_money_items_date" parent="baseReference">
+        <Value name="size" value="150px 25px" />
+        <Value name="margin" value="0px 0px 2px 0px"/>
+        <Value name="screenAlign" value="bottomLeft" />
+        <Value name="positionOrigin" value="bottomLeft" />
+        <Value name="imageColor" value="$preset_colorDarkGrey3" />
+    </Profile>
+    <Profile name="mpManager_money_items_date_itemSeperator" parent="mpManager_money_items_date">
+        <Value name="imageColor" value="$preset_colorDarkGrey2" />
+        <Value name="size" value="148px 2px" />
+        <Value name="position" value="0px -2px" />
+    </Profile>
+    <Profile name="mpManager_money_items_name" parent="baseReference">
+        <Value name="size" value="130px 25px" />
+        <Value name="margin" value="0px 0px 2px 0px"/>
+        <Value name="screenAlign" value="bottomLeft" />
+        <Value name="positionOrigin" value="bottomLeft" />
+        <Value name="imageColor" value="$preset_colorDarkGrey3" />
+    </Profile>
+    <Profile name="mpManager_money_items_name_itemSeperator" parent="mpManager_money_items_name">
+        <Value name="imageColor" value="$preset_colorDarkGrey2" />
+        <Value name="size" value="128px 2px" />
+        <Value name="position" value="0px -2px" />
+    </Profile>
+    <Profile name="mpManager_money_items_category" parent="baseReference">
+        <Value name="size" value="150px 25px" />
+        <Value name="margin" value="0px 0px 2px 0px"/>
+        <Value name="screenAlign" value="bottomLeft" />
+        <Value name="positionOrigin" value="bottomLeft" />
+        <Value name="imageColor" value="$preset_colorDarkGrey3" />
+    </Profile>
+    <Profile name="mpManager_money_items_category_itemSeperator" parent="mpManager_money_items_category">
+        <Value name="imageColor" value="$preset_colorDarkGrey2" />
+        <Value name="size" value="148px 2px" />
+        <Value name="position" value="0px -2px" />
+    </Profile>
+    <Profile name="mpManager_money_items_addInfo" parent="baseReference">
+        <Value name="size" value="281px 25px" />
+        <Value name="margin" value="0px 0px 2px 0px"/>
+        <Value name="screenAlign" value="bottomLeft" />
+        <Value name="positionOrigin" value="bottomLeft" />
+        <Value name="imageColor" value="$preset_colorDarkGrey3" />
+    </Profile>
+    <Profile name="mpManager_money_items_addInfo_itemSeperator" parent="mpManager_money_items_addInfo">
+        <Value name="imageColor" value="$preset_colorDarkGrey2" />
+        <Value name="size" value="279px 2px" />
+        <Value name="position" value="0px -2px" />
+    </Profile>
+    <Profile name="mpManager_money_items_sellTo" parent="baseReference">
+        <Value name="size" value="150px 25px" />
+        <Value name="margin" value="0px 0px 2px 0px"/>
+        <Value name="screenAlign" value="bottomLeft" />
+        <Value name="positionOrigin" value="bottomLeft" />
+        <Value name="imageColor" value="$preset_colorDarkGrey3" />
+    </Profile>
+    <Profile name="mpManager_money_items_sellTo_itemSeperator" parent="mpManager_money_items_sellTo">
+        <Value name="imageColor" value="$preset_colorDarkGrey2" />
+        <Value name="size" value="148px 2px" />
+        <Value name="position" value="0px -2px" />
+    </Profile>
+    <Profile name="mpManager_money_items_num" parent="baseReference">
+        <Value name="size" value="150px 25px" />
+        <Value name="margin" value="0px 0px 2px 0px"/>
+        <Value name="screenAlign" value="bottomLeft" />
+        <Value name="positionOrigin" value="bottomLeft" />
+        <Value name="imageColor" value="$preset_colorDarkGrey3" />
+    </Profile>
+    <Profile name="mpManager_money_items_num_itemSeperator" parent="mpManager_money_items_num">
+        <Value name="imageColor" value="$preset_colorDarkGrey2" />
+        <Value name="size" value="148px 2px" />
+        <Value name="position" value="0px -2px" />
+    </Profile>
+    <Profile name="mpManager_money_items_balance" parent="baseReference">
+        <Value name="size" value="150px 25px" />
+        <Value name="margin" value="0px 0px 2px 0px"/>
+        <Value name="screenAlign" value="bottomLeft" />
+        <Value name="positionOrigin" value="bottomLeft" />
+        <Value name="imageColor" value="$preset_colorDarkGrey3" />
+    </Profile>
+    <Profile name="mpManager_money_items_balance_itemSeperator" parent="mpManager_money_items_num">
+        <Value name="imageColor" value="$preset_colorDarkGrey2" />
+        <Value name="size" value="148px 2px" />
+        <Value name="position" value="0px -2px" />
+    </Profile>
+    <Profile name="mpManager_money_listItem_date" parent="mpManager_listItem">
+        <Value name="size" value="150px 25px" />
+        <Value name="position" value="0px 0px" />
+        <Value name="screenAlign" value="topLeft" />
+        <Value name="positionOrigin" value="topLeft" />
+    </Profile>
+    <Profile name="mpManager_money_listItem_name" parent="mpManager_listItem">
+        <Value name="size" value="130px 25px" />
+        <Value name="position" value="0px 0px" />
+        <Value name="screenAlign" value="topLeft" />
+        <Value name="positionOrigin" value="topLeft" />
+    </Profile>
+    <Profile name="mpManager_money_listItem_category" parent="mpManager_listItem">
+        <Value name="size" value="150px 25px" />
+        <Value name="position" value="0px 0px" />
+        <Value name="screenAlign" value="topLeft" />
+        <Value name="positionOrigin" value="topLeft" />
+    </Profile>
+    <Profile name="mpManager_money_listItem_addInfo" parent="mpManager_listItem">
+        <Value name="size" value="281px 25px" />
+        <Value name="position" value="0px 0px" />
+        <Value name="screenAlign" value="topLeft" />
+        <Value name="positionOrigin" value="topLeft" />
+    </Profile>
+    <Profile name="mpManager_money_listItem_sellTo" parent="mpManager_listItem">
+        <Value name="size" value="150px 25px" />
+        <Value name="position" value="0px 0px" />
+        <Value name="screenAlign" value="topLeft" />
+        <Value name="positionOrigin" value="topLeft" />
+    </Profile>
+    <Profile name="mpManager_money_headerItems" parent="buttonBox">
+        <Value name="size" value="1190px 25px"/>
+        <Value name="position" value="0px 0px" />
+        <Value name="screenAlign" value="topLeft" />
+        <Value name="positionOrigin" value="topLeft" />
+        <Value name="alignmentX" value="left" />
+        <Value name="alignmentY" value="bottom" />
+    </Profile>
+    <Profile name="mpManager_money_listItem_num" parent="mpManager_listItem">
+        <Value name="size" value="150px 25px" />
+        <Value name="position" value="0px 0px" />
+        <Value name="screenAlign" value="topLeft" />
+        <Value name="positionOrigin" value="topLeft" />
+    </Profile>
+    <Profile name="mpManager_money_listItem_balance" parent="mpManager_listItem">
+        <Value name="size" value="150px 25px" />
+        <Value name="position" value="0px 0px" />
+        <Value name="screenAlign" value="topLeft" />
+        <Value name="positionOrigin" value="topLeft" />
+    </Profile>
+	<!-- Money In-/Output End -->
+	
+	
+		
+	<!-- Adminsection -->
+    <Profile name="mpManager_selectHeader" parent="baseReference" >
+        <Value name="screenAlign" value="topCenter" />
+        <Value name="positionOrigin" value="topCenter" />
+        <Value name="position" value="0px 0px" />
+        <Value name="size" value="1190px 30px"/>
+        <Value name="alignmentX" value="center" />
+        <Value name="alignmentY" value="middle" />
+        <Value name="imageColor" value="$preset_colorBlack3"/>
+    </Profile>
+    <Profile name="mpManager_selectHeaderSelector" parent="mpManager_selectHeader">
+        <Value name="screenAlign" value="topLeft" />
+        <Value name="positionOrigin" value="topLeft" />
+        <Value name="buttonLRChange" value="true"/>
+    </Profile>
+    <Profile name="mpManager_selectHeaderSelectorLeft" parent="buttonBase">
+        <Value name="size" value="80px 30px" />
+        <Value name="imageColor" value="$preset_colorRed4" />
+        <Value name="imageDisabledColor" value="$preset_colorLightGrey" />
+        <Value name="iconUVs" value="669px 945px 24px 36px" />
+        <Value name="iconFocusedUVs" value="700px 945px 24px 36px" />
+        <Value name="iconSize" value="15px 23px" />
+        <Value name="iconColor" value="$preset_colorWhite" />
+        <Value name="iconDisabledColor" value="$preset_colorDarkGrey" />
+        <Value name="iconTextOffset" value="31px -11px" />
+        <Value name="iconRotation" value="180"/>
+    </Profile>
+    <Profile name="mpManager_selectHeaderSelectorRight" parent="mpManager_selectHeaderSelectorLeft">
+        <Value name="iconRotation" value="0"/>
+        <Value name="position" value="0px 0px" />
+        <Value name="screenAlign" value="topRight" />
+        <Value name="positionOrigin" value="topRight" />
+    </Profile>
+    <Profile name="mpManager_selectHeaderText" parent="textDefault">
+        <Value name="textSize" value="19px"/>
+        <Value name="textBold" value="true"/>
+        <Value name="textUpperCase" value="true"/>
+        <Value name="textOffset" value="0px 2px" />
+        <Value name="textAlignment" value="center" />
+        <Value name="screenAlign" value="middleCenter" />
+        <Value name="positionOrigin" value="middleCenter" />
+        <Value name="size" value="960px 19px" />
+        <Value name="position" value="0px 0px" />
+    </Profile>
+    <Profile name="mpManager_admin_Text" parent="textDefault">
+        <Value name="textSize" value="17px"/>
+        <Value name="textOffset" value="0px 2px" />
+        <Value name="textAlignment" value="center" />
+        <Value name="screenAlign" value="middleCenter" />
+        <Value name="positionOrigin" value="middleCenter" />
+        <Value name="size" value="960px 19px" />
+        <Value name="position" value="0px 0px" />
+    </Profile>
+    <Profile name="mpManager_admin_menuStateBg" parent="baseReference">
+        <Value name="size" value="1190px 30px"/>
+        <Value name="position" value="0px 0px" />
+        <Value name="alignmentX" value="center" />
+        <Value name="alignmentY" value="middle" />
+        <Value name="imageColor" value="$preset_colorLightGrey" />
+        <Value name="useFullVisibility" value="false" />
+        <Value name="autoValidateLayout" value="true" />
+    </Profile>
+    <Profile name="mpManager_admin_menuState" parent="selectionState" >
+        <Value name="imageUVs" value="824px 901px 12px 12px" />
+        <Value name="size" value="8px 8px" />
+        <Value name="margin" value="7px 0px 7px 0px" />
+        <Value name="imageColor" value="$preset_colorWhite" />
+        <Value name="imageFocusedColor" value="$preset_colorRed4" />
+    </Profile>
+	
+    <Profile name="mpManager_admin_itemsHeaderBg" parent="baseReference">
+        <Value name="size" value="1190px 50px"/>
+        <Value name="alignmentX" value="center" />
+        <Value name="alignmentY" value="middle" />
+        <Value name="imageColor" value="$preset_colorDarkGrey2" />
+        <Value name="useFullVisibility" value="false" />
+        <Value name="autoValidateLayout" value="true" />
+    </Profile>
+    <Profile name="mpManager_admin_itemsHeaderText" parent="textDefault">
+        <Value name="textSize" value="18px"/>
+        <Value name="textBold" value="true"/>
+        <Value name="textOffset" value="10px 12px" />
+        <Value name="textAlignment" value="left" />
+        <Value name="screenAlign" value="middleLeft" />
+        <Value name="positionOrigin" value="middleLeft" />
+        <Value name="size" value="960px 19px" />
+        <Value name="position" value="0px 0px" />
+    </Profile>
+    <Profile name="mpManager_admin_itemsHeaderTextInfo" parent="mpManager_admin_itemsHeaderText">
+        <Value name="textSize" value="15px"/>
+        <Value name="textBold" value="false"/>
+        <Value name="textOffset" value="10px -5px" />
+    </Profile>
+	
+    <Profile name="mpManager_admin_item_1" parent="mpManager_admin_itemsHeaderBg">
+        <Value name="position" value="0px 450px" />
+    </Profile>
+    <Profile name="mpManager_admin_item_2" parent="mpManager_admin_itemsHeaderBg">
+        <Value name="position" value="0px 330px" />
+    </Profile>
+    <Profile name="mpManager_admin_item_3" parent="mpManager_admin_itemsHeaderBg">
+        <Value name="position" value="0px 210px" />
+    </Profile>
+	
+    <Profile name="mpManager_admin_pwInput" parent="textInput">
+        <Value name="screenAlign" value="middleLeft" />
+        <Value name="positionOrigin" value="middleLeft" />
+        <Value name="position" value="0px 60px" />
+        <Value name="size" value="405px 36px"/>
+        <Value name="imageFocusedColor" value="$preset_colorRed4"/>
+    </Profile>
+    <Profile name="mpManager_admin_pwInputOk" parent="buttonBase">
+        <Value name="imageUVs" value="$preset_colorUVs"/>
+        <Value name="imageColor" value="$preset_colorBlack3"/>
+        <Value name="imageFocusedColor" value="$preset_colorRed4"/>
+        <Value name="screenAlign" value="middleLeft" />
+        <Value name="positionOrigin" value="middleLeft" />
+        <Value name="position" value="420px 60px" />
+        <Value name="size" value="405px 36px"/>
+        <Value name="textBold" value="true" />
+        <Value name="textUpperCase" value="true" />
+    </Profile>
+	
+    <Profile name="mpManager_admin_newAdminInput" parent="textInput">
+        <Value name="screenAlign" value="middleLeft" />
+        <Value name="positionOrigin" value="middleLeft" />
+        <Value name="position" value="0px -60px" />
+        <Value name="size" value="405px 36px"/>
+        <Value name="imageFocusedColor" value="$preset_colorRed4"/>
+    </Profile>
+    <Profile name="mpManager_admin_newAdminInputOk" parent="buttonBase">
+        <Value name="imageUVs" value="$preset_colorUVs"/>
+        <Value name="imageColor" value="$preset_colorBlack3"/>
+        <Value name="imageFocusedColor" value="$preset_colorRed4"/>
+        <Value name="screenAlign" value="middleLeft" />
+        <Value name="positionOrigin" value="middleLeft" />
+        <Value name="position" value="420px -60px" />
+        <Value name="size" value="405px 36px"/>
+        <Value name="textBold" value="true" />
+        <Value name="textUpperCase" value="true" />
+    </Profile>
+    <Profile name="mpManager_admin_admin_slider" parent="sliderVertical">
+        <Value name="position" value="120px 70px" />
+        <Value name="size" value="16px 100px" />
+        <Value name="screenAlign" value="bottomCenter" />
+        <Value name="positionOrigin" value="bottomCenter" />
+        <Value name="sliderImageColor" value="$preset_colorRed4"/>
+    </Profile>
+    <Profile name="mpManager_admin_deleteAdminOk" parent="buttonBase">
+        <Value name="imageUVs" value="$preset_colorUVs"/>
+        <Value name="imageColor" value="$preset_colorBlack3"/>
+        <Value name="imageFocusedColor" value="$preset_colorRed4"/>
+        <Value name="screenAlign" value="bottomCenter" />
+        <Value name="positionOrigin" value="bottomCenter" />
+        <Value name="position" value="348px 34px" />
+        <Value name="size" value="405px 36px"/>
+        <Value name="textBold" value="true" />
+        <Value name="textUpperCase" value="true" />
+    </Profile>
+    <Profile name="mpManager_admin_admin_sliderUp" parent="sliderButtonUp">
+        <Value name="imageFocusedColor" value="$preset_colorRed4"/>
+    </Profile>
+    <Profile name="mpManager_admin_admin_sliderDown" parent="sliderButtonDown">
+        <Value name="imageFocusedColor" value="$preset_colorRed4"/>
+    </Profile>
+	
+	
+    <Profile name="mpManager_admin_changePlayerChange1" parent="buttonBase">
+        <Value name="imageUVs" value="$preset_colorUVs"/>
+        <Value name="imageColor" value="$preset_colorBlack3"/>
+        <Value name="imageFocusedColor" value="$preset_colorRed4"/>
+        <Value name="screenAlign" value="bottomCenter" />
+        <Value name="positionOrigin" value="bottomCenter" />
+        <Value name="position" value="348px 172px" />
+        <Value name="size" value="405px 36px"/>
+        <Value name="textBold" value="true" />
+        <Value name="textUpperCase" value="true" />
+    </Profile>
+    <Profile name="mpManager_admin_changePlayerChange2" parent="buttonBase">
+        <Value name="imageUVs" value="$preset_colorUVs"/>
+        <Value name="imageColor" value="$preset_colorBlack3"/>
+        <Value name="imageFocusedColor" value="$preset_colorRed4"/>
+        <Value name="screenAlign" value="bottomCenter" />
+        <Value name="positionOrigin" value="bottomCenter" />
+        <Value name="position" value="348px 126px" />
+        <Value name="size" value="405px 36px"/>
+        <Value name="textBold" value="true" />
+        <Value name="textUpperCase" value="true" />
+    </Profile>
+    <Profile name="mpManager_admin_changePlayerChange3" parent="buttonBase">
+        <Value name="imageUVs" value="$preset_colorUVs"/>
+        <Value name="imageColor" value="$preset_colorBlack3"/>
+        <Value name="imageFocusedColor" value="$preset_colorRed4"/>
+        <Value name="screenAlign" value="bottomCenter" />
+        <Value name="positionOrigin" value="bottomCenter" />
+        <Value name="position" value="348px 80px" />
+        <Value name="size" value="405px 36px"/>
+        <Value name="textBold" value="true" />
+        <Value name="textUpperCase" value="true" />
+    </Profile>
+    <Profile name="mpManager_admin_changePlayerDelete" parent="buttonBase">
+        <Value name="imageUVs" value="$preset_colorUVs"/>
+        <Value name="imageColor" value="$preset_colorBlack3"/>
+        <Value name="imageFocusedColor" value="$preset_colorRed4"/>
+        <Value name="screenAlign" value="bottomCenter" />
+        <Value name="positionOrigin" value="bottomCenter" />
+        <Value name="position" value="348px 34px" />
+        <Value name="size" value="405px 36px"/>
+        <Value name="textBold" value="true" />
+        <Value name="textUpperCase" value="true" />
+    </Profile>
+    <Profile name="mpManager_admin_changePlayerChange4" parent="buttonBase">
+        <Value name="imageUVs" value="$preset_colorUVs"/>
+        <Value name="imageColor" value="$preset_colorBlack3"/>
+        <Value name="imageFocusedColor" value="$preset_colorRed4"/>
+        <Value name="screenAlign" value="bottomCenter" />
+        <Value name="positionOrigin" value="bottomCenter" />
+        <Value name="position" value="-40px 40px" />
+        <Value name="size" value="405px 36px"/>
+        <Value name="textBold" value="true" />
+        <Value name="textUpperCase" value="true" />
+    </Profile>
+	
+    <Profile name="mpManager_admin_pwInput" parent="textInput">
+        <Value name="screenAlign" value="middleLeft" />
+        <Value name="positionOrigin" value="middleLeft" />
+        <Value name="position" value="0px 60px" />
+        <Value name="size" value="405px 36px"/>
+        <Value name="imageFocusedColor" value="$preset_colorRed4"/>
+    </Profile>
+    <Profile name="mpManager_admin_player_newPlayerBg" parent="mpManager_admin_player_newPlayer" >
+        <Value name="screenAlign" value="topCenter" />
+        <Value name="positionOrigin" value="topCenter" />
+        <Value name="position" value="0px 0px" />
+        <Value name="size" value="305px 36px"/>
+        <Value name="imageColor" value="$preset_colorBlack3"/>
+    </Profile>
+    <Profile name="mpManager_admin_player_newPlayer" parent="baseReference">
+        <Value name="screenAlign" value="topLeft" />
+        <Value name="positionOrigin" value="topLeft" />
+        <Value name="buttonLRChange" value="true"/>
+        <Value name="position" value="420px -282px" />
+        <Value name="size" value="405px 36px"/>
+        <Value name="alignmentX" value="center" />
+        <Value name="alignmentY" value="middle" />
+        <Value name="imageUVs" value="$preset_colorUVs"/>
+        <Value name="imageColor" value="$preset_colorBlack3"/>
+    </Profile>
+    <Profile name="mpManager_admin_player_SelectorLeft" parent="buttonBase">
+        <Value name="size" value="50px 36px" />
+        <Value name="imageColor" value="$preset_colorRed4" />
+        <Value name="imageDisabledColor" value="$preset_colorLightGrey" />
+        <Value name="iconUVs" value="669px 945px 24px 36px" />
+        <Value name="iconFocusedUVs" value="700px 945px 24px 36px" />
+        <Value name="iconSize" value="15px 23px" />
+        <Value name="iconColor" value="$preset_colorWhite" />
+        <Value name="iconDisabledColor" value="$preset_colorDarkGrey" />
+        <Value name="iconTextOffset" value="31px -9px" />
+        <Value name="iconRotation" value="180"/>
+    </Profile>
+    <Profile name="mpManager_admin_player_SelectorRight" parent="mpManager_admin_player_SelectorLeft">
+        <Value name="iconRotation" value="0"/>
+        <Value name="position" value="0px 0px" />
+        <Value name="screenAlign" value="topRight" />
+        <Value name="positionOrigin" value="topRight" />
+    </Profile>
+    <Profile name="mpManager_admin_player_newPlayerOk" parent="buttonBase">
+        <Value name="imageUVs" value="$preset_colorUVs"/>
+        <Value name="imageColor" value="$preset_colorBlack3"/>
+        <Value name="imageFocusedColor" value="$preset_colorRed4"/>
+        <Value name="screenAlign" value="middleLeft" />
+        <Value name="positionOrigin" value="middleLeft" />
+        <Value name="position" value="840px 60px" />
+        <Value name="size" value="350px 36px"/>
+        <Value name="textBold" value="true" />
+        <Value name="textUpperCase" value="true" />
+    </Profile>
+	
+	
+	
+    <Profile name="mpManager_admin_adminTabl_header" parent="buttonBox">
+        <Value name="size" value="748px 25px"/>
+        <Value name="position" value="0px 180px" />
+        <Value name="screenAlign" value="bottomLeft" />
+        <Value name="positionOrigin" value="bottomLeft" />
+        <Value name="alignmentX" value="left" />
+        <Value name="alignmentY" value="bottom" />
+    </Profile>
+    <Profile name="mpManager_admin_adminTabl_item" parent="mpManager_listItem">
+        <Value name="size" value="373px 25px" />
+        <Value name="margin" value="0px 0px 2px 0px"/>
+        <Value name="screenAlign" value="bottomLeft" />
+        <Value name="positionOrigin" value="bottomLeft" />
+        <Value name="imageColor" value="$preset_colorDarkGrey3" />
+    </Profile>
+    <Profile name="mpManager_admin_adminTabl_itemSeperator" parent="mpManager_admin_adminTabl_item">
+        <Value name="imageColor" value="$preset_colorDarkGrey2" />
+        <Value name="size" value="373px 2px" />
+        <Value name="position" value="0px -2px" />
+    </Profile>
+	<Profile name="mpManager_admin_admin_list" parent="list">
+        <Value name="size" value="748px 140px" />
+        <Value name="screenAlign" value="topRight"/>
+        <Value name="positionOrigin" value="topRight"/>
+        <Value name="position" value="-20px 4px"/>
+        <Value name="listItemHeight" value="25px"/>
+        <Value name="isHorizontalList" value="false"/>
+        <Value name="visibleItems" value="5"/>
+    </Profile>
+    <Profile name="mpManager_admin_admin_listItem" parent="mpManager_listItem">
+        <Value name="imageColor" value="$preset_colorWhite_0"/>
+        <Value name="imageFocusedColor" value="$preset_colorWhite_0"/>
+        <Value name="imageSelectedColor" value="$preset_colorWhite_0"/>
+        <Value name="size" value="748px 20px"/>
+        <Value name="position" value="0px 0px" />
+        <Value name="screenAlign" value="bottomLeft" />
+        <Value name="positionOrigin" value="bottomLeft" />
+    </Profile>
+    <Profile name="mpManager_admin_player_slider" parent="sliderVertical">
+        <Value name="position" value="120px 70px" />
+        <Value name="size" value="16px 220px" />
+        <Value name="screenAlign" value="bottomCenter" />
+        <Value name="positionOrigin" value="bottomCenter" />
+        <Value name="sliderImageColor" value="$preset_colorRed4"/>
+    </Profile>
+    <Profile name="mpManager_admin_playerTabl_header" parent="buttonBox">
+        <Value name="size" value="248px 25px"/>
+        <Value name="position" value="0px 301px" />
+        <Value name="screenAlign" value="bottomLeft" />
+        <Value name="positionOrigin" value="bottomLeft" />
+        <Value name="alignmentX" value="left" />
+        <Value name="alignmentY" value="bottom" />
+    </Profile>
+	<Profile name="mpManager_admin_player_list" parent="list">
+        <Value name="size" value="748px 260px" />
+        <Value name="screenAlign" value="topRight"/>
+        <Value name="positionOrigin" value="topRight"/>
+        <Value name="position" value="-20px 4px"/>
+        <Value name="listItemHeight" value="25px"/>
+        <Value name="isHorizontalList" value="false"/>
+        <Value name="visibleItems" value="10"/>
+    </Profile>
+    <Profile name="mpManager_admin_playerTabl_item" parent="mpManager_listItem">
+        <Value name="size" value="248px 25px" />
+        <Value name="margin" value="0px 0px 2px 0px"/>
+        <Value name="screenAlign" value="bottomLeft" />
+        <Value name="positionOrigin" value="bottomLeft" />
+        <Value name="imageColor" value="$preset_colorDarkGrey3" />
+    </Profile>
+    <Profile name="mpManager_admin_playerTabl_itemSeperator" parent="mpManager_admin_playerTabl_item">
+        <Value name="imageColor" value="$preset_colorDarkGrey2" />
+        <Value name="size" value="248px 2px" />
+        <Value name="position" value="0px -2px" />
+    </Profile>
+	
+	<Profile name="mpManager_admin_add1_header" parent="buttonBox">
+        <Value name="size" value="1172px 25px"/>
+        <Value name="position" value="0px 420px" />
+        <Value name="screenAlign" value="bottomLeft" />
+        <Value name="positionOrigin" value="bottomLeft" />
+        <Value name="alignmentX" value="left" />
+        <Value name="alignmentY" value="bottom" />
+    </Profile>
+    <Profile name="mpManager_admin_add1_item1" parent="mpManager_listItem">
+        <Value name="size" value="400px 25px" />
+        <Value name="margin" value="0px 0px 2px 0px"/>
+        <Value name="screenAlign" value="bottomLeft" />
+        <Value name="positionOrigin" value="bottomLeft" />
+        <Value name="imageColor" value="$preset_colorDarkGrey3" />
+    </Profile>
+    <Profile name="mpManager_admin_add1_item1_1" parent="mpManager_listItem">
+        <Value name="size" value="400px 30px" />
+        <Value name="margin" value="0px 0px 2px 0px"/>
+        <Value name="screenAlign" value="bottomLeft" />
+        <Value name="positionOrigin" value="bottomLeft" />
+        <Value name="imageColor" value="$preset_colorDarkGrey3" />
+    </Profile>
+    <Profile name="mpManager_admin_add1_item2" parent="mpManager_listItem">
+        <Value name="size" value="770px 25px" />
+        <Value name="margin" value="0px 0px 2px 0px"/>
+        <Value name="screenAlign" value="bottomLeft" />
+        <Value name="positionOrigin" value="bottomLeft" />
+        <Value name="imageColor" value="$preset_colorDarkGrey3" />
+    </Profile>
+    <Profile name="mpManager_admin_add1_item2_1" parent="mpManager_listItem">
+        <Value name="size" value="770px 30px" />
+        <Value name="margin" value="0px 0px 2px 0px"/>
+        <Value name="screenAlign" value="bottomLeft" />
+        <Value name="positionOrigin" value="bottomLeft" />
+        <Value name="imageColor" value="$preset_colorDarkGrey3" />
+    </Profile>
+    <Profile name="mpManager_admin_add1_itemSeperator1" parent="mpManager_admin_add1_item1">
+        <Value name="imageColor" value="$preset_colorDarkGrey2" />
+        <Value name="size" value="400px 2px" />
+        <Value name="position" value="0px -2px" />
+    </Profile>
+    <Profile name="mpManager_admin_add1_itemSeperator2" parent="mpManager_admin_add1_item2">
+        <Value name="imageColor" value="$preset_colorDarkGrey2" />
+        <Value name="size" value="770px 2px" />
+        <Value name="position" value="0px -2px" />
+    </Profile>
+    <Profile name="mpManager_admin_add1_slider" parent="sliderVertical">
+        <Value name="position" value="542px 120px" />
+        <Value name="size" value="16px 290px" />
+        <Value name="screenAlign" value="bottomCenter" />
+        <Value name="positionOrigin" value="bottomCenter" />
+        <Value name="sliderImageColor" value="$preset_colorRed4"/>
+    </Profile>
+	
+	<Profile name="mpManager_admin_add1_list" parent="list">
+        <Value name="size" value="1170px 330px" />
+        <Value name="screenAlign" value="topRight"/>
+        <Value name="positionOrigin" value="topRight"/>
+        <Value name="position" value="-20px 4px"/>
+        <Value name="listItemHeight" value="30px"/>
+        <Value name="isHorizontalList" value="false"/>
+        <Value name="visibleItems" value="11"/>
+    </Profile>
+    <Profile name="mpManager_admin_add1_listItem" parent="mpManager_listItem2">
+        <Value name="imageColor" value="$preset_colorWhite_0"/>
+        <Value name="imageFocusedColor" value="$preset_colorWhite_0"/>
+        <Value name="imageSelectedColor" value="$preset_colorWhite_0"/>
+        <Value name="size" value="748px 30px"/>
+        <Value name="position" value="0px 0px" />
+        <Value name="screenAlign" value="bottomLeft" />
+        <Value name="positionOrigin" value="bottomLeft" />
+    </Profile>
+	
+    <Profile name="mpManager_admin_add1_multiTextBg" parent="mpManager_admin_add1_multiText" >
+        <Value name="screenAlign" value="middleCenter" />
+        <Value name="positionOrigin" value="middleCenter" />
+        <Value name="position" value="0px 0px" />
+        <Value name="size" value="350px 34px"/>
+        <Value name="imageColor" value="$preset_colorBlack3"/>
+    </Profile>
+    <Profile name="mpManager_admin_add1_multiText" parent="baseReference">
+        <Value name="screenAlign" value="middleCenter" />
+        <Value name="positionOrigin" value="middleCenter" />
+        <Value name="buttonLRChange" value="true"/>
+        <Value name="position" value="0px 0px" />
+        <Value name="size" value="450px 34px"/>
+        <Value name="alignmentX" value="center" />
+        <Value name="alignmentY" value="middle" />
+        <Value name="imageUVs" value="$preset_colorUVs"/>
+        <Value name="imageColor" value="$preset_colorBlack3"/>
+    </Profile>
+    <Profile name="mpManager_admin_add1_SelectorLeft" parent="buttonBase">
+        <Value name="size" value="50px 34px" />
+        <Value name="imageColor" value="$preset_colorRed4" />
+        <Value name="imageDisabledColor" value="$preset_colorLightGrey" />
+        <Value name="iconUVs" value="669px 945px 24px 36px" />
+        <Value name="iconFocusedUVs" value="700px 945px 24px 36px" />
+        <Value name="iconSize" value="15px 23px" />
+        <Value name="iconColor" value="$preset_colorWhite" />
+        <Value name="iconDisabledColor" value="$preset_colorDarkGrey" />
+        <Value name="iconTextOffset" value="31px -9px" />
+        <Value name="iconRotation" value="180"/>
+    </Profile>
+    <Profile name="mpManager_admin_add1_SelectorRight" parent="mpManager_admin_add1_SelectorLeft">
+        <Value name="iconRotation" value="0"/>
+        <Value name="position" value="0px 0px" />
+        <Value name="screenAlign" value="topRight" />
+        <Value name="positionOrigin" value="topRight" />
+    </Profile>
+	
+	
+    <Profile name="mpManager_admin_settings_multiText" parent="baseReference">
+        <Value name="screenAlign" value="topLeft" />
+        <Value name="positionOrigin" value="topLeft" />
+        <Value name="buttonLRChange" value="true"/>
+        <Value name="position" value="420px -282px" />
+        <Value name="size" value="380px 36px"/>
+        <Value name="alignmentX" value="center" />
+        <Value name="alignmentY" value="middle" />
+        <Value name="imageUVs" value="$preset_colorUVs"/>
+        <Value name="imageColor" value="$preset_colorBlack3"/>
+    </Profile>
+    <Profile name="mpManager_admin_settings_SelectorLeft" parent="buttonBase">
+        <Value name="size" value="40px 36px" />
+        <Value name="imageColor" value="$preset_colorRed4" />
+        <Value name="imageDisabledColor" value="$preset_colorLightGrey" />
+        <Value name="iconUVs" value="669px 945px 24px 36px" />
+        <Value name="iconFocusedUVs" value="700px 945px 24px 36px" />
+        <Value name="iconSize" value="15px 23px" />
+        <Value name="iconColor" value="$preset_colorWhite" />
+        <Value name="iconDisabledColor" value="$preset_colorDarkGrey" />
+        <Value name="iconTextOffset" value="30px -9px" />
+        <Value name="iconRotation" value="180"/>
+    </Profile>
+    <Profile name="mpManager_admin_settings_SelectorRight" parent="mpManager_admin_settings_SelectorLeft">
+        <Value name="iconRotation" value="0"/>
+        <Value name="screenAlign" value="topRight" />
+        <Value name="positionOrigin" value="topRight" />
+    </Profile>
+    <Profile name="mpManager_admin_settings_text" parent="textDefault">
+        <Value name="textSize" value="19px"/>
+        <Value name="textOffset" value="0px 10px" />
+        <Value name="textAlignment" value="center" />
+        <Value name="screenAlign" value="middleCenter" />
+        <Value name="positionOrigin" value="middleCenter" />
+        <Value name="size" value="310px 36px"/>
+        <Value name="position" value="0px 0px" />
+    </Profile>	
+    <Profile name="mpManager_admin_settings_multiTextBg" parent="mpManager_admin_settings_1_1_multiText" >
+        <Value name="screenAlign" value="topCenter" />
+        <Value name="positionOrigin" value="topCenter" />
+        <Value name="position" value="0px 0px" />
+        <Value name="size" value="310px 36px"/>
+        <Value name="imageColor" value="$preset_colorBlack3"/>
+    </Profile>
+    <Profile name="mpManager_admin_settings_multiTextHeader" parent="textDefault">
+        <Value name="textSize" value="16px"/>
+        <Value name="textOffset" value="0px 10px" />
+        <Value name="textAlignment" value="left" />
+        <Value name="screenAlign" value="topCenter" />
+        <Value name="positionOrigin" value="topCenter" />
+        <Value name="size" value="0px 0px" />
+        <Value name="position" value="0px 20px" />
+    </Profile>
+	
+	
+    <Profile name="mpManager_admin_settings_1_1_multiText" parent="mpManager_admin_settings_multiText">
+        <Value name="position" value="10px -250px" />
+    </Profile>
+    <Profile name="mpManager_admin_settings_1_2_multiText" parent="mpManager_admin_settings_multiText">
+        <Value name="position" value="405px -250px" />
+    </Profile>
+    <Profile name="mpManager_admin_settings_1_3_multiText" parent="mpManager_admin_settings_multiText">
+        <Value name="position" value="800px -250px" />
+    </Profile>
+    <Profile name="mpManager_admin_settings_2_1_multiText" parent="mpManager_admin_settings_multiText">
+        <Value name="position" value="10px -340px" />
+    </Profile>
+    <Profile name="mpManager_admin_settings_2_2_multiText" parent="mpManager_admin_settings_multiText">
+        <Value name="position" value="405px -340px" />
+    </Profile>
+    <Profile name="mpManager_admin_settings_2_3_multiText" parent="mpManager_admin_settings_multiText">
+        <Value name="position" value="800px -340px" />
+    </Profile>
+	
+	
+	
+    <Profile name="mpManager_settings_textInput" parent="textInput">
+        <Value name="screenAlign" value="middleLeft" />
+        <Value name="positionOrigin" value="middleLeft" />
+        <Value name="position" value="0px -60px" />
+        <Value name="size" value="205px 36px"/>
+        <Value name="imageFocusedColor" value="$preset_colorRed4"/>
+    </Profile>
+    <Profile name="mpManager_settings_text" parent="textDefault">
+        <Value name="textSize" value="16px"/>
+        <Value name="textOffset" value="0px 0px" />
+        <Value name="textAlignment" value="left" />
+        <Value name="screenAlign" value="topCenter" />
+        <Value name="positionOrigin" value="topCenter" />
+        <Value name="size" value="0px 0px" />
+        <Value name="position" value="0px 15px" />
+    </Profile>
+    <Profile name="mpManager_settings_button" parent="buttonBase">
+        <Value name="imageUVs" value="$preset_colorUVs"/>
+        <Value name="imageColor" value="$preset_colorBlack3"/>
+        <Value name="imageFocusedColor" value="$preset_colorRed4"/>
+        <Value name="screenAlign" value="bottomCenter" />
+        <Value name="positionOrigin" value="bottomCenter" />
+        <Value name="position" value="160px 0px" />
+        <Value name="size" value="105px 36px"/>
+        <Value name="textBold" value="true" />
+        <Value name="textUpperCase" value="true" />
+    </Profile>
+	
+    <Profile name="mpManager_settings_1_1_textInput" parent="mpManager_settings_textInput">
+        <Value name="position" value="30px 0px" />
+    </Profile>
+    <Profile name="mpManager_settings_1_2_textInput" parent="mpManager_settings_textInput">
+        <Value name="position" value="430px 0px" />
+    </Profile>
+    <Profile name="mpManager_settings_1_3_textInput" parent="mpManager_settings_textInput">
+        <Value name="position" value="830px 0px" />
+    </Profile>
+	
+    <Profile name="mpManager_settings_2_1_textInput" parent="mpManager_settings_textInput">
+        <Value name="position" value="30px -120px" />
+    </Profile>
+    <Profile name="mpManager_settings_2_2_textInput" parent="mpManager_settings_textInput">
+        <Value name="position" value="430px -120px" />
+    </Profile>
+    <Profile name="mpManager_settings_2_3_textInput" parent="mpManager_settings_textInput">
+        <Value name="position" value="830px -120px" />
+    </Profile>
+	
+    <Profile name="mpManager_settings_3_1_textInput" parent="mpManager_settings_textInput">
+        <Value name="position" value="30px -240px" />
+    </Profile>
+    <Profile name="mpManager_settings_3_2_textInput" parent="mpManager_settings_textInput">
+        <Value name="position" value="430px -240px" />
+    </Profile>
+	
+	
+    <Profile name="mpManager_settings_infoBg" parent="baseReference">
+        <Value name="size" value="1190px 30px"/>
+        <Value name="alignmentX" value="center" />
+        <Value name="alignmentY" value="bottom" />
+        <Value name="imageColor" value="$preset_colorDarkGrey2" />
+        <Value name="useFullVisibility" value="false" />
+        <Value name="autoValidateLayout" value="true" />
+		<Value name="position" value="0px 40px" />
+    </Profile>
+    <Profile name="mpManager_settings_infoText" parent="textDefault">
+        <Value name="textSize" value="18px"/>
+        <Value name="textBold" value="true"/>
+        <Value name="textColor" value="$preset_colorRed"/>
+        <Value name="textOffset" value="10px 3px" />
+        <Value name="textAlignment" value="left" />
+        <Value name="screenAlign" value="middleLeft" />
+        <Value name="positionOrigin" value="middleLeft" />
+        <Value name="size" value="960px 19px" />
+        <Value name="position" value="0px 0px" />
+    </Profile>
+	
+	
+	<!-- Config -->
+	<Profile name="mpManagerConfigUiBackground" parent="baseReference" >
+        <Value name="screenAlign" value="middleCenter" />
+        <Value name="positionOrigin" value="middleCenter" />
+        <Value name="size" value="1000px 550px"/>
+        <Value name="imageColor" value="$preset_colorBlack3_70"/>
+    </Profile>
+    <Profile name="mpManagerConfigUiBackgroundMain" parent="baseReference" >
+        <Value name="screenAlign" value="middleCenter" />
+        <Value name="positionOrigin" value="middleCenter" />
+        <Value name="size" value="980px 530px"/>
+        <Value name="imageColor" value="$preset_colorDarkGrey"/>
+    </Profile>	
+    <Profile name="mpManagerConfigUiBackgroundHeader" parent="baseReference" >
+        <Value name="screenAlign" value="topCenter" />
+        <Value name="positionOrigin" value="topCenter" />
+        <Value name="position" value="0px 0px" />
+        <Value name="size" value="980px 40px"/>
+        <Value name="alignmentX" value="center" />
+        <Value name="alignmentY" value="middle" />
+        <Value name="imageColor" value="$preset_colorBlack"/>
+    </Profile>
+    <Profile name="mpManagerConfigUiBackgroundHeaderSteps" parent="textDefault">
+        <Value name="textSize" value="19px"/>
+        <Value name="textBold" value="true"/>
+        <Value name="textOffset" value="0px 2px" />
+        <Value name="textAlignment" value="right" />
+        <Value name="screenAlign" value="bottomCenter" />
+        <Value name="positionOrigin" value="bottomCenter" />
+        <Value name="size" value="960px 40px" />
+        <Value name="position" value="0px 10px" />
+    </Profile>
+    <Profile name="mpManagerConfigPage" parent="baseReference">
+        <Value name="position" value="0px 40px" />
+        <Value name="size" value="980px 450px"/>
+    </Profile>
+    <Profile name="mpManagerConfigUiBackgroundHeaderStepsHeader" parent="textDefault">
+        <Value name="textSize" value="18px"/>
+        <Value name="textOffset" value="0px 2px" />
+        <Value name="textAlignment" value="center" />
+        <Value name="screenAlign" value="topCenter" />
+        <Value name="positionOrigin" value="topCenter" />
+        <Value name="size" value="960px 30px" />
+    </Profile>
+    <Profile name="mpManagerConfigUiBackgroundHeaderStepsInfo" parent="textDefault">
+        <Value name="textSize" value="16px"/>
+        <Value name="textOffset" value="0px 2px" />
+        <Value name="textAlignment" value="center" />
+        <Value name="screenAlign" value="topCenter" />
+        <Value name="positionOrigin" value="topCenter" />
+        <Value name="size" value="960px 60px" />
+    </Profile>
+	
+	<!-- Config: Page 1 -->
+    <Profile name="mpManagerConfigUiBackgroundHeaderStep_1_text" parent="textDefault">
+        <Value name="textSize" value="16px"/>
+        <Value name="textOffset" value="0px 2px" />
+        <Value name="textAlignment" value="center" />
+        <Value name="screenAlign" value="topCenter" />
+        <Value name="positionOrigin" value="topCenter" />
+        <Value name="position" value="0px -60px" />
+        <Value name="textLineHeightScale" value="2"/>
+    </Profile>
+		
+	<!-- Config: Page 2 -->
+    <Profile name="mpManagerConfigPageSliderVertical" parent="sliderVertical">
+        <Value name="position" value="0px 0px" />
+        <Value name="size" value="16px 378px" />
+    </Profile>
+    <Profile name="mpManagerConfigPageList" parent="list">
+        <Value name="size" value="904px 300px" />
+        <Value name="position" value="-934px -50px" />
+        <Value name="screenAlign" value="topLeft"/>
+        <Value name="positionOrigin" value="topLeft"/>
+        <Value name="listItemHeight" value="30px"/>
+        <Value name="isHorizontalList" value="false"/>
+        <Value name="visibleItems" value="10"/>
+    </Profile>
+    <Profile name="mpManagerConfigPageListItem" parent="listItem" >
+        <Value name="imageColor" value="$preset_colorDarkGrey6"/>
+        <Value name="imageFocusedColor" value="$preset_colorDarkGrey2_50"/>
+        <Value name="imageSelectedColor" value="$preset_colorDarkGrey2"/>
+        <Value name="size" value="904px 30px"/>
+        <Value name="position" value="0px 0px" />
+        <Value name="screenAlign" value="bottomLeft" />
+        <Value name="positionOrigin" value="bottomLeft" />
+    </Profile>
+    <Profile name="mpManagerConfigPageListItemOdd" parent="mpManagerConfigPageListItem" >
+        <Value name="imageColor" value="$preset_colorDarkGrey3"/>
+    </Profile>
+    <Profile name="mpManagerConfigPageButtonsBox" parent="baseReference">
+        <Value name="size" value="700px 40px"/>
+        <Value name="position" value="-830px -20px" />
+        <Value name="imageColor" value="$preset_colorWhite_0" />
+        <Value name="useFullVisibility" value="false" />
+        <Value name="autoValidateLayout" value="true" />
+    </Profile>
+    <Profile name="mpManagerConfigPageButtonsBox2" parent="baseReference">
+        <Value name="size" value="700px 40px"/>
+        <Value name="position" value="-645px -20px" />
+        <Value name="imageColor" value="$preset_colorWhite_0" />
+        <Value name="useFullVisibility" value="false" />
+        <Value name="autoValidateLayout" value="true" />
+    </Profile>
+    <Profile name="mpManagerConfigPageListItemText" parent="textDefault">
+        <Value name="textSize" value="19px"/>
+        <Value name="textOffset" value="0px 2px" />
+        <Value name="textAlignment" value="left" />
+        <Value name="screenAlign" value="topLeft" />
+        <Value name="positionOrigin" value="topLeft" />
+        <Value name="position" value="10px -5px" />
+    </Profile>
+    <Profile name="mpManagerConfigPageListItemText1" parent="mpManagerConfigPageListItemText">
+        <Value name="position" value="400px -5px" />
+    </Profile>
+	
+	
+	<!-- Infoscreen -->
+	<Profile name="mpManagerInfoUiBackground" parent="baseReference" >
+        <Value name="screenAlign" value="middleCenter" />
+        <Value name="positionOrigin" value="middleCenter" />
+        <Value name="size" value="800px 340px"/>
+        <Value name="imageColor" value="$preset_colorBlack3_70"/>
+    </Profile>
+    <Profile name="mpManagerInfoUiBackgroundMain" parent="baseReference" >
+        <Value name="screenAlign" value="middleCenter" />
+        <Value name="positionOrigin" value="middleCenter" />
+        <Value name="size" value="780px 320px"/>
+        <Value name="imageColor" value="$preset_colorDarkGrey"/>
+    </Profile>	
+    <Profile name="mpManagerInfoUiBackgroundHeader" parent="baseReference" >
+        <Value name="screenAlign" value="topCenter" />
+        <Value name="positionOrigin" value="topCenter" />
+        <Value name="position" value="0px 0px" />
+        <Value name="size" value="780px 40px"/>
+        <Value name="alignmentX" value="center" />
+        <Value name="alignmentY" value="middle" />
+        <Value name="imageColor" value="$preset_colorBlack"/>
+    </Profile>
+    <Profile name="mpManagerInfoBitmapBg" parent="baseReference">
+        <Value name="size" value="72px 72px"/>
+        <Value name="imageColor" value="$preset_colorGreen"/>
+        <Value name="imageUVs" value="638px 706px 100px 100px"/>
+        <Value name="position" value="0px 60px"/>
+        <Value name="screenAlign" value="middleCenter" />
+        <Value name="positionOrigin" value="middleCenter" />
+    </Profile>
+    <Profile name="mpManagerInfoBitmapBgInfo" parent="dialogWarning">
+        <Value name="size" value="9px 38px"/>
+        <Value name="position" value="0px 0px"/>
+        <Value name="screenAlign" value="middleCenter" />
+        <Value name="positionOrigin" value="middleCenter" />
+        <Value name="imageColor" value="$preset_colorDarkGrey"/>
+        <Value name="imageUVs" value="135px 764px 17px 56px" />
+        <Value name="size" value="11px 38px"/>
+    </Profile>
+    <Profile name="mpManagerInfoText" parent="textDefault">
+        <Value name="textSize" value="19px"/>
+        <Value name="textOffset" value="0px 2px" />
+        <Value name="textAlignment" value="center" />
+        <Value name="screenAlign" value="topLeft" />
+        <Value name="positionOrigin" value="topLeft" />
+        <Value name="position" value="40px -180px" />
+        <Value name="size" value="700px 0px"/>
+        <Value name="textLineHeightScale" value="1.5"/>
+        <Value name="textWrapWidth" value="560px" />
+        <Value name="textMaxNumLines" value="3"/>
+    </Profile>
+	
+	<!-- InputScreen -->
+    <Profile name="mpManagerInputTextInfo" parent="textDefault">
+        <Value name="textSize" value="19px"/>
+        <Value name="textOffset" value="0px 2px" />
+        <Value name="textAlignment" value="center" />
+        <Value name="screenAlign" value="topCenter" />
+        <Value name="positionOrigin" value="topCenter" />
+        <Value name="position" value="00px -90px" />
+        <Value name="size" value="600px 0px"/>
+        <Value name="textLineHeightScale" value="1.5"/>
+        <Value name="textWrapWidth" value="600px" />
+        <Value name="textMaxNumLines" value="3"/>
+    </Profile>
+    <Profile name="mpManagerInputTextinput" parent="textInput">
+        <Value name="screenAlign" value="bottomCenter" />
+        <Value name="positionOrigin" value="bottomCenter" />
+        <Value name="position" value="0px 100px" />
+        <Value name="size" value="405px 36px"/>
+    </Profile>
+    <Profile name="mpManagerInputChooseButton" parent="baseReference">
+        <Value name="doLockingOnFocus" value="false" />
+        <Value name="position" value="180px 100px" />
+        <Value name="screenAlign" value="bottomLeft" />
+        <Value name="positionOrigin" value="bottomLeft" />
+        <Value name="size" value="420px 36px"/>
+    </Profile>	
+	<Profile name="mpManagerInputChooseButtonLeft" parent="buttonBase">
+        <Value name="size" value="36px 36px" />
+        <Value name="position" value="0px 0px" />
+        <Value name="imageColor" value="$preset_colorBlack3" />
+        <Value name="imageFocusedColor" value="$preset_colorGreen" />
+        <Value name="imageUVs" value="$preset_colorUVs"/>
+        <Value name="iconUVs" value="535px 989px 27px 27px" />
+        <Value name="iconSize" value="14px 14px"/>
+        <Value name="iconTextOffset" value="28px -5px"/>
+        <Value name="iconColor" value="$preset_colorGreen"/>
+        <Value name="iconFocusedColor" value="$preset_colorBlack3"/>
+        <Value name="iconDisabledColor" value="$preset_colorLightGrey"/>
+        <Value name="iconRotation" value="180"/>
+    </Profile>
+    <Profile name="mpManagerInputChooseButtonRight" parent="mpManagerInputChooseButtonLeft">
+        <Value name="screenAlign" value="bottomRight" />
+        <Value name="positionOrigin" value="bottomRight" />
+        <Value name="iconRotation" value="0"/>
+        <Value name="position" value="0px 0px" />
+        <Value name="iconTextOffset" value="27px -5px"/>
+    </Profile>	
+    <Profile name="mpManagerInputChooseButtonText" parent="textDefault">
+        <Value name="screenAlign" value="bottomCenter" />
+        <Value name="positionOrigin" value="bottomCenter" />
+        <Value name="position" value="0px 10px" />
+        <Value name="textAlignment" value="center" />
+        <Value name="textSize" value="18px"/>
+        <Value name="textMaxWidth" value="190px"/>
+    </Profile>	
+    <Profile name="mpManagerInputChooseButtonBg" parent="baseReference">
+        <Value name="imageColor" value="$preset_colorBlack3" />
+        <Value name="position" value="37px 0px" />
+        <Value name="size" value="345px 36px" />
+    </Profile>
+	
+	<!-- CheckScreen -->
+	<Profile name="mpManagerCheckUiBackground" parent="baseReference" >
+        <Value name="screenAlign" value="middleCenter" />
+        <Value name="positionOrigin" value="middleCenter" />
+        <Value name="size" value="800px 300px"/>
+        <Value name="imageColor" value="$preset_colorBlack3_70"/>
+    </Profile>
+    <Profile name="mpManagerCheckUiBackgroundMain" parent="baseReference" >
+        <Value name="screenAlign" value="middleCenter" />
+        <Value name="positionOrigin" value="middleCenter" />
+        <Value name="size" value="780px 280px"/>
+        <Value name="imageColor" value="$preset_colorDarkGrey"/>
+    </Profile>	
+    <Profile name="mpManagerCheckUiBackgroundHeader" parent="baseReference" >
+        <Value name="screenAlign" value="topCenter" />
+        <Value name="positionOrigin" value="topCenter" />
+        <Value name="position" value="0px 0px" />
+        <Value name="size" value="780px 40px"/>
+        <Value name="alignmentX" value="center" />
+        <Value name="alignmentY" value="middle" />
+        <Value name="imageColor" value="$preset_colorBlack"/>
+    </Profile>
+    <Profile name="mpManagerCheckBitmapBg" parent="baseReference">
+        <Value name="size" value="72px 72px"/>
+        <Value name="imageColor" value="$preset_colorGreen"/>
+        <Value name="imageUVs" value="638px 706px 100px 100px"/>
+        <Value name="position" value="0px 40px"/>
+        <Value name="screenAlign" value="middleCenter" />
+        <Value name="positionOrigin" value="middleCenter" />
+    </Profile>
+    <Profile name="mpManagerCheckBitmapBgQuestion" parent="dialogWarning">
+        <Value name="size" value="9px 38px"/>
+        <Value name="position" value="0px 0px"/>
+        <Value name="screenAlign" value="middleCenter" />
+        <Value name="positionOrigin" value="middleCenter" />
+        <Value name="imageColor" value="$preset_colorDarkGrey"/>
+        <Value name="size" value="23px 38px"/>
+        <Value name="imageUVs" value="70px 764px 34px 57px"/>
+    </Profile>
+    <Profile name="mpManagerCheckText" parent="textDefault">
+        <Value name="textSize" value="19px"/>
+        <Value name="textOffset" value="0px 2px" />
+        <Value name="textAlignment" value="center" />
+        <Value name="screenAlign" value="topLeft" />
+        <Value name="positionOrigin" value="topLeft" />
+        <Value name="position" value="40px -180px" />
+        <Value name="size" value="700px 0px"/>
+        <Value name="textLineHeightScale" value="1.5"/>
+        <Value name="textWrapWidth" value="560px" />
+        <Value name="textMaxNumLines" value="2"/>
+    </Profile>
+	
+	<!-- Billscreen -->
+	<Profile name="mpManagerBillUiBackground" parent="baseReference" >
+        <Value name="screenAlign" value="middleCenter" />
+        <Value name="positionOrigin" value="middleCenter" />
+        <Value name="size" value="900px 700px"/>
+        <Value name="imageColor" value="$preset_colorBlack3_70"/>
+    </Profile>
+    <Profile name="mpManagerBillUiBackgroundMain" parent="baseReference" >
+        <Value name="screenAlign" value="middleCenter" />
+        <Value name="positionOrigin" value="middleCenter" />
+        <Value name="size" value="880px 680px"/>
+        <Value name="imageColor" value="$preset_colorDarkGrey"/>
+    </Profile>	
+    <Profile name="mpManagerBillUiBackgroundHeader" parent="baseReference" >
+        <Value name="screenAlign" value="topCenter" />
+        <Value name="positionOrigin" value="topCenter" />
+        <Value name="position" value="0px 0px" />
+        <Value name="size" value="880px 40px"/>
+        <Value name="alignmentX" value="center" />
+        <Value name="alignmentY" value="middle" />
+        <Value name="imageColor" value="$preset_colorBlack"/>
+    </Profile>
+    <Profile name="mpManagerBillPaper" parent="baseReference">
+        <Value name="size" value="470px 1000px"/>
+        <Value name="screenAlign" value="bottomRight" />
+        <Value name="positionOrigin" value="bottomRight" />
+        <Value name="position" value="-400px -180px" />
+        <Value name="fixedWidth" value="true" />
+        <Value name="imageUVs" value="0 0 1 1"/>
+        <Value name="imageFilename" value="g_baseUIFilename"/>
+    </Profile>
+    <Profile name="mpManagerPayedLogo" parent="baseReference">
+        <Value name="size" value="200px 100px"/>
+        <Value name="screenAlign" value="topLeft" />
+        <Value name="positionOrigin" value="topLeft" />
+        <Value name="position" value="120px -70px" />
+        <Value name="fixedWidth" value="true" />
+        <Value name="imageUVs" value="0 0 1 1"/>
+        <Value name="imageFilename" value="g_baseUIFilename"/>
+        <Value name="newLayer" value="true"/>
+    </Profile>
+    <Profile name="mpManagerBillLogo" parent="baseReference">
+        <Value name="size" value="200px 200px"/>
+        <Value name="screenAlign" value="topLeft" />
+        <Value name="positionOrigin" value="topLeft" />
+        <Value name="position" value="270px -10px" />
+        <Value name="fixedWidth" value="true" />
+        <Value name="imageUVs" value="0 0 1 1"/>
+        <Value name="imageFilename" value="g_baseUIFilename"/>
+    </Profile>
+    <Profile name="mpManagerBillText_ad_1" parent="textDefault">
+        <Value name="textColor" value="$preset_colorBlack" />
+        <Value name="screenAlign" value="topLeft" />
+        <Value name="positionOrigin" value="topLeft" />
+        <Value name="position" value="70px -90px" />
+        <Value name="textWrapWidth" value="350px" />
+        <Value name="textSize" value="11px"/>
+        <Value name="size" value="0px 20px"/>
+        <Value name="textAlignment" value="left"/>
+        <Value name="textLineHeightScale" value="1.5"/>
+    </Profile>
+    <Profile name="mpManagerBillText_ad_2" parent="mpManagerBillText_ad_1">
+        <Value name="position" value="70px -110px" />
+    </Profile>
+    <Profile name="mpManagerBillText_ad_3" parent="mpManagerBillText_ad_1">
+        <Value name="position" value="340px -150px" />
+    </Profile>
+    <Profile name="mpManagerBillText_ad_4" parent="mpManagerBillText_ad_1">
+        <Value name="position" value="340px -170px" />
+    </Profile>
+    <Profile name="mpManagerBillText_ad_5" parent="mpManagerBillText_ad_1">
+        <Value name="position" value="340px -190px" />
+    </Profile>
+    <Profile name="mpManagerBillText_billHeader" parent="mpManagerBillText_ad_1">
+        <Value name="position" value="70px -170px" />
+        <Value name="textSize" value="18px"/>
+    </Profile>
+    <Profile name="mpManagerBillText_billHeaderNum" parent="mpManagerBillText_billHeader">
+        <Value name="position" value="220px -170px" />
+    </Profile>
+    <Profile name="mpManagerBillText_billInfo01" parent="mpManagerBillText_ad_1">
+        <Value name="position" value="70px -220px" />
+    </Profile>
+    <Profile name="mpManagerBillText_billInfo02" parent="mpManagerBillText_ad_1">
+        <Value name="position" value="60px -630px" />
+    </Profile>
+	
+	
+    <Profile name="mpManagerBillUiPage1_header" parent="buttonBox">
+        <Value name="size" value="375px 20px"/>
+        <Value name="position" value="60px -270px" />
+        <Value name="screenAlign" value="topLeft" />
+        <Value name="positionOrigin" value="topLeft" />
+        <Value name="alignmentX" value="left" />
+        <Value name="alignmentY" value="bottom" />
+        <Value name="imageColor" value="$preset_colorBlack" />
+    </Profile>
+	<Profile name="mpManagerBillUiPage1_headerItem1" parent="baseReference">
+        <Value name="size" value="30px 18px" />
+        <Value name="margin" value="0px 0px 1px 0px"/>
+        <Value name="screenAlign" value="topLeft" />
+        <Value name="positionOrigin" value="topLeft" />
+        <Value name="imageColor" value="$preset_colorDarkGrey8" />
+    </Profile>
+	<Profile name="mpManagerBillUiPage1_headerItem2" parent="baseReference">
+        <Value name="size" value="80px 18px" />
+        <Value name="margin" value="0px 0px 2px 0px"/>
+        <Value name="screenAlign" value="topLeft" />
+        <Value name="positionOrigin" value="topLeft" />
+        <Value name="imageColor" value="$preset_colorDarkGrey8" />
+    </Profile>
+	<Profile name="mpManagerBillUiPage1_headerItem3" parent="baseReference">
+        <Value name="size" value="130px 18px" />
+        <Value name="margin" value="0px 0px 2px 0px"/>
+        <Value name="screenAlign" value="topLeft" />
+        <Value name="positionOrigin" value="topLeft" />
+        <Value name="imageColor" value="$preset_colorDarkGrey8" />
+    </Profile>
+	<Profile name="mpManagerBillUiPage1_headerItem4" parent="baseReference">
+        <Value name="size" value="130px 18px" />
+        <Value name="margin" value="0px 0px 2px 0px"/>
+        <Value name="screenAlign" value="topLeft" />
+        <Value name="positionOrigin" value="topLeft" />
+        <Value name="imageColor" value="$preset_colorDarkGrey8" />
+    </Profile>
+    <Profile name="mpManager_items_textBlack" parent="textDefault">
+        <Value name="textSize" value="12px" />
+        <Value name="position" value="0px 0px" />
+        <Value name="screenAlign" value="middleCenter" />
+        <Value name="positionOrigin" value="middleCenter" />
+        <Value name="textBold" value="true" />
+        <Value name="textColor" value="$preset_colorBlack" />
+    </Profile>	
+	<Profile name="mpManagerBillUiPage1_sum" parent="baseReference">
+        <Value name="size" value="250px 20px" />
+        <Value name="margin" value="0px 0px 1px 0px"/>
+        <Value name="screenAlign" value="bottomLeft" />
+        <Value name="positionOrigin" value="bottomLeft" />
+        <Value name="imageColor" value="$preset_colorOrange2" />
+        <Value name="position" value="185px 65px" />
+    </Profile>
+    <Profile name="mpManagerBillUiPage1_sumText1" parent="textDefault">
+        <Value name="textSize" value="14px" />
+        <Value name="position" value="5px 0px" />
+        <Value name="screenAlign" value="middleLeft" />
+        <Value name="positionOrigin" value="middleLeft" />
+        <Value name="textColor" value="$preset_colorBlack" />
+        <Value name="textSelectedColor" value="$preset_colorBlack"/>
+        <Value name="textDisabledColor" value="$preset_colorBlack"/>
+        <Value name="textPreSelectedColor" value="$preset_colorBlack"/>
+        <Value name="textAlignment" value="left"/>
+        <Value name="textBold" value="true"/>
+    </Profile>	
+    <Profile name="mpManagerBillUiPage1_sumText2" parent="mpManagerBillUiPage1_sumText1">
+        <Value name="position" value="-5px 0px" />
+        <Value name="size" value="130px 15px" />
+        <Value name="screenAlign" value="middleRight" />
+        <Value name="positionOrigin" value="middleRight" />
+        <Value name="textColor" value="$preset_colorBlack" />
+        <Value name="textAlignment" value="right"/>
+    </Profile>	
+	
+	<Profile name="mpManagerBillUiPage1_list" parent="list">
+        <Value name="size" value="375px 300px" />
+        <Value name="screenAlign" value="topLeft"/>
+        <Value name="positionOrigin" value="topLeft"/>
+        <Value name="position" value="60px -295px"/>
+        <Value name="listItemHeight" value="50px"/>
+        <Value name="isHorizontalList" value="false"/>
+        <Value name="visibleItems" value="6"/>
+    </Profile>
+    <Profile name="mpManagerBillUiPage1_listItem" parent="list">
+        <Value name="imageColor" value="$preset_colorWhite_0"/>
+        <Value name="size" value="375px 50px"/>
+        <Value name="position" value="0px 0px" />
+        <Value name="screenAlign" value="bottomLeft" />
+        <Value name="positionOrigin" value="bottomLeft" />
+    </Profile>
+    <Profile name="mpManagerBillUiPage1_items" parent="buttonBox">
+        <Value name="size" value="375px 50px"/>
+        <Value name="position" value="0px 0px" />
+        <Value name="screenAlign" value="topLeft" />
+        <Value name="positionOrigin" value="topLeft" />
+        <Value name="alignmentX" value="left" />
+        <Value name="alignmentY" value="bottom" />
+        <Value name="imageColor" value="$preset_colorDarkGrey_0" />
+    </Profile>
+	
+	
+	<Profile name="mpManagerBillUiPage1_listItemItem1" parent="baseReference">
+        <Value name="size" value="30px 16px" />
+        <Value name="margin" value="0px 0px 1px 0px"/>
+        <Value name="screenAlign" value="topLeft" />
+        <Value name="positionOrigin" value="topLeft" />
+        <Value name="imageColor" value="$preset_colorDarkGrey_0" />
+    </Profile>
+	<Profile name="mpManagerBillUiPage1_listItemItem2" parent="baseReference">
+        <Value name="size" value="80px 16px" />
+        <Value name="margin" value="0px 0px 2px 0px"/>
+        <Value name="screenAlign" value="topLeft" />
+        <Value name="positionOrigin" value="topLeft" />
+        <Value name="imageColor" value="$preset_colorDarkGrey_0" />
+    </Profile>
+	<Profile name="mpManagerBillUiPage1_listItemItem3" parent="baseReference">
+        <Value name="size" value="130px 16px" />
+        <Value name="margin" value="0px 0px 2px 0px"/>
+        <Value name="screenAlign" value="topLeft" />
+        <Value name="positionOrigin" value="topLeft" />
+        <Value name="imageColor" value="$preset_colorDarkGrey_0" />
+    </Profile>
+	<Profile name="mpManagerBillUiPage1_listItemItem4" parent="baseReference">
+        <Value name="size" value="130px 16px" />
+        <Value name="margin" value="0px 0px 2px 0px"/>
+        <Value name="screenAlign" value="topLeft" />
+        <Value name="positionOrigin" value="topLeft" />
+        <Value name="imageColor" value="$preset_colorDarkGrey_0" />
+    </Profile>
+    <Profile name="mpManagerBillUiPage1_listItemItemText" parent="textDefault">
+        <Value name="textSize" value="12px" />
+        <Value name="position" value="0px 0px" />
+        <Value name="screenAlign" value="middleCenter" />
+        <Value name="positionOrigin" value="middleCenter" />
+        <Value name="textColor" value="$preset_colorBlack" />
+        <Value name="textSelectedColor" value="$preset_colorBlack"/>
+        <Value name="textDisabledColor" value="$preset_colorBlack"/>
+        <Value name="textPreSelectedColor" value="$preset_colorBlack"/>
+    </Profile>	
+    <Profile name="mpManagerBillUiPage1_listItemItemTextDesc" parent="textDefault">
+        <Value name="textSize" value="12px" />
+        <Value name="position" value="30px -16px" />
+        <Value name="screenAlign" value="topLeft" />
+        <Value name="positionOrigin" value="topLeft" />
+        <Value name="textAlignment" value="left" />
+        <Value name="textColor" value="$preset_colorBlack" />
+        <Value name="textSelectedColor" value="$preset_colorBlack"/>
+        <Value name="textDisabledColor" value="$preset_colorBlack"/>
+        <Value name="textPreSelectedColor" value="$preset_colorBlack"/>
+    </Profile>		
+    <Profile name="mpManagerBillUiPage1_listItemItemTextDesc2" parent="mpManagerBillUiPage1_listItemItemTextDesc">
+        <Value name="position" value="30px -32px" />
+    </Profile>	
+	
+	
+    <Profile name="mpManagerBillUiSeperator01" parent="baseReference" >
+        <Value name="screenAlign" value="bottomLeft" />
+        <Value name="positionOrigin" value="bottomLeft" />
+        <Value name="size" value="375px 1px"/>
+        <Value name="position" value="0px 0px" />
+        <Value name="imageColor" value="$preset_colorDarkGrey"/>
+    </Profile>	
+    <Profile name="mpManagerBillUiSeperator02" parent="baseReference" >
+        <Value name="screenAlign" value="bottomLeft" />
+        <Value name="positionOrigin" value="bottomLeft" />
+        <Value name="size" value="375px 2px"/>
+        <Value name="position" value="60px 45px" />
+        <Value name="imageColor" value="$preset_colorDarkGrey"/>
+    </Profile>	
+    <Profile name="mpManagerBillUiSeperator03" parent="baseReference" >
+        <Value name="screenAlign" value="bottomLeft" />
+        <Value name="positionOrigin" value="bottomLeft" />
+        <Value name="size" value="1px 50px"/>
+        <Value name="position" value="330px 469px" />
+        <Value name="imageColor" value="$preset_colorDarkGrey"/>
+    </Profile>	
+    <Profile name="mpManagerBillArrow1" parent="baseReference">	
+        <Value name="size" value="16px 16px" />
+        <Value name="screenAlign" value="bottomLeft" />
+        <Value name="positionOrigin" value="bottomLeft" />
+        <Value name="position" value="60px 65px" />
+        <Value name="fixedWidth" value="true" />
+        <Value name="imageUVs" value="535px 989px 27px 27px"/>
+        <Value name="imageFilename" value="g_baseUIFilename"/>
+        <Value name="imageRotation" value="90"/>
+        <Value name="imageColor" value="$preset_colorOrange2" />
+    </Profile>
+    <Profile name="mpManagerBillArrow2" parent="mpManagerBillArrow1">	
+        <Value name="position" value="80px 65px" />
+        <Value name="imageRotation" value="270"/>
+    </Profile>
+    <Profile name="mpManagerButton1" parent="pcButton">
+        <Value name="textOffset" value="0px 10px"/>
+        <Value name="iconSize" value="0px 0px"/>
+        <Value name="imageFocusedColor" value="$preset_colorOrange2"/>
+    </Profile>
+    <Profile name="mpManagerButton2" parent="buttonBack">
+        <Value name="textOffset" value="0px 10px"/>
+        <Value name="imageFocusedColor" value="$preset_colorOrange2"/>
+        <Value name="iconColor" value="$preset_colorOrange2"/>
+    </Profile>
+    <Profile name="mpManagerButton3" parent="buttonSave">
+        <Value name="textOffset" value="0px 10px"/>
+        <Value name="imageFocusedColor" value="$preset_colorOrange2"/>
+        <Value name="iconColor" value="$preset_colorOrange2"/>
+    </Profile>
+    <Profile name="mpManagerButton4" parent="buttonDelete">
+        <Value name="textOffset" value="0px 10px"/>
+        <Value name="imageFocusedColor" value="$preset_colorOrange2"/>
+        <Value name="iconColor" value="$preset_colorOrange2"/>
+    </Profile>
+    <Profile name="mpManagerButton5" parent="buttonSelect">
+        <Value name="textOffset" value="0px 10px"/>
+        <Value name="imageFocusedColor" value="$preset_colorOrange2"/>
+        <Value name="iconColor" value="$preset_colorOrange2"/>
+    </Profile>
+    <Profile name="mpManagerButton6" parent="buttonDownload">
+        <Value name="textOffset" value="0px 10px"/>
+        <Value name="imageFocusedColor" value="$preset_colorOrange2"/>
+        <Value name="iconColor" value="$preset_colorOrange2"/>
+    </Profile>
+	
+	
+    <Profile name="mpManagerBillText_billHeader01" parent="textDefault">
+        <Value name="textSize" value="17px" />
+        <Value name="position" value="470px -50px" />
+        <Value name="screenAlign" value="topLeft" />
+        <Value name="positionOrigin" value="topLeft" />
+        <Value name="textAlignment" value="left"/>
+        <Value name="textBold" value="true"/>
+    </Profile>	
+    <Profile name="mpManagerBillText_billHeader02" parent="mpManagerBillText_billHeader01">
+        <Value name="position" value="470px -130px" />
+    </Profile>	
+    <Profile name="mpManagerBillText_billHeader03" parent="mpManagerBillText_billHeader01">
+        <Value name="position" value="470px -170px" />
+        <Value name="textSize" value="16px" />
+    </Profile>	
+    <Profile name="mpManagerBillText_billHeader04" parent="mpManagerBillText_billHeader01">
+        <Value name="position" value="470px -280px" />
+        <Value name="textSize" value="16px" />
+    </Profile>	
+    <Profile name="mpManagerBillText_billHeader05" parent="mpManagerBillText_billHeader01">
+        <Value name="position" value="470px -390px" />
+        <Value name="textSize" value="16px" />
+    </Profile>	
+	
+	
+    <Profile name="mpManagerBillText_Background01" parent="baseReference" >
+        <Value name="screenAlign" value="topLeft" />
+        <Value name="positionOrigin" value="topLeft" />
+        <Value name="size" value="390px 30px"/>
+        <Value name="position" value="470px -200px" />
+        <Value name="imageColor" value="$preset_colorDarkGrey2"/>
+    </Profile>	
+    <Profile name="mpManagerBillText_Background02" parent="mpManagerBillText_Background01" >
+        <Value name="position" value="470px -310px" />
+    </Profile>	
+    <Profile name="mpManagerBillText_Background03" parent="mpManagerBillText_Background01" >
+        <Value name="position" value="470px -420px" />
+    </Profile>	
+    <Profile name="mpManagerBillText_Background04" parent="mpManagerBillText_Background01" >
+        <Value name="position" value="470px -540px" />
+        <Value name="size" value="390px 5px"/>
+    </Profile>	
+    <Profile name="mpManagerBillText_billText01" parent="textDefault">
+        <Value name="textSize" value="17px" />
+        <Value name="position" value="0px 0px" />
+        <Value name="size" value="390px 0px" />
+        <Value name="textOffset" value="0px 8px"/>
+        <Value name="textAlignment" value="center"/>
+        <Value name="screenAlign" value="bottomCenter" />
+        <Value name="positionOrigin" value="bottomCenter" />
+    </Profile>	
+	
+	
+    <Profile name="mpManagerBillText_billSelectionHeader" parent="baseReference" >
+        <Value name="screenAlign" value="topLeft" />
+        <Value name="positionOrigin" value="topLeft" />
+        <Value name="position" value="550px -80px" />
+        <Value name="size" value="230px 30px"/>
+        <Value name="alignmentX" value="center" />
+        <Value name="alignmentY" value="middle" />
+        <Value name="imageColor" value="$preset_colorBlack2"/>
+    </Profile>
+    <Profile name="mpManagerBillText_billSelection" parent="mpManagerBillText_billSelectionHeader">
+        <Value name="screenAlign" value="topLeft" />
+        <Value name="positionOrigin" value="topLeft" />
+        <Value name="buttonLRChange" value="true"/>
+        <Value name="position" value="0px 0px" />
+    </Profile>
+    <Profile name="mpManagerBillText_billSelectionLeft" parent="buttonBase">
+        <Value name="size" value="80px 30px" />
+        <Value name="imageColor" value="$preset_colorOrange2" />
+        <Value name="imageDisabledColor" value="$preset_colorLightGrey" />
+        <Value name="iconUVs" value="669px 945px 24px 36px" />
+        <Value name="iconFocusedUVs" value="700px 945px 24px 36px" />
+        <Value name="iconSize" value="15px 23px" />
+        <Value name="iconColor" value="$preset_colorWhite" />
+        <Value name="iconDisabledColor" value="$preset_colorDarkGrey" />
+        <Value name="iconTextOffset" value="31px -11px" />
+        <Value name="iconRotation" value="180"/>
+        <Value name="position" value="-80px 0px" />
+    </Profile>
+    <Profile name="mpManagerBillText_billSelectionRight" parent="mpManagerBillText_billSelectionLeft">
+        <Value name="iconRotation" value="0"/>
+        <Value name="position" value="80px 0px" />
+        <Value name="screenAlign" value="topRight" />
+        <Value name="positionOrigin" value="topRight" />
+    </Profile>
+	
+	
+	<!-- SelectionScreen -->
+	<Profile name="mpManagerSelectionUiBackground" parent="baseReference" >
+        <Value name="screenAlign" value="middleCenter" />
+        <Value name="positionOrigin" value="middleCenter" />
+        <Value name="size" value="700px 500px"/>
+        <Value name="imageColor" value="$preset_colorBlack3_70"/>
+    </Profile>
+    <Profile name="mpManagerSelectionUiBackgroundMain" parent="baseReference" >
+        <Value name="screenAlign" value="middleCenter" />
+        <Value name="positionOrigin" value="middleCenter" />
+        <Value name="size" value="680px 480px"/>
+        <Value name="imageColor" value="$preset_colorDarkGrey"/>
+    </Profile>	
+    <Profile name="mpManagerSelectionlUiBackgroundHeader" parent="baseReference" >
+        <Value name="screenAlign" value="topCenter" />
+        <Value name="positionOrigin" value="topCenter" />
+        <Value name="position" value="0px 0px" />
+        <Value name="size" value="680px 40px"/>
+        <Value name="alignmentX" value="center" />
+        <Value name="alignmentY" value="middle" />
+        <Value name="imageColor" value="$preset_colorBlack"/>
+    </Profile>
+    <Profile name="mpManagerSelectionButton1" parent="buttonBack">
+        <Value name="textOffset" value="0px 10px"/>
+        <Value name="position" value="0px 0px"/>
+        <Value name="size" value="339px 35px"/>
+        <Value name="imageFocusedColor" value="$preset_colorOrange2"/>
+        <Value name="iconColor" value="$preset_colorOrange2"/>
+    </Profile>
+    <Profile name="mpManagerSelectionButton2" parent="buttonOK">
+        <Value name="textOffset" value="0px 10px"/>
+        <Value name="position" value="341px 0px"/>
+        <Value name="size" value="339px 35px"/>
+        <Value name="imageFocusedColor" value="$preset_colorOrange2"/>
+        <Value name="iconColor" value="$preset_colorOrange2"/>
+    </Profile>
+	
+    <Profile name="mpManagerSelectionHeaderItems" parent="buttonBox">
+        <Value name="size" value="1190px 25px"/>
+        <Value name="position" value="0px -40px" />
+        <Value name="screenAlign" value="topLeft" />
+        <Value name="positionOrigin" value="topLeft" />
+        <Value name="alignmentX" value="left" />
+        <Value name="alignmentY" value="bottom" />
+    </Profile>
+    <Profile name="mpManagerSelectionHeaderItemsItem1" parent="baseReference">
+        <Value name="size" value="260px 25px" />
+        <Value name="margin" value="0px 0px 2px 0px"/>
+        <Value name="screenAlign" value="bottomLeft" />
+        <Value name="positionOrigin" value="bottomLeft" />
+        <Value name="imageColor" value="$preset_colorDarkGrey3" />
+    </Profile>
+    <Profile name="mpManagerSelectionHeaderItemsItem2" parent="baseReference">
+        <Value name="size" value="200px 25px" />
+        <Value name="margin" value="0px 0px 2px 0px"/>
+        <Value name="screenAlign" value="bottomLeft" />
+        <Value name="positionOrigin" value="bottomLeft" />
+        <Value name="imageColor" value="$preset_colorDarkGrey3" />
+    </Profile>
+    <Profile name="mpManagerSelectionHeaderItemsItem1Text" parent="textDefault">
+        <Value name="textSize" value="11px" />
+        <Value name="position" value="0px 0px" />
+        <Value name="textAlignment" value="center"/>
+        <Value name="screenAlign" value="bottomLeft" />
+        <Value name="positionOrigin" value="bottomLeft" />
+        <Value name="textBold" value="true" />
+        <Value name="size" value="260px 0px" />
+        <Value name="textOffset" value="0px 8px"/>
+    </Profile>	
+    <Profile name="mpManagerSelectionHeaderItemsItem2Text" parent="mpManagerSelectionHeaderItemsItem1Text">
+        <Value name="size" value="200px 0px" />
+    </Profile>
+	
+    <Profile name="mpManagerSelectionHeaderItemsItem3" parent="baseReference">
+        <Value name="size" value="665px 25px" />
+        <Value name="margin" value="0px 0px 2px 0px"/>
+        <Value name="screenAlign" value="bottomLeft" />
+        <Value name="positionOrigin" value="bottomLeft" />
+        <Value name="imageColor" value="$preset_colorDarkGrey3" />
+    </Profile>	
+    <Profile name="mpManagerSelectionHeaderItemsItem3Text" parent="mpManagerSelectionHeaderItemsItem1Text">
+        <Value name="size" value="665px 0px" />
+    </Profile>	
+    <Profile name="mpManagerSelectionHeaderItemsItemSep1" parent="mpManagerSelectionHeaderItemsItem1">
+        <Value name="imageColor" value="$preset_colorDarkGrey2" />
+        <Value name="size" value="260px 2px" />
+        <Value name="position" value="0px -2px" />
+    </Profile>
+    <Profile name="mpManagerSelectionHeaderItemsItemSep2" parent="mpManagerSelectionHeaderItemsItem2">
+        <Value name="imageColor" value="$preset_colorDarkGrey2" />
+        <Value name="size" value="200px 2px" />
+        <Value name="position" value="0px -2px" />
+    </Profile>
+    <Profile name="mpManagerSelectionHeaderItemsItemSep3" parent="mpManagerSelectionHeaderItemsItem2">
+        <Value name="imageColor" value="$preset_colorDarkGrey2" />
+        <Value name="size" value="665px 2px" />
+        <Value name="position" value="0px -2px" />
+    </Profile>
+    <Profile name="mpManagerSelectionSlider" parent="sliderVertical">
+        <Value name="position" value="0px 70px" />
+        <Value name="size" value="16px 334px" />
+        <Value name="screenAlign" value="bottomRight" />
+        <Value name="positionOrigin" value="bottomRight" />
+        <Value name="sliderImageColor" value="$preset_colorOrange2"/>
+    </Profile>
+    <Profile name="mpManagerSelectionList" parent="list">
+        <Value name="size" value="664px 375px" />
+        <Value name="screenAlign" value="topRight"/>
+        <Value name="positionOrigin" value="topRight"/>
+        <Value name="position" value="-16px 8px"/>
+        <Value name="listItemHeight" value="25px"/>
+        <Value name="isHorizontalList" value="false"/>
+        <Value name="visibleItems" value="15"/>
+    </Profile>
+	
+    <Profile name="mpManager_items_listItem" parent="list">
+        <Value name="imageColor" value="$preset_colorWhite_0"/>
+        <Value name="imageFocusedColor" value="$preset_colorWhite_0"/>
+        <Value name="imageSelectedColor" value="$preset_colorWhite_0"/>
+        <Value name="size" value="982px 25px"/>
+        <Value name="position" value="0px 0px" />
+        <Value name="screenAlign" value="bottomLeft" />
+        <Value name="positionOrigin" value="bottomLeft" />
+    </Profile>
+	
+    <Profile name="mpManagerSelectionHeaderItemsItem1_2" parent="baseReference">
+        <Value name="size" value="260px 23px" />
+        <Value name="margin" value="0px 0px 2px 2px"/>
+        <Value name="screenAlign" value="bottomLeft" />
+        <Value name="positionOrigin" value="bottomLeft" />
+        <Value name="imageColor" value="$preset_colorDarkGrey3"/>
+        <Value name="imageFocusedColor" value="$preset_colorOrange2_50"/>
+        <Value name="imageSelectedColor" value="$preset_colorOrange2"/>
+    </Profile>
+    <Profile name="mpManagerSelectionHeaderItemsItem2_2" parent="baseReference">
+        <Value name="size" value="200px 23px" />
+        <Value name="margin" value="0px 0px 2px 2px"/>
+        <Value name="screenAlign" value="bottomLeft" />
+        <Value name="positionOrigin" value="bottomLeft" />
+        <Value name="imageColor" value="$preset_colorDarkGrey3"/>
+        <Value name="imageFocusedColor" value="$preset_colorOrange2_50"/>
+        <Value name="imageSelectedColor" value="$preset_colorOrange2"/>
+    </Profile>
+    <Profile name="mpManagerSelectionHeaderItemsItem2_3" parent="baseReference">
+        <Value name="size" value="664px 23px" />
+        <Value name="margin" value="0px 0px 2px 2px"/>
+        <Value name="screenAlign" value="bottomLeft" />
+        <Value name="positionOrigin" value="bottomLeft" />
+        <Value name="imageColor" value="$preset_colorDarkGrey3"/>
+        <Value name="imageFocusedColor" value="$preset_colorOrange2_50"/>
+        <Value name="imageSelectedColor" value="$preset_colorOrange2"/>
+    </Profile>
+    <Profile name="mpManagerSelectionText1" parent="textDefault">
+        <Value name="textSize" value="11px" />
+        <Value name="position" value="0px 0px" />
+        <Value name="size" value="260px 0px" />
+        <Value name="textOffset" value="0px 8px"/>
+        <Value name="textAlignment" value="center"/>
+        <Value name="screenAlign" value="bottomLeft" />
+        <Value name="positionOrigin" value="bottomLeft" />
+    </Profile>
+    <Profile name="mpManagerSelectionText2" parent="mpManagerSelectionText1">
+        <Value name="size" value="200px 0px" />
+    </Profile>
+    <Profile name="mpManagerSelectionText3" parent="mpManagerSelectionText1">
+        <Value name="size" value="664px 0px" />
+    </Profile>
+    <Profile name="mpManagerSelectionSliderUp" parent="sliderButtonUp">
+        <Value name="imageFocusedColor" value="$preset_colorOrange2"/>
+    </Profile>
+    <Profile name="mpManagerSelectionSliderDown" parent="sliderButtonDown">
+        <Value name="imageFocusedColor" value="$preset_colorOrange2"/>
+    </Profile>
+		
+	<!-- Transferscreen -->
+	<Profile name="mpManagerTransferUiBackground" parent="baseReference" >
+        <Value name="screenAlign" value="middleCenter" />
+        <Value name="positionOrigin" value="middleCenter" />
+        <Value name="size" value="920px 500px"/>
+        <Value name="imageColor" value="$preset_colorBlack3_70"/>
+    </Profile>
+    <Profile name="mpManagerTransferUiBackgroundMain" parent="baseReference" >
+        <Value name="screenAlign" value="middleCenter" />
+        <Value name="positionOrigin" value="middleCenter" />
+        <Value name="size" value="900px 480px"/>
+        <Value name="imageColor" value="$preset_colorDarkGrey"/>
+    </Profile>	
+    <Profile name="mpManagerTransferUiBackgroundHeader" parent="baseReference" >
+        <Value name="screenAlign" value="topCenter" />
+        <Value name="positionOrigin" value="topCenter" />
+        <Value name="position" value="0px 0px" />
+        <Value name="size" value="900px 40px"/>
+        <Value name="alignmentX" value="center" />
+        <Value name="alignmentY" value="middle" />
+        <Value name="imageColor" value="$preset_colorBlack"/>
+    </Profile>
+    <Profile name="mpManagerTransferPaper" parent="baseReference">
+        <Value name="size" value="610px 330px"/>
+        <Value name="screenAlign" value="bottomRight" />
+        <Value name="positionOrigin" value="bottomRight" />
+        <Value name="position" value="-350px 70px" />
+        <Value name="fixedWidth" value="true" />
+        <Value name="imageUVs" value="0 0 1 1"/>
+        <Value name="imageFilename" value="g_baseUIFilename"/>
+    </Profile>
+    <Profile name="mpManagerTransferLogo" parent="baseReference">
+        <Value name="size" value="110px 110px"/>
+        <Value name="screenAlign" value="topLeft" />
+        <Value name="positionOrigin" value="topLeft" />
+        <Value name="position" value="240px -80px" />
+        <Value name="fixedWidth" value="true" />
+        <Value name="imageUVs" value="0 0 1 1"/>
+        <Value name="imageFilename" value="g_baseUIFilename"/>
+    </Profile>	
+	
+    <Profile name="mpManagerTransferText0102" parent="buttonBox">
+        <Value name="screenAlign" value="topLeft" />
+        <Value name="positionOrigin" value="topLeft" />
+        <Value name="position" value="23px -103px" />
+    </Profile>
+    <Profile name="mpManagerTransferText01" parent="textDefault">
+        <Value name="textBold" value="true" />
+        <Value name="textColor" value="$preset_colorBlack" />
+        <Value name="screenAlign" value="topLeft" />
+        <Value name="positionOrigin" value="topLeft" />
+        <Value name="position" value="0px 0px" />
+        <Value name="textSize" value="14px"/>
+        <Value name="size" value="132px 20px"/>
+        <Value name="textAlignment" value="left"/>
+    </Profile>
+    <Profile name="mpManagerTransferText02" parent="mpManagerTransferText01">
+        <Value name="textBold" value="false" />
+        <Value name="size" value="0px 20px"/>
+    </Profile>
+    <Profile name="mpManagerTransferText03" parent="mpManagerTransferText02">
+        <Value name="textWrapWidth" value="100px" />
+        <Value name="textSize" value="9px"/>
+        <Value name="textColor" value="$preset_colorOrange2" />
+        <Value name="position" value="367px -100px" />		
+        <Value name="textBold" value="true" />
+    </Profile>
+    <Profile name="mpManagerTransferText04" parent="mpManagerTransferText03">
+        <Value name="position" value="40px -153px" />		
+    </Profile>
+    <Profile name="mpManagerTransferText05" parent="mpManagerTransferText03">
+        <Value name="position" value="40px -183px" />		
+    </Profile>
+    <Profile name="mpManagerTransferText06" parent="mpManagerTransferText03">
+        <Value name="position" value="40px -213px" />		
+        <Value name="textWrapWidth" value="200px" />
+    </Profile>
+    <Profile name="mpManagerTransferText07" parent="mpManagerTransferText03">
+        <Value name="position" value="285px -271px" />		
+        <Value name="textWrapWidth" value="200px" />
+    </Profile>
+    <Profile name="mpManagerTransferText08" parent="mpManagerTransferText03">
+        <Value name="position" value="35px -310px" />		
+        <Value name="textWrapWidth" value="200px" />
+    </Profile>
+    <Profile name="mpManagerTransferText09" parent="mpManagerTransferText03">
+        <Value name="position" value="160px -310px" />		
+        <Value name="textWrapWidth" value="200px" />
+    </Profile>
+    <Profile name="mpManagerTransferText10" parent="mpManagerTransferText01">
+        <Value name="position" value="40px -166px" />	
+        <Value name="textBold" value="false" />	
+        <Value name="textSize" value="12px"/>
+    </Profile>
+    <Profile name="mpManagerTransferText11" parent="mpManagerTransferText10">
+        <Value name="position" value="40px -196px" />	
+        <Value name="textBold" value="false" />	
+    </Profile>
+    <Profile name="mpManagerTransferText12" parent="mpManagerTransferText10">
+        <Value name="position" value="40px -226px" />	
+        <Value name="textBold" value="false" />	
+    </Profile>
+    <Profile name="mpManagerTransferText13" parent="mpManagerTransferText10">
+        <Value name="position" value="281px -286px" />	
+        <Value name="textBold" value="false" />	
+    </Profile>
+    <Profile name="mpManagerTransferText14" parent="mpManagerTransferText10">
+        <Value name="position" value="48px -335px" />	
+        <Value name="textBold" value="false" />	
+    </Profile>
+    <Profile name="mpManagerTransferText15" parent="mpManagerTransferText10">
+        <Value name="position" value="168px -335px" />	
+        <Value name="textBold" value="false" />	
+    </Profile>
+    <Profile name="mpManagerTransferText16" parent="textDefault">
+        <Value name="textSize" value="17px" />
+        <Value name="position" value="499px -240px" />
+        <Value name="screenAlign" value="topLeft" />
+        <Value name="positionOrigin" value="topLeft" />
+        <Value name="textAlignment" value="left"/>
+        <Value name="textBold" value="true"/>
+    </Profile>		
+	<Profile name="mpManagerTransferText_tranferSelectionHeader" parent="baseReference" >
+        <Value name="screenAlign" value="topLeft" />
+        <Value name="positionOrigin" value="topLeft" />
+        <Value name="position" value="580px -270px" />
+        <Value name="size" value="230px 30px"/>
+        <Value name="alignmentX" value="center" />
+        <Value name="alignmentY" value="middle" />
+        <Value name="imageColor" value="$preset_colorBlack2"/>
+    </Profile>
+    <Profile name="mpManagerTransferText_tranferSelection" parent="mpManagerBillText_billSelectionHeader">
+        <Value name="screenAlign" value="topLeft" />
+        <Value name="positionOrigin" value="topLeft" />
+        <Value name="buttonLRChange" value="true"/>
+        <Value name="position" value="0px 0px" />
+    </Profile>
+    <Profile name="mpManagerTransferText_tranferSelectionLeft" parent="buttonBase">
+        <Value name="size" value="80px 30px" />
+        <Value name="imageColor" value="$preset_colorOrange2" />
+        <Value name="imageDisabledColor" value="$preset_colorLightGrey" />
+        <Value name="iconUVs" value="669px 945px 24px 36px" />
+        <Value name="iconFocusedUVs" value="700px 945px 24px 36px" />
+        <Value name="iconSize" value="15px 23px" />
+        <Value name="iconColor" value="$preset_colorWhite" />
+        <Value name="iconDisabledColor" value="$preset_colorDarkGrey" />
+        <Value name="iconTextOffset" value="31px -11px" />
+        <Value name="iconRotation" value="180"/>
+        <Value name="position" value="-80px 0px" />
+    </Profile>
+    <Profile name="mpManagerTransferText_tranferSelectionRight" parent="mpManagerTransferText_tranferSelectionLeft">
+        <Value name="iconRotation" value="0"/>
+        <Value name="position" value="80px 0px" />
+        <Value name="screenAlign" value="topRight" />
+        <Value name="positionOrigin" value="topRight" />
+    </Profile>
+    <Profile name="mpManagerTransferText17" parent="textDefault">
+        <Value name="textSize" value="17px" />
+        <Value name="position" value="499px -320px" />
+        <Value name="screenAlign" value="topLeft" />
+        <Value name="positionOrigin" value="topLeft" />
+        <Value name="textAlignment" value="left"/>
+        <Value name="textBold" value="true"/>
+    </Profile>		
+    <Profile name="mpManagerTransferTextinput01" parent="textInput">
+        <Value name="screenAlign" value="middleLeft" />
+        <Value name="positionOrigin" value="middleLeft" />
+        <Value name="position" value="500px -8px" />
+        <Value name="size" value="390px 36px"/>
+        <Value name="imageFocusedColor" value="$preset_colorOrange2"/>
+    </Profile>
+    <Profile name="mpManagerTransferText18" parent="mpManagerTransferText17">
+        <Value name="position" value="499px -400px" />
+    </Profile>		
+    <Profile name="mpManagerTransferTextinput02" parent="mpManagerTransferTextinput01">
+        <Value name="position" value="500px -88px" />
+    </Profile>
+    <Profile name="mpManagerTransferText19" parent="mpManagerTransferText17">
+        <Value name="position" value="499px -480px" />
+    </Profile>		
+    <Profile name="mpManagerTransferTextinput03" parent="mpManagerTransferTextinput01">
+        <Value name="position" value="500px -168px" />
+    </Profile>
+    <Profile name="mpManagerTransfer_Background01" parent="mpManagerBillText_Background01" >
+        <Value name="position" value="500px -370px" />
+        <Value name="size" value="390px 5px"/>
+    </Profile>	
+	
+	<!-- Web -->
+    <Profile name="mpManagerWebHeader" parent="textDefault">
+        <Value name="textSize" value="23px"/>
+        <Value name="textOffset" value="0px 2px" />
+        <Value name="textAlignment" value="center" />
+        <Value name="screenAlign" value="topCenter" />
+        <Value name="positionOrigin" value="topCenter" />
+        <Value name="position" value="0px -20px" />
+        <Value name="textLineHeightScale" value="2"/>
+    </Profile>
+    <Profile name="mpManagerWebText" parent="textDefault">
+        <Value name="textSize" value="16px"/>
+        <Value name="textOffset" value="0px 2px" />
+        <Value name="textAlignment" value="center" />
+        <Value name="screenAlign" value="topCenter" />
+        <Value name="positionOrigin" value="topCenter" />
+        <Value name="position" value="0px -60px" />
+        <Value name="textLineHeightScale" value="2"/>
+    </Profile>
+	
+	
+	
+</GUIProfiles>    

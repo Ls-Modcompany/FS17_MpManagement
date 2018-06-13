@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<GUI onOpen="onOpen" onClose="onClose" onCreate="onCreate">	
+    <GuiElement type="empty" profile="newLayer" />
+    <GuiElement type="bitmap" profile="mpManagerInfoUiBackground">	
+        <GuiElement type="bitmap" profile="mpManagerInfoUiBackgroundMain">				
+			<GuiElement type="bitmap" profile="mpManagerInfoUiBackgroundHeader">
+					<GuiElement type="text" profile="headerText" id="infoHeader" />
+            </GuiElement>									
+			<GuiElement type="text" profile="mpManagerInputTextInfo" id="infoText"/>			
+			
+			<GuiElement type="toggleButton2" profile="mpManagerInputChooseButton" id="textTable" focusId="1" >
+				<GuiElement type="button" profile="mpManagerInputChooseButtonLeft" />
+				<GuiElement type="button" profile="mpManagerInputChooseButtonRight" />
+				<GuiElement type="text"   profile="mpManagerInputChooseButtonText" />
+				<GuiElement type="bitmap" profile="mpManagerInputChooseButtonBg" />
+			</GuiElement>			
+			
+            <GuiElement type="flowLayout" profile="buttonBox" id="buttonsPC" >
+                <GuiElement type="button" profile="buttonDelete" size="390px 40px" text="$l10n_mpManagerCheck_buttonNo"  onClick="onClickNo" focusId="2"/>
+				<GuiElement type="button" profile="buttonOK" size="390px 40px" text="$l10n_mpManagerCheck_buttonYes" id="okButton" onClick="onClickYes" focusId="3"/>
+            </GuiElement>
+		</GuiElement>
+    </GuiElement>
+</GUI>
