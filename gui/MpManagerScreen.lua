@@ -489,9 +489,11 @@ function MpManagerScreen:onCreateMoneyHomeAnimals(element)
 	if self.currentFarm ~= nil then
 		local num = 0;		
 		local husbandry = g_mpManager.husbandry:getHusbandryByFarmName(self.currentFarm:getName());
-		for _,count in pairs(husbandry) do
-			num = num + count;
-		end;	
+		if husbandry ~= nil then
+			for _,count in pairs(husbandry) do
+				num = num + count;
+			end;	
+		end;
 		element:setText(tostring(num));
 	end;
 end;
@@ -656,8 +658,10 @@ function MpManagerScreen:onClickAdminPageSelection2()
 	self.activeAdminPlayerFarm = self.mpManager_admin_player_farm:getState();
 end;
 function MpManagerScreen:onClickAdminPlayerChangeName()
-	local currentName = g_mpManager.user:getUsers()[self.activeSelectionAdminPlayerList]:getName();
-	g_mpManager:showInputDialog(g_i18n:getText("mpManager_AdminInput1_header"), g_i18n:getText("mpManager_AdminInput1_text"), g_i18n:getText("mpManager_AdminInput1_button"), 1, self.onClickAdminPlayerChangeNameOk, self, currentName);
+	if self.activeSelectionAdminPlayerList ~= nil then
+		local currentName = g_mpManager.user:getUsers()[self.activeSelectionAdminPlayerList]:getName();
+		g_mpManager:showInputDialog(g_i18n:getText("mpManager_AdminInput1_header"), g_i18n:getText("mpManager_AdminInput1_text"), g_i18n:getText("mpManager_AdminInput1_button"), 1, self.onClickAdminPlayerChangeNameOk, self, currentName);
+	end;
 end;
 function MpManagerScreen:onClickAdminPlayerChangeNameOk(newName)
 	if newName == "" then
@@ -680,16 +684,18 @@ function MpManagerScreen:onClickAdminPlayerChangeNameOk(newName)
 	end;
 end;
 function MpManagerScreen:onClickAdminPlayerChangeFarm()
-	local name = g_mpManager.user:getUsers()[self.activeSelectionAdminPlayerList]:getName();
-	
-	if g_mpManager.farm:getUserIsLeader(name) then
-		g_mpManager:showInfoDialog(string.format(g_i18n:getText("mpManager_AdminInfo10"), name));
-	else
-		local list = {};
-		for _, farm in pairs(g_mpManager.farm:getFarms()) do
-			table.insert(list, farm:getName());
+	if self.activeSelectionAdminPlayerList ~= nil then
+		local name = g_mpManager.user:getUsers()[self.activeSelectionAdminPlayerList]:getName();
+		
+		if g_mpManager.farm:getUserIsLeader(name) then
+			g_mpManager:showInfoDialog(string.format(g_i18n:getText("mpManager_AdminInfo10"), name));
+		else
+			local list = {};
+			for _, farm in pairs(g_mpManager.farm:getFarms()) do
+				table.insert(list, farm:getName());
+			end;
+			g_mpManager:showInputDialog(g_i18n:getText("mpManager_AdminInput2_header"), string.format(g_i18n:getText("mpManager_AdminInput2_text"), name), g_i18n:getText("mpManager_AdminInput2_button"), 2, self.onClickAdminPlayerChangeFarmOk, self, list);
 		end;
-		g_mpManager:showInputDialog(g_i18n:getText("mpManager_AdminInput2_header"), string.format(g_i18n:getText("mpManager_AdminInput2_text"), name), g_i18n:getText("mpManager_AdminInput2_button"), 2, self.onClickAdminPlayerChangeFarmOk, self, list);
 	end;
 end;
 function MpManagerScreen:onClickAdminPlayerChangeFarmOk(newFarm)	
