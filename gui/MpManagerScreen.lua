@@ -1272,10 +1272,14 @@ function MpManagerScreen:loadSettings3Table()
 	local needChange = g_mpManager.husbandry:checkAnimals() or self.loadSettings3Table_firstLoad == nil;
 	if needChange then
 		for i = 1, g_mpManager.utils:getTableLenght(g_currentMission.husbandries) do
-			self["mpManager_settings_husbandry" .. i]:setVisible(true);
+			if self["mpManager_settings_husbandry" .. i] ~= nil then
+				self["mpManager_settings_husbandry" .. i]:setVisible(true);
+			end;
 		end;
 		for i = g_mpManager.utils:getTableLenght(g_currentMission.husbandries) + 1, 8 do
-			self["mpManager_settings_husbandry" .. i]:setVisible(false);
+			if self["mpManager_settings_husbandry" .. i] ~= nil then
+				self["mpManager_settings_husbandry" .. i]:setVisible(false);
+			end;
 		end;
 		self.loadSettings3Table_firstLoad = true;
 	end;
