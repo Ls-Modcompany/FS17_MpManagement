@@ -759,9 +759,20 @@ function MoneyStats.Bga_setFillLevel(old)
 		MoneyStats:setActiveMoneyState(MoneyStats.STATE_NONE);		
 	end;
 end
+function MoneyStats.Bga_extension(old) 
+	return function(s, v1, v2, v3, v4)
+		MoneyStats:setActiveMoneyState(MoneyStats.STATE_BGA);
+		MoneyStats.activeBga = s;
+		old(s, v1, v2, v3, v4);
+		MoneyStats:setActiveMoneyState(MoneyStats.STATE_NONE);		
+	end;
+end
 
 Bga.objectDeleteTriggerCallback = MoneyStats.Bga_objectDeleteTriggerCallback(Bga.objectDeleteTriggerCallback);
 Bga.setFillLevel = MoneyStats.Bga_setFillLevel(Bga.setFillLevel);
+Bga.updateTick = MoneyStats.Bga_extension(Bga.updateTick);
+Bga.handleInput = MoneyStats.Bga_extension(Bga.handleInput);
+Bga.readStream = MoneyStats.Bga_extension(Bga.readStream);
 --BGA end
 
 -- Shovel: addShovelFillLevel
