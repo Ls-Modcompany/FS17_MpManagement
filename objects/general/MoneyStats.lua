@@ -1040,8 +1040,9 @@ function MoneyStats.GasStation_fillFuel(old)
 		MoneyStats.activeMoneyGasStationV = v;
 		MoneyStats.activeMoneyGasStationS = s;
 		local delta = old(s,vehicle,...);
-		MoneyStats.activeMoneyGasStationVehicles[MoneyStats.activeMoneyGasStationV].delta = MoneyStats.activeMoneyGasStationVehicles[MoneyStats.activeMoneyGasStationV].delta + delta;			
-		
+		if MoneyStats.acactiveMoneyGasStationVehicles[MoneyStats.activeMoneyGasStationV] ~= nil then
+			MoneyStats.activeMoneyGasStationVehicles[MoneyStats.activeMoneyGasStationV].delta = MoneyStats.activeMoneyGasStationVehicles[MoneyStats.activeMoneyGasStationV].delta + delta;			
+		end;
 		MoneyStats:setActiveMoneyState(MoneyStats.STATE_NONE);
 		return delta;
 	end;
