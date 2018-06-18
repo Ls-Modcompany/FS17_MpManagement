@@ -78,6 +78,18 @@ function MoneyStats:load()
 	g_mpManager.saveManager:addSave(MoneyStats.saveSavegame, MoneyStats);
 	g_mpManager.loadManager:addLoad(MoneyStats.loadSavegame, MoneyStats);
 	g_mpManager:addUpdateable(MoneyStats, MoneyStats.update);
+	
+	
+	if Bga.updateTick ~= nil then
+		Bga.updateTick = MoneyStats.Bga_extension(Bga.updateTick);
+	end;	
+	if Bga.handleInput ~= nil then
+		Bga.handleInput = MoneyStats.Bga_extension(Bga.handleInput);
+	end;		
+	if Bga.readStream ~= nil then
+		Bga.readStream = MoneyStats.Bga_extension(Bga.readStream);
+	end;	
+	
 end;
 
 function MoneyStats:getDate(noHour)
@@ -770,9 +782,6 @@ end
 
 Bga.objectDeleteTriggerCallback = MoneyStats.Bga_objectDeleteTriggerCallback(Bga.objectDeleteTriggerCallback);
 Bga.setFillLevel = MoneyStats.Bga_setFillLevel(Bga.setFillLevel);
-Bga.updateTick = MoneyStats.Bga_extension(Bga.updateTick);
-Bga.handleInput = MoneyStats.Bga_extension(Bga.handleInput);
-Bga.readStream = MoneyStats.Bga_extension(Bga.readStream);
 --BGA end
 
 -- Shovel: addShovelFillLevel
