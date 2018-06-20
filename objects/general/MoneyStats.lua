@@ -3,11 +3,12 @@
 -- 
 -- @Interface: 1.5.3.1 b1841
 -- @Author: LS-Modcompany/kevink98 
--- @Date: 03.06.2018
--- @Version: 1.0.0.0
+-- @Date: 15.06.2018
+-- @Version: 1.0.0.1
 -- 
 -- @Support: LS-Modcompany
 -- 
+-- 1.0.0.1: Add SiloTrigger (BPG)
 
 MoneyStats = {};
 g_mpManager.moneyStats = MoneyStats;
@@ -39,6 +40,7 @@ MoneyStats.STATE_PICKUPOBJECTSSELLTRIGGER = getNextNumber();
 MoneyStats.STATE_TIPTRIGGER = getNextNumber();
 MoneyStats.STATE_WOODSELLTRIGGER = getNextNumber();
 MoneyStats.STATE_WATERTRAILERFILLLEVEL = getNextNumber();
+MoneyStats.STATE_SILOTRIGGER = getNextNumber();
 
 function MoneyStats:load()	
 	MoneyStats.sortByFarm = {};
@@ -57,6 +59,7 @@ function MoneyStats:load()
 	
 	MoneyStats.activeMoneyGasStationVehicles = {};
 	MoneyStats.activeMoneyWaterTrailerFillTriggerVehicles = {};
+	MoneyStats.activeMoneySiloTriggerVehicles = {};
 	
 	MoneyStats.activeMoneyTrain = {};
 	MoneyStats.activeMoneyBaleDestroyerTrigger = {};
@@ -202,6 +205,19 @@ function MoneyStats:update(dt)
 				farm:addMoney(data.amount);
 			end;
 			MoneyStats.activeMoneyWaterTrailerFillTriggerVehicles[vehicle] = nil;
+		else
+			data.timer = data.timer + 1;
+		end;
+	end;
+		
+	for vehicle, data in pairs(MoneyStats.activeMoneySiloTriggerVehicles) do
+		if data.timer > 50 then
+			local farm = g_mpManager.utils:getFarmTblFromUsername(vehicle.controllerName);
+			if farm ~= nil then
+				MoneyStats:addMoneyStatsToFarm(MoneyStats:getDate(), vehicle.controllerName, farm, data.lastMoneyType, "-", "-", "-", data.amount);
+				farm:addMoney(data.amount);
+			end;
+			MoneyStats.activeMoneySiloTriggerVehicles[vehicle] = nil;
 		else
 			data.timer = data.timer + 1;
 		end;
@@ -575,6 +591,17 @@ function MoneyStats:addSharedMoney(old)
 				end;
 				MoneyStats.activeMoneyWaterTrailerFillTriggerVehicles[MoneyStats.activeMoneyWaterTrailerFillTriggerV].timer = 0;
 				MoneyStats.activeMoneyWaterTrailerFillTriggerVehicles[MoneyStats.activeMoneyWaterTrailerFillTriggerV].amount = MoneyStats.activeMoneyWaterTrailerFillTriggerVehicles[MoneyStats.activeMoneyWaterTrailerFillTriggerV].amount + amount;
+			elseif MoneyStats.activeMoneyState == MoneyStats.STATE_SILOTRIGGER then
+				if MoneyStats.activeMoneySiloTriggerVehicles[MoneyStats.activeSiloTriggerV] == nil then
+					MoneyStats.activeMoneySiloTriggerVehicles[MoneyStats.activeSiloTriggerV] = {};
+					MoneyStats.activeMoneySiloTriggerVehicles[MoneyStats.activeSiloTriggerV].amount = 0;	
+					MoneyStats.activeMoneySiloTriggerVehicles[MoneyStats.activeSiloTriggerV].lastMoneyType = "other";	
+				end;
+				MoneyStats.activeMoneySiloTriggerVehicles[MoneyStats.activeSiloTriggerV].timer = 0;
+				MoneyStats.activeMoneySiloTriggerVehicles[MoneyStats.activeSiloTriggerV].amount = MoneyStats.activeMoneySiloTriggerVehicles[MoneyStats.activeSiloTriggerV].amount + amount;
+				if MoneyStats.activeSiloTriggerLastMoneyType ~= nil then
+					MoneyStats.activeMoneySiloTriggerVehicles[MoneyStats.activeSiloTriggerV].lastMoneyType = MoneyStats.activeSiloTriggerLastMoneyType;	
+				end;
 			elseif MoneyStats.activeMoneyState == MoneyStats.STATE_GASSTATION then
 				if MoneyStats.activeMoneyGasStationVehicles[MoneyStats.activeMoneyGasStationV] == nil then
 					MoneyStats.activeMoneyGasStationVehicles[MoneyStats.activeMoneyGasStationV] = {};
@@ -1033,8 +1060,9 @@ function MoneyStats.GasStation_fillFuel(old)
 		MoneyStats.activeMoneyGasStationV = v;
 		MoneyStats.activeMoneyGasStationS = s;
 		local delta = old(s,vehicle,...);
-		MoneyStats.activeMoneyGasStationVehicles[MoneyStats.activeMoneyGasStationV].delta = MoneyStats.activeMoneyGasStationVehicles[MoneyStats.activeMoneyGasStationV].delta + delta;			
-		
+		if MoneyStats.activeMoneyGasStationVehicles[MoneyStats.activeMoneyGasStationV] ~= nil then
+			MoneyStats.activeMoneyGasStationVehicles[MoneyStats.activeMoneyGasStationV].delta = MoneyStats.activeMoneyGasStationVehicles[MoneyStats.activeMoneyGasStationV].delta + delta;			
+		end;
 		MoneyStats:setActiveMoneyState(MoneyStats.STATE_NONE);
 		return delta;
 	end;
@@ -1102,6 +1130,27 @@ function MoneyStats.WaterTrailerFillTrigger_fillWater(old)
 	end;
 end;	
 WaterTrailerFillTrigger.fillWater = MoneyStats.WaterTrailerFillTrigger_fillWater(WaterTrailerFillTrigger.fillWater);
+
+function MoneyStats.SiloTrigger_update(old) 
+	return function(s, dt,...)	
+		MoneyStats:setActiveMoneyState(MoneyStats.STATE_SILOTRIGGER);
+		if s.siloTrailer ~= nil then
+			local v = s.siloTrailer;
+			if s.siloTrailer.attacherVehicle ~= nil then	
+				v = s.siloTrailer.attacherVehicle;
+				if s.siloTrailer.attacherVehicle.attacherVehicle ~= nil then
+					v = s.siloTrailer.attacherVehicle.attacherVehicle;
+				end;
+			end;		
+			MoneyStats.activeSiloTriggerV = v;
+		end;
+		MoneyStats.activeSiloTriggerLastMoneyType = s.lastMoneyType;
+		local delta = old(s, dt,...);
+		MoneyStats:setActiveMoneyState(MoneyStats.STATE_NONE);	
+		return delta;
+	end;
+end;	
+SiloTrigger.update = MoneyStats.SiloTrigger_update(SiloTrigger.update);
 
 -- function traceback()
   -- local level = 1

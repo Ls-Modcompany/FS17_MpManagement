@@ -34,6 +34,9 @@ function MpManagerStorage:pay()
 		return;
 	end;	
 	local storage_tbl = g_mpManager.assignabels.assignabelsById[g_mpManager.assignabels.STORAGE];
+	if storage_tbl == nil then
+		return;
+	end;
 	for _,storage in pairs(storage_tbl) do
 		local farmname = storage.object.mpManagerFarm;
 		local money = storage.object.mpManagerMoney;		

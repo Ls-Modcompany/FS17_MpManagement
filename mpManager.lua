@@ -2,13 +2,13 @@
 -- MpManager 
 -- 
 -- @Interface: 1.5.3.1 b1841
--- @Author: LS-Modcompany/kevink98 
--- @Date: 18.06.2018
--- @Version: 1.0.0.1-2
+-- @Author: LS-Modcompany/kevink98
+-- @Date: 20.06.2018
+-- @Version: 1.0.0.3
 -- 
 -- @Support: LS-Modcompany
 -- 
-local version = "1.0.0.1-2 (18.06.2018)";
+local version = "1.0.0.3 (20.06.2018)";
 
 MpManager = {};
 --_G["g_mpManager"] = MpManager;
