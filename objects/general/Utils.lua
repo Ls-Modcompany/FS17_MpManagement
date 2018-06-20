@@ -14,8 +14,10 @@ g_mpManager.utils = MpManagerUtils;
 
 function MpManagerUtils:getTableLenght(tbl)
 	local count = 0;
-	for _,_ in pairs(tbl) do
-		count = count + 1;
+	if tbl ~= nil then
+		for _,_ in pairs(tbl) do
+			count = count + 1;
+		end;
 	end;
 	return count;
 end;
