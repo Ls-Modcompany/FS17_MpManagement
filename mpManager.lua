@@ -2,7 +2,7 @@
 -- MpManager 
 -- 
 -- @Interface: 1.5.3.1 b1841
--- @Author: LS-Modcompany/kevink98 
+-- @Author: LS-Modcompany/kevink98
 -- @Date: 20.06.2018
 -- @Version: 1.0.0.3
 -- 
@@ -17,7 +17,7 @@ MpManager.dir = g_currentModDirectory;
 addModEventListener(MpManager);
 
 source(MpManager.dir .. "Debug.lua");
-g_debug.write(-2, "load MpManager %s", version);
+g_debug.write(-2, "load MpManagement %s", version);
 
 g_mpManager.updates = {};
 

@@ -81,6 +81,18 @@ function MoneyStats:load()
 	g_mpManager.saveManager:addSave(MoneyStats.saveSavegame, MoneyStats);
 	g_mpManager.loadManager:addLoad(MoneyStats.loadSavegame, MoneyStats);
 	g_mpManager:addUpdateable(MoneyStats, MoneyStats.update);
+	
+	
+	if Bga.updateTick ~= nil then
+		Bga.updateTick = MoneyStats.Bga_extension(Bga.updateTick);
+	end;	
+	if Bga.handleInput ~= nil then
+		Bga.handleInput = MoneyStats.Bga_extension(Bga.handleInput);
+	end;		
+	if Bga.readStream ~= nil then
+		Bga.readStream = MoneyStats.Bga_extension(Bga.readStream);
+	end;	
+	
 end;
 
 function MoneyStats:getDate(noHour)
@@ -783,6 +795,14 @@ function MoneyStats.Bga_setFillLevel(old)
 				s.mpManagerNum = s.mpManagerNum + delta;
 			end;
 		end;
+		MoneyStats:setActiveMoneyState(MoneyStats.STATE_NONE);		
+	end;
+end
+function MoneyStats.Bga_extension(old) 
+	return function(s, v1, v2, v3, v4)
+		MoneyStats:setActiveMoneyState(MoneyStats.STATE_BGA);
+		MoneyStats.activeBga = s;
+		old(s, v1, v2, v3, v4);
 		MoneyStats:setActiveMoneyState(MoneyStats.STATE_NONE);		
 	end;
 end
