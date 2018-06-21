@@ -28,10 +28,12 @@ local function getNextId() MoneyAssignment.id = MoneyAssignment.id + 1; return M
 
 function MoneyAssignment:load()
 	MoneyAssignment.assignments = {};
+	g_mpManager.saveManager:addSave(MoneyAssignment.saveSavegame, MoneyAssignment);
+	g_mpManager.loadManager:addLoad(MoneyAssignment.loadSavegame, MoneyAssignment);
 end;
 
 function MoneyAssignment:addAssignment(id, statType, money, noEventSend)
-	MpManagement_MoneyAssignment_AddDialog.sendEvent(id, statType, money, noEventSend);
+	MpManagement_MoneyAssignment_AddAssignment.sendEvent(id, statType, money, noEventSend);
 	MoneyAssignment.assignments[getNextId()] = {id=id, statType=statType, money=money, date=MoneyStats:getDate()};
 end;
 
@@ -42,7 +44,7 @@ function MoneyAssignment:removeAssignment(id, playerName, noEventSend)
 	local ass = MoneyAssignment.assignments[id]
 	local farm = g_mpManager.utils:getFarmTblFromUsername(playerName);
 	if farm == nil then
-	
+		g_debug.write(-1, "Can't remove assignment");
 		return;
 	end;
 	local info = "-";
@@ -90,3 +92,37 @@ function MoneyAssignment:readStream(streamId, connection)
 		MoneyAssignment.assignments[assId] = {id=id, statType=statType, money=money};
 	end;
 end;
+
+function MoneyAssignment:saveSavegame()
+	local index = 0;
+	for _,ass in pairs(MoneyAssignment.assignments) do
+		g_mpManager.saveManager:setXmlInt(string.format("moneyAssignabels.assignment(%d)#id", index), ass.id);	
+		g_mpManager.saveManager:setXmlString(string.format("moneyAssignabels.assignment(%d)#statType", index), ass.statType);
+		g_mpManager.saveManager:setXmlInt(string.format("moneyAssignabels.assignment(%d)#money", index), ass.money);	
+		g_mpManager.saveManager:setXmlString(string.format("moneyAssignabels.assignment(%d)#date", index), ass.date);			
+		index = index + 1;
+	end;
+end;
+
+function MoneyAssignment:loadSavegame()
+	local index = 0;
+	while true do
+		local key = string.format("moneyAssignabels.assignment(%d)", index);
+		if not g_mpManager.loadManager:hasXmlProperty(key) then
+			break;
+		end;
+		local id = g_mpManager.loadManager:getXmlInt(key .. "#id");
+		local statType = g_mpManager.loadManager:getXmlString(key .. "#statType");
+		local money = g_mpManager.loadManager:getXmlInt(key .. "#money");
+		local dat = g_mpManager.loadManager:getXmlString(key .. "#date");
+		MoneyAssignment.assignments[getNextId()] = {id=id, statType=statType, money=money, date=dat};
+		index = index + 1;
+	end;
+end;
+
+
+
+
+
+
+
