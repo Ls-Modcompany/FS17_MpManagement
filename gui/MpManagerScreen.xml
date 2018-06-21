@@ -148,7 +148,7 @@
 						<GuiElement type="text"   profile="mpManager_items_text" text="$l10n_mpManager_openPosts_items_addInfos" />
 						<GuiElement type="bitmap" profile="mpManager_money_items_addInfo_itemSeperator"/>
 					</GuiElement>
-					<GuiElement type="bitmap" profile="mpManager_money_items_moneyFrom" >
+					<GuiElement type="bitmap" profile="mpManager_money_items_sellTo" >
 						<GuiElement type="text"   profile="mpManager_items_text" text="$l10n_mpManager_openPosts_items_sellTo" />
 						<GuiElement type="bitmap" profile="mpManager_money_items_sellTo_itemSeperator"/>
 					</GuiElement>
@@ -162,10 +162,10 @@
 					</GuiElement>			
 				</GuiElement>
 				
-				<GuiElement type="slider" profile="mpManager_items_slider" id="mpManager_moneyOutput_slider">
+				<GuiElement type="slider" profile="mpManager_items_slider" id="mpManager_moneyOpenPosts_slider">
 					<GuiElement type="button" profile="sliderButtonUp"   focusId="sliderUpPrices"/>
 					<GuiElement type="button" profile="sliderButtonDown" focusId="sliderDownPrices" />					
-					<GuiElement type="list" profile="mpManager_items_list" id="mpManager_items_openPosts_list" onDoubleClickCallback="onDoubleClickOpenPosts" focusId="200" focusChangeTop="1" focusChangeBottom="100">
+					<GuiElement type="list" profile="mpManager_items_list" id="mpManager_items_openPosts_list" onDoubleClick="onDoubleClickOpenPosts" focusId="200" focusChangeTop="1" focusChangeBottom="100">
 						<GuiElement type="listItem" profile="mpManager_items_listItem" id="mpManager_openPosts_listTemplate">
 							<GuiElement type="flowLayout" profile="mpManager_listItem_layout" >							
 								<GuiElement type="bitmap" profile="mpManager_money_listItem_date">
@@ -192,9 +192,7 @@
 							</GuiElement>
 						</GuiElement>			
 					</GuiElement>
-				</GuiElement>		
-				
-							
+				</GuiElement>	
             </GuiElement>
 			
 			<!-- MoneyOutput -->

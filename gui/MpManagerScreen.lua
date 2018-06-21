@@ -151,7 +151,7 @@ function MpManagerScreen:onCreate_button_orders(element)
 end;
 function MpManagerScreen:onCreate_button_openPosts(element)
 	self.target:checkProfileHuds();
-	self.target:recreateButtonsOverlays(element, "button_menu1");
+	self.target:recreateButtonsOverlays(element, "button_menu2");
 end;
 function MpManagerScreen:onCreate_button_moneyinput(element)
 	self.target:checkProfileHuds();
@@ -336,7 +336,7 @@ end;
 
 --Page: OpenPosts
 function MpManagerScreen:reloadOpenPostsOutputs()
-	local stats = g_mpManager.moneyStats:getSortByFarm();
+	local stats = g_mpManager.moneyAssignabels:getAssignments();
 	if stats == nil then
 		return;
 	end;
