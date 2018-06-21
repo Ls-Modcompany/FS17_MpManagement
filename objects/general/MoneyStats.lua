@@ -129,7 +129,7 @@ function MoneyStats:update(dt)
 	for a, s in pairs(MoneyStats.activeMoneyTrain) do
 		for statType, d in pairs(s) do
 			if d.timer > 50 then
-				g_mpManager.moneyAssignabels:addDialog(g_mpManager.moneyAssignabels.DLG_TRAIN, statType, d.money);	
+				g_mpManager.moneyAssignabels:addAssignment(g_mpManager.moneyAssignabels.DLG_TRAIN, statType, d.money);	
 				MoneyStats.activeMoneyTrain[a][statType] = nil;
 			else
 				d.timer = d.timer + 1;
@@ -139,7 +139,7 @@ function MoneyStats:update(dt)
 		
 	for trigger, d in pairs(MoneyStats.activeMoneyBaleDestroyerTrigger) do
 		if d.timer > 50 then
-			g_mpManager.moneyAssignabels:addDialog(g_mpManager.moneyAssignabels.DLG_NOADDINFO, "soldBales", d.amount);	
+			g_mpManager.moneyAssignabels:addAssignment(g_mpManager.moneyAssignabels.DLG_NOADDINFO, "soldBales", d.amount);	
 			MoneyStats.activeMoneyBaleDestroyerTrigger[trigger] = nil;
 		else
 			d.timer = d.timer + 1;
@@ -148,7 +148,7 @@ function MoneyStats:update(dt)
 		
 	for trigger, d in pairs(MoneyStats.activeMoneyFillablePalletSellTrigger) do
 		if d.timer > 50 then
-			g_mpManager.moneyAssignabels:addDialog(g_mpManager.moneyAssignabels.DLG_NOADDINFO, d.statType, d.amount);	
+			g_mpManager.moneyAssignabels:addAssignment(g_mpManager.moneyAssignabels.DLG_NOADDINFO, d.statType, d.amount);	
 			MoneyStats.activeMoneyFillablePalletSellTrigger[trigger] = nil;
 		else
 			d.timer = d.timer + 1;
@@ -157,7 +157,7 @@ function MoneyStats:update(dt)
 		
 	for trigger, d in pairs(MoneyStats.activeMoneyFillTrigger) do
 		if d.timer > 50 then
-			g_mpManager.moneyAssignabels:addDialog(g_mpManager.moneyAssignabels.DLG_NOADDINFO, d.statType, d.amount);	
+			g_mpManager.moneyAssignabels:addAssignment(g_mpManager.moneyAssignabels.DLG_NOADDINFO, d.statType, d.amount);	
 			MoneyStats.activeMoneyFillTrigger[trigger] = nil;
 		else
 			d.timer = d.timer + 1;
@@ -179,7 +179,7 @@ function MoneyStats:update(dt)
 		
 	for trigger, d in pairs(MoneyStats.activeMoneyTipTrigger) do
 		if d.timer > 50 then
-			g_mpManager.moneyAssignabels:addDialog(g_mpManager.moneyAssignabels.DLG_NOADDINFO, d.statType, d.amount);	
+			g_mpManager.moneyAssignabels:addAssignment(g_mpManager.moneyAssignabels.DLG_NOADDINFO, d.statType, d.amount);	
 			MoneyStats.activeMoneyTipTrigger[trigger] = nil;
 		else
 			d.timer = d.timer + 1;
@@ -188,7 +188,7 @@ function MoneyStats:update(dt)
 		
 	for trigger, d in pairs(MoneyStats.activeMoneyWoodSellTrigger) do
 		if d.timer > 50 then
-			g_mpManager.moneyAssignabels:addDialog(g_mpManager.moneyAssignabels.DLG_NOADDINFO, "soldWood", d.amount);	
+			g_mpManager.moneyAssignabels:addAssignment(g_mpManager.moneyAssignabels.DLG_NOADDINFO, "soldWood", d.amount);	
 			MoneyStats.activeMoneyWoodSellTrigger[trigger] = nil;
 		else
 			d.timer = d.timer + 1;
@@ -514,11 +514,11 @@ function MoneyStats:addSharedMoney(old)
 				end;
 				MoneyStats.activeSiloExtension = nil;
 			elseif MoneyStats.activeMoneyState == MoneyStats.STATE_SELLHANDTOOL then					
-				g_mpManager.moneyAssignabels:addDialog(g_mpManager.moneyAssignabels.DLG_HANDTOOL, statType, amount);	
+				g_mpManager.moneyAssignabels:addAssignment(g_mpManager.moneyAssignabels.DLG_HANDTOOL, statType, amount);	
 			elseif MoneyStats.activeMoneyState == MoneyStats.STATE_SELLPLACEABLE then					
-				g_mpManager.moneyAssignabels:addDialog(g_mpManager.moneyAssignabels.DLG_PLACEABLE, statType, amount);	
+				g_mpManager.moneyAssignabels:addAssignment(g_mpManager.moneyAssignabels.DLG_PLACEABLE, statType, amount);	
 			elseif MoneyStats.activeMoneyState == MoneyStats.STATE_SELLVEHICLE then					
-				g_mpManager.moneyAssignabels:addDialog(g_mpManager.moneyAssignabels.DLG_VEHICLE, statType, amount);		
+				g_mpManager.moneyAssignabels:addAssignment(g_mpManager.moneyAssignabels.DLG_VEHICLE, statType, amount);		
 			elseif MoneyStats.activeMoneyState == MoneyStats.STATE_BALEDESTROYTRIGGER then					
 				if MoneyStats.activeMoneyBaleDestroyerTrigger[MoneyStats.activeBaleDestroyTrigger] == nil then
 					MoneyStats.activeMoneyBaleDestroyerTrigger[MoneyStats.activeBaleDestroyTrigger] = {};
@@ -535,7 +535,7 @@ function MoneyStats:addSharedMoney(old)
 				
 				local oldStatType = MoneyStats.activeMoneyFillablePalletSellTrigger[MoneyStats.activeFillablePalletSellTrigger].statType;
 				if oldStatType ~= nil and oldStatType ~= statType then
-					g_mpManager.moneyAssignabels:addDialog(g_mpManager.moneyAssignabels.DLG_NOADDINFO, oldStatType, MoneyStats.activeMoneyFillablePalletSellTrigger[MoneyStats.activeFillablePalletSellTrigger].amount);	
+					g_mpManager.moneyAssignabels:addAssignment(g_mpManager.moneyAssignabels.DLG_NOADDINFO, oldStatType, MoneyStats.activeMoneyFillablePalletSellTrigger[MoneyStats.activeFillablePalletSellTrigger].amount);	
 					MoneyStats.activeMoneyFillablePalletSellTrigger[MoneyStats.activeFillablePalletSellTrigger].amount = 0;
 				end;
 				
@@ -551,7 +551,7 @@ function MoneyStats:addSharedMoney(old)
 				
 				local oldStatType = MoneyStats.activeMoneyFillTrigger[MoneyStats.activeFillTrigger].statType;
 				if oldStatType ~= nil and oldStatType ~= statType then
-					g_mpManager.moneyAssignabels:addDialog(g_mpManager.moneyAssignabels.DLG_NOADDINFO, oldStatType, MoneyStats.activeMoneyFillTrigger[MoneyStats.activeFillTrigger].amount);	
+					g_mpManager.moneyAssignabels:addAssignment(g_mpManager.moneyAssignabels.DLG_NOADDINFO, oldStatType, MoneyStats.activeMoneyFillTrigger[MoneyStats.activeFillTrigger].amount);	
 					MoneyStats.activeMoneyFillTrigger[MoneyStats.activeFillTrigger].amount = 0;
 				end;		
 				
@@ -560,9 +560,9 @@ function MoneyStats:addSharedMoney(old)
 				MoneyStats.activeMoneyFillTrigger[MoneyStats.activeFillTrigger].amount = MoneyStats.activeMoneyFillTrigger[MoneyStats.activeFillTrigger].amount + amount;
 				MoneyStats.activeFillablePalletSellTrigger = nil;
 			elseif MoneyStats.activeMoneyState == MoneyStats.STATE_PALLETTRIGGER then					
-				g_mpManager.moneyAssignabels:addDialog(g_mpManager.moneyAssignabels.DLG_PALLETTRIGGER, statType, amount);	
+				g_mpManager.moneyAssignabels:addAssignment(g_mpManager.moneyAssignabels.DLG_PALLETTRIGGER, statType, amount);	
 			elseif MoneyStats.activeMoneyState == MoneyStats.STATE_PICKUPOBJECTSSELLTRIGGER then					
-				g_mpManager.moneyAssignabels:addDialog(g_mpManager.moneyAssignabels.DLG_PICKUPOBJECTSSELLTRIGGER, statType, amount);
+				g_mpManager.moneyAssignabels:addAssignment(g_mpManager.moneyAssignabels.DLG_PICKUPOBJECTSSELLTRIGGER, statType, amount);
 			elseif MoneyStats.activeMoneyState == MoneyStats.STATE_TIPTRIGGER then					
 				if MoneyStats.activeMoneyTipTrigger[MoneyStats.activeTipTrigger] == nil then
 					MoneyStats.activeMoneyTipTrigger[MoneyStats.activeTipTrigger] = {};
@@ -615,7 +615,7 @@ function MoneyStats:addSharedMoney(old)
 			elseif not MoneyStats.activeMoneyState == MoneyStats.STATE_DONOTHING then
 				if not g_mpManager.modulManager:controllMoney(statType, amount) then
 					if amount > 100 then
-						g_mpManager.moneyAssignabels:addDialog(g_mpManager.moneyAssignabels.DLG_NOADDINFO, statType, amount);
+						g_mpManager.moneyAssignabels:addAssignment(g_mpManager.moneyAssignabels.DLG_NOADDINFO, statType, amount);
 					else
 						if MoneyStats.manuelMoney_type == "" then
 							MoneyStats.manuelMoney_money = amount;
@@ -625,7 +625,7 @@ function MoneyStats:addSharedMoney(old)
 							MoneyStats.manuelMoney_money = MoneyStats.manuelMoney_money + amount;
 							MoneyStats.manuelMoney_timer = 0;
 						elseif MoneyStats.manuelMoney_money ~= 0 then
-							g_mpManager.moneyAssignabels:addDialog(g_mpManager.moneyAssignabels.DLG_NOADDINFO, MoneyStats.manuelMoney_type, MoneyStats.manuelMoney_money);
+							g_mpManager.moneyAssignabels:addAssignment(g_mpManager.moneyAssignabels.DLG_NOADDINFO, MoneyStats.manuelMoney_type, MoneyStats.manuelMoney_money);
 							MoneyStats.manuelMoney_money = 0;
 							MoneyStats.manuelMoney_type = "";
 							MoneyStats.manuelMoney_timer = 0;
