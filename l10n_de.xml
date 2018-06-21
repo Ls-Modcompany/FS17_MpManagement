@@ -110,7 +110,13 @@ Der MP-Manager wurde erfolgreich konfiguriert."/>
 <e k="mpManager_konto_items_yearBalance" v="Jahresbilanz"/>
 
 <!-- OpenPosts -->
-<e k="mpManager_money_items_moneyFrom" v="An/Von"/>
+<e k="mpManager_openPosts_items_datum" v="Datum/Uhrzeit"/>
+<e k="mpManager_openPosts_items_name" v="Name"/>
+<e k="mpManager_openPosts_items_category" v="Kategorie"/>
+<e k="mpManager_openPosts_items_addInfos" v="Information"/>
+<e k="mpManager_openPosts_items_sellTo" v="An/Von"/>
+<e k="mpManager_openPosts_items_num" v="Anzahl/Liter/Nummer"/>
+<e k="mpManager_openPosts_items_balance" v="Gesamtpreis"/>
 
 <!-- MoneyOutput -->
 <e k="mpManager_moneyoutput_items_datum" v="Datum/Uhrzeit"/>
