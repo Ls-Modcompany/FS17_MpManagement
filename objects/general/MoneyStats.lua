@@ -81,6 +81,16 @@ function MoneyStats:load()
 	g_mpManager.saveManager:addSave(MoneyStats.saveSavegame, MoneyStats);
 	g_mpManager.loadManager:addLoad(MoneyStats.loadSavegame, MoneyStats);
 	g_mpManager:addUpdateable(MoneyStats, MoneyStats.update);
+	
+	if Bga.updateTick ~= nil then
+		Bga.updateTick = MoneyStats.Bga_extension(Bga.updateTick);
+	end;	
+	if Bga.handleInput ~= nil then
+		Bga.handleInput = MoneyStats.Bga_extension(Bga.handleInput);
+	end;		
+	if Bga.readStream ~= nil then
+		Bga.readStream = MoneyStats.Bga_extension(Bga.readStream);
+	end;
 end;
 
 function MoneyStats:getDate(noHour)
@@ -213,14 +223,13 @@ function MoneyStats:update(dt)
 	
 	if MoneyStats.manuelMoney_money ~= 0 then
 		if MoneyStats.manuelMoney_timer >= 300 then
-			g_mpManager.moneyAssignabels:addDialog(g_mpManager.moneyAssignabels.DLG_NOADDINFO, MoneyStats.manuelMoney_type, MoneyStats.manuelMoney_money);	
+			g_mpManager.moneyAssignabels:addAssignment(g_mpManager.moneyAssignabels.DLG_NOADDINFO, MoneyStats.manuelMoney_type, MoneyStats.manuelMoney_money);	
 			MoneyStats.manuelMoney_money = 0;
 			MoneyStats.manuelMoney_type = "";
 			MoneyStats.manuelMoney_timer = 0;
 		else
 			MoneyStats.manuelMoney_timer = MoneyStats.manuelMoney_timer + 1;
-		end;
-	
+		end;	
 	end;
 	
 	--Set load to 0
@@ -786,7 +795,14 @@ function MoneyStats.Bga_setFillLevel(old)
 		MoneyStats:setActiveMoneyState(MoneyStats.STATE_NONE);		
 	end;
 end
-
+function MoneyStats.Bga_extension(old) 
+	return function(s, v1, v2, v3, v4)
+		MoneyStats:setActiveMoneyState(MoneyStats.STATE_BGA);
+		MoneyStats.activeBga = s;
+		old(s, v1, v2, v3, v4);
+		MoneyStats:setActiveMoneyState(MoneyStats.STATE_NONE);		
+	end;
+end
 Bga.objectDeleteTriggerCallback = MoneyStats.Bga_objectDeleteTriggerCallback(Bga.objectDeleteTriggerCallback);
 Bga.setFillLevel = MoneyStats.Bga_setFillLevel(Bga.setFillLevel);
 --BGA end

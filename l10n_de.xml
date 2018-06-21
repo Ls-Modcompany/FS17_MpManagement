@@ -109,6 +109,9 @@ Der MP-Manager wurde erfolgreich konfiguriert."/>
 <e k="mpManager_konto_items_outputsWage" v="Ausgaben Lohnarbeiten"/>
 <e k="mpManager_konto_items_yearBalance" v="Jahresbilanz"/>
 
+<!-- OpenPosts -->
+<e k="mpManager_money_items_moneyFrom" v="An/Von"/>
+
 <!-- MoneyOutput -->
 <e k="mpManager_moneyoutput_items_datum" v="Datum/Uhrzeit"/>
 <e k="mpManager_moneyoutput_items_name" v="Name"/>

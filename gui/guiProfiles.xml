@@ -81,6 +81,15 @@
         <Value name="imageUVs" value="0.5 0.5 0.25 0.25"/>
         <Value name="position" value="70px 2.5px" />
     </Profile>
+    <Profile name="button_openPosts" parent="button_menu1">
+        <Value name="imageUVs" value="0.75 0.75 0.25 0.25"/>
+        <Value name="imageFocusedUVs" value="0.5 0.5 0.25 0.25"/>
+        <Value name="position" value="70px 2.5px" />
+    </Profile>
+    <Profile name="button_openPosts_a" parent="button_menu1">
+        <Value name="imageUVs" value="0.75 0.75 0.25 0.25"/>
+        <Value name="position" value="70px 2.5px" />
+    </Profile>
     <Profile name="button_moneyoutput" parent="button_menu1">
         <Value name="imageUVs" value="0.25 0.75 0.25 0.25"/>
         <Value name="imageFocusedUVs" value="0 0.75 0.25 0.25"/>

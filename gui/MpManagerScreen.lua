@@ -25,6 +25,7 @@ MpManagerScreen.PAGE_HOME = 10;
 MpManagerScreen.PAGE_ADMIN = 11;
 MpManagerScreen.PAGE_SETTINGS = 12;
 MpManagerScreen.PAGE_WEB = 13;
+MpManagerScreen.PAGE_OPENPOSTS = 14;
 
 MpManagerScreen.PAGE_ADMIN_COUNT = 5;
 MpManagerScreen.PAGE_ADMIN_ADMIN = 1;
@@ -65,6 +66,7 @@ function MpManagerScreen:onCreate()
 	self.activeSettingsPage = 1;
 	self:setPage(MpManagerScreen.PAGE_HOME);
 
+	self.mpManager_items_openPosts_list:removeElement(self.mpManager_openPosts_listTemplate);
 	self.mpManager_items_moneyOutput_list:removeElement(self.mpManager_moneyOutput_listTemplate);
 	self.mpManager_items_moneyInput_list:removeElement(self.mpManager_moneyInput_listTemplate);
 	self.mpManager_items_home_list:removeElement(self.mpManager_home_listTemplate);
@@ -94,6 +96,8 @@ end
 function MpManagerScreen:onOpen()
     MpManagerScreen:superClass().onOpen(self);
 	
+	self.mpManager_items_openPosts_list:deleteListItems();
+	self:reloadOpenPostsOutputs();
 	self.mpManager_items_moneyOutput_list:deleteListItems();
 	self:reloadMoneyOutputs();
 	self.mpManager_items_moneyInput_list:deleteListItems();
@@ -109,6 +113,7 @@ function MpManagerScreen:update(dt)
     MpManagerScreen:superClass().update(self, dt);
 	
 	if g_mpManager.reloadScreen then
+		self.mpManager_items_openPosts_list:deleteListItems();
 		self.mpManager_items_moneyOutput_list:deleteListItems();
 		self.mpManager_items_moneyInput_list:deleteListItems();
 		self.mpManager_items_home_list:deleteListItems();
@@ -118,6 +123,7 @@ function MpManagerScreen:update(dt)
 		self:loadFarmTable();
 		self:loadSettingsPage();
 		self:reloadMoneyOutputs();
+		self:reloadOpenPostsOutputs();
 		self:reloadMoneyInputs();
 		g_mpManager.reloadScreen = false;
 	end;
@@ -140,6 +146,10 @@ function MpManagerScreen:onCreate_button_konto(element)
 	self.target:recreateButtonsOverlays(element, "button_menu1");
 end;
 function MpManagerScreen:onCreate_button_orders(element)
+	self.target:checkProfileHuds();
+	self.target:recreateButtonsOverlays(element, "button_menu1");
+end;
+function MpManagerScreen:onCreate_button_openPosts(element)
 	self.target:checkProfileHuds();
 	self.target:recreateButtonsOverlays(element, "button_menu1");
 end;
@@ -190,6 +200,9 @@ end;
 function MpManagerScreen:onClick_mainMenueToggleButton(element, checked)
 	if element.name == tostring(self.PAGE_KONTO) then
 	elseif element.name == tostring(self.PAGE_ORDERS) then
+	elseif element.name == tostring(self.PAGE_OPENPOSTS) then
+		self.mpManager_items_openPosts_list:deleteListItems();
+		self:reloadOpenPostsOutputs();
 	elseif element.name == tostring(self.PAGE_MONEYOUTPUT) then
 		self.mpManager_items_moneyOutput_list:deleteListItems();
 		self:reloadMoneyOutputs();
@@ -320,6 +333,81 @@ function MpManagerScreen:onCreate_page(element)
 	end;
 end;
 --Pages End
+
+--Page: OpenPosts
+function MpManagerScreen:reloadOpenPostsOutputs()
+	local stats = g_mpManager.moneyStats:getSortByFarm();
+	if stats == nil then
+		return;
+	end;
+	self.openPostsList = {};
+	if g_mpManager.utils:getTableLenght(stats) == 0 then return; end;	
+	
+	for k,v in pairs(stats) do	
+		self.currentStat = v;
+		local newItem = self.mpManager_openPosts_listTemplate:clone(self.mpManager_items_openPosts_list);	
+		newItem:updateAbsolutePosition();		
+		self.mpManager_items_openPosts_list:updateItemPositions();
+		table.insert(self.openPostsList, k);
+		self.currentStat = nil;	
+	end;
+end;
+function MpManagerScreen:onDoubleClickOpenPosts(row)
+	if row == nil then return; end;
+	g_mpManager.moneyAssignabels:removeAssignment(self.openPostsList[row], g_currentMission.missionInfo.playerName);
+	self.mpManager_items_openPosts_list:deleteListItems();
+	self:reloadOpenPostsOutputs();
+end;
+function MpManagerScreen:onCreateOpenPostsDate(element)
+	if self.currentStat ~= nil then
+		element:setText(self.currentStat.date);
+	end;
+end;
+function MpManagerScreen:onCreateOpenPostsName(element)
+	if self.currentStat ~= nil then
+		element:setText("-");
+	end;
+end;
+function MpManagerScreen:onCreateOpenPostsCategory(element)
+	if self.currentStat ~= nil then
+		element:setText(FinanceStats.statNamesI18n[self.currentStat.statType]);
+	end;
+end;
+function MpManagerScreen:onCreateOpenPostsAddInfo(element)
+	if self.currentStat ~= nil then
+		local info = "-";
+		if self.currentStat.id == MoneyAssignment.DLG_TRAIN then
+			info = g_i18n:getText("mpManager_MoneyAssignment_train");
+		elseif self.currentStat.id == MoneyAssignment.DLG_HANDTOOL then
+			info = g_i18n:getText("mpManager_MoneyAssignment_handtool");
+		elseif self.currentStat.id == MoneyAssignment.DLG_PLACEABLE then
+			info = g_i18n:getText("mpManager_MoneyAssignment_placeable");
+		elseif self.currentStat.id == MoneyAssignment.DLG_VEHICLE then
+			info = g_i18n:getText("mpManager_MoneyAssignment_vehicle");
+		elseif self.currentStat.id == MoneyAssignment.DLG_PALLETTRIGGER then
+			info = g_i18n:getText("mpManager_MoneyAssignment_palletTrigger");
+		elseif self.currentStat.id == MoneyAssignment.DLG_PICKUPOBJECTSSELLTRIGGER then
+			info = g_i18n:getText("mpManager_MoneyAssignment_pickupObectsSellTrigger");
+		end;	
+		element:setText(info);
+	end;
+end;
+function MpManagerScreen:onCreateOpenPostsSellTo(element)
+	if self.currentStat ~= nil then
+		element:setText("-");
+	end;
+end;
+function MpManagerScreen:onCreateOpenPostsNum(element)
+	if self.currentStat ~= nil then
+		element:setText("-");
+	end;
+end;
+function MpManagerScreen:onCreateOpenPostsBalance(element)
+	if self.currentStat ~= nil then
+		element:setText(string.format("%s",g_i18n:formatMoney(self.currentStat.money,0,true)));
+	end;
+end;
+--Page: OpenPosts End
 
 --Page: MoneyOutput
 function MpManagerScreen:reloadMoneyOutputs()

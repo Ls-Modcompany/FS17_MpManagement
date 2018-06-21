@@ -15,6 +15,10 @@
 					<GuiElement type="button" profile="button_orders_a" onCreate="onCreate_button_orders" focusId="3" />
 					<GuiElement type="button" profile="button_orders" onCreate="onCreate_button_orders" focusId="3" />
 				</GuiElement> -->
+				<GuiElement type="toggleButton" name="2" onCreate="onCreate_mainMenueToggleButton" onClick="onClick_mainMenueToggleButton">
+					<GuiElement type="button" profile="button_openPosts_a" onCreate="onCreate_button_openPosts" focusId="3" />
+					<GuiElement type="button" profile="button_openPosts" onCreate="onCreate_button_openPosts" focusId="3" />
+				</GuiElement>
 				<GuiElement type="toggleButton" name="3" onCreate="onCreate_mainMenueToggleButton" onClick="onClick_mainMenueToggleButton">
 					<GuiElement type="button" profile="button_moneyoutput_a" onCreate="onCreate_button_moneyoutput" focusId="4" />
 					<GuiElement type="button" profile="button_moneyoutput" onCreate="onCreate_button_moneyoutput" focusId="4" />
@@ -124,6 +128,74 @@
 					</GuiElement>
 				</GuiElement>			
             </GuiElement>	
+			
+			<!-- Open posts -->
+			<GuiElement type="empty" onCreate="onCreate_page" profile="mpManagerPage" name="mpManagerPage_2">			
+				<GuiElement type="flowLayout" profile="mpManager_money_headerItems" >
+					<GuiElement type="bitmap" profile="mpManager_money_items_date" >
+						<GuiElement type="text"   profile="mpManager_items_text" text="$l10n_mpManager_openPosts_items_datum" />
+						<GuiElement type="bitmap" profile="mpManager_money_items_date_itemSeperator"/>
+					</GuiElement>
+					<GuiElement type="bitmap" profile="mpManager_money_items_name" >
+						<GuiElement type="text"   profile="mpManager_items_text" text="$l10n_mpManager_openPosts_items_name" />
+						<GuiElement type="bitmap" profile="mpManager_money_items_name_itemSeperator"/>
+					</GuiElement>
+					<GuiElement type="bitmap" profile="mpManager_money_items_category" >
+						<GuiElement type="text"   profile="mpManager_items_text" text="$l10n_mpManager_openPosts_items_category" />
+						<GuiElement type="bitmap" profile="mpManager_money_items_category_itemSeperator"/>
+					</GuiElement>
+					<GuiElement type="bitmap" profile="mpManager_money_items_addInfo" >
+						<GuiElement type="text"   profile="mpManager_items_text" text="$l10n_mpManager_openPosts_items_addInfos" />
+						<GuiElement type="bitmap" profile="mpManager_money_items_addInfo_itemSeperator"/>
+					</GuiElement>
+					<GuiElement type="bitmap" profile="mpManager_money_items_moneyFrom" >
+						<GuiElement type="text"   profile="mpManager_items_text" text="$l10n_mpManager_openPosts_items_sellTo" />
+						<GuiElement type="bitmap" profile="mpManager_money_items_sellTo_itemSeperator"/>
+					</GuiElement>
+					<GuiElement type="bitmap" profile="mpManager_money_items_num" >
+						<GuiElement type="text"   profile="mpManager_items_text" text="$l10n_mpManager_openPosts_items_num" />
+						<GuiElement type="bitmap" profile="mpManager_money_items_num_itemSeperator"/>
+					</GuiElement>		
+					<GuiElement type="bitmap" profile="mpManager_money_items_balance" >
+						<GuiElement type="text"   profile="mpManager_items_text" text="$l10n_mpManager_openPosts_items_balance" />
+						<GuiElement type="bitmap" profile="mpManager_money_items_balance_itemSeperator"/>
+					</GuiElement>			
+				</GuiElement>
+				
+				<GuiElement type="slider" profile="mpManager_items_slider" id="mpManager_moneyOutput_slider">
+					<GuiElement type="button" profile="sliderButtonUp"   focusId="sliderUpPrices"/>
+					<GuiElement type="button" profile="sliderButtonDown" focusId="sliderDownPrices" />					
+					<GuiElement type="list" profile="mpManager_items_list" id="mpManager_items_openPosts_list" onDoubleClickCallback="onDoubleClickOpenPosts" focusId="200" focusChangeTop="1" focusChangeBottom="100">
+						<GuiElement type="listItem" profile="mpManager_items_listItem" id="mpManager_openPosts_listTemplate">
+							<GuiElement type="flowLayout" profile="mpManager_listItem_layout" >							
+								<GuiElement type="bitmap" profile="mpManager_money_listItem_date">
+									<GuiElement type="text"  profile="mpManager_listItemText" onCreate="onCreateOpenPostsDate" />
+								</GuiElement>
+								<GuiElement type="bitmap" profile="mpManager_money_listItem_name">
+									<GuiElement type="text"  profile="mpManager_listItemText" onCreate="onCreateOpenPostsName" />
+								</GuiElement>
+								<GuiElement type="bitmap" profile="mpManager_money_listItem_category">
+									<GuiElement type="text"  profile="mpManager_listItemText" onCreate="onCreateOpenPostsCategory" />
+								</GuiElement>
+								<GuiElement type="bitmap" profile="mpManager_money_listItem_addInfo">
+									<GuiElement type="text"  profile="mpManager_listItemText" onCreate="onCreateOpenPostsAddInfo" />
+								</GuiElement>
+								<GuiElement type="bitmap" profile="mpManager_money_listItem_sellTo">
+									<GuiElement type="text"  profile="mpManager_listItemText" onCreate="onCreateOpenPostsSellTo" />
+								</GuiElement>
+								<GuiElement type="bitmap" profile="mpManager_money_listItem_num">
+									<GuiElement type="text"  profile="mpManager_listItemText" onCreate="onCreateOpenPostsNum" />
+								</GuiElement>
+								<GuiElement type="bitmap" profile="mpManager_money_listItem_balance">
+									<GuiElement type="text"  profile="mpManager_listItemTextRed" onCreate="onCreateOpenPostsBalance" />
+								</GuiElement>								
+							</GuiElement>
+						</GuiElement>			
+					</GuiElement>
+				</GuiElement>		
+				
+							
+            </GuiElement>
 			
 			<!-- MoneyOutput -->
 			<GuiElement type="empty" onCreate="onCreate_page" profile="mpManagerPage" name="mpManagerPage_3">			
