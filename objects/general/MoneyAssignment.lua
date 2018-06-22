@@ -34,7 +34,7 @@ end;
 
 function MoneyAssignment:addAssignment(id, statType, money, noEventSend)
 	MpManagement_MoneyAssignment_AddAssignment.sendEvent(id, statType, money, noEventSend);
-	MoneyAssignment.assignments[getNextId()] = {id=id, statType=statType, money=money, date=MoneyStats:getDate()};
+	MoneyAssignment.assignments[getNextId()] = {id=id, statType=statType, money=money, dat=MoneyStats:getDate()};
 end;
 
 function MoneyAssignment:removeAssignment(id, playerName, noEventSend)
@@ -61,7 +61,10 @@ function MoneyAssignment:removeAssignment(id, playerName, noEventSend)
 	elseif ass.id == MoneyAssignment.DLG_PICKUPOBJECTSSELLTRIGGER then
 		info = g_i18n:getText("mpManager_MoneyAssignment_pickupObectsSellTrigger");
 	end;	
-	MoneyStats:addMoneyStatsToFarm(ass.date, playerName, farm, ass.statType, info, "-", "-", ass.money);
+	if ass.dat == nil then 
+		ass.dat = MoneyStats:getDate();
+	end;
+	MoneyStats:addMoneyStatsToFarm(ass.dat, playerName, farm, ass.statType, info, "-", "-", ass.money);
 	farm:addMoney(ass.money);	
 	MoneyAssignment.assignments[id] = nil;
 end;
@@ -99,7 +102,7 @@ function MoneyAssignment:saveSavegame()
 		g_mpManager.saveManager:setXmlInt(string.format("moneyAssignabels.assignment(%d)#id", index), ass.id);	
 		g_mpManager.saveManager:setXmlString(string.format("moneyAssignabels.assignment(%d)#statType", index), ass.statType);
 		g_mpManager.saveManager:setXmlInt(string.format("moneyAssignabels.assignment(%d)#money", index), ass.money);	
-		g_mpManager.saveManager:setXmlString(string.format("moneyAssignabels.assignment(%d)#date", index), ass.date);			
+		g_mpManager.saveManager:setXmlString(string.format("moneyAssignabels.assignment(%d)#date", index), ass.dat);			
 		index = index + 1;
 	end;
 end;
@@ -115,7 +118,7 @@ function MoneyAssignment:loadSavegame()
 		local statType = g_mpManager.loadManager:getXmlString(key .. "#statType");
 		local money = g_mpManager.loadManager:getXmlInt(key .. "#money");
 		local dat = g_mpManager.loadManager:getXmlString(key .. "#date");
-		MoneyAssignment.assignments[getNextId()] = {id=id, statType=statType, money=money, date=dat};
+		MoneyAssignment.assignments[getNextId()] = {id=id, statType=statType, money=money, dat=dat};
 		index = index + 1;
 	end;
 end;
