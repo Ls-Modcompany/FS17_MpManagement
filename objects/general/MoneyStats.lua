@@ -437,7 +437,6 @@ function MoneyStats:addSharedMoney(old)
 				else
 					g_debug.write(-1, "Can't add money to Bga");
 				end;
-				MoneyStats.activeBga = nil;				
 			elseif MoneyStats.activeMoneyState == MoneyStats.STATE_SHOVEL then
 				MoneyStats.activeMoneyShovel_money = amount;
 				MoneyStats.activeMoneyShovel_statType = statType;
@@ -614,7 +613,7 @@ function MoneyStats:addSharedMoney(old)
 				MoneyStats.activeMoneyGasStationVehicles[MoneyStats.activeMoneyGasStationV].amount = MoneyStats.activeMoneyGasStationVehicles[MoneyStats.activeMoneyGasStationV].amount + amount;
 			elseif not MoneyStats.activeMoneyState == MoneyStats.STATE_DONOTHING then
 				if not g_mpManager.modulManager:controllMoney(statType, amount) then
-					if amount > 100 then
+					if amount > 100 or amount < -100 then
 						g_mpManager.moneyAssignabels:addAssignment(g_mpManager.moneyAssignabels.DLG_NOADDINFO, statType, amount);
 					else
 						if MoneyStats.manuelMoney_type == "" then
@@ -626,8 +625,8 @@ function MoneyStats:addSharedMoney(old)
 							MoneyStats.manuelMoney_timer = 0;
 						elseif MoneyStats.manuelMoney_money ~= 0 then
 							g_mpManager.moneyAssignabels:addAssignment(g_mpManager.moneyAssignabels.DLG_NOADDINFO, MoneyStats.manuelMoney_type, MoneyStats.manuelMoney_money);
-							MoneyStats.manuelMoney_money = 0;
-							MoneyStats.manuelMoney_type = "";
+							MoneyStats.manuelMoney_money = amount;
+							MoneyStats.manuelMoney_type = statType;
 							MoneyStats.manuelMoney_timer = 0;
 						end;
 					end;
@@ -774,6 +773,7 @@ function MoneyStats.Bga_objectDeleteTriggerCallback(old)
 		MoneyStats.activeBga = s;
 		old(s, ...);
 		MoneyStats:setActiveMoneyState(MoneyStats.STATE_NONE);		
+		MoneyStats.activeBga = nil;				
 	end;
 end
 -- BGA: Selling filllevel
@@ -793,6 +793,7 @@ function MoneyStats.Bga_setFillLevel(old)
 			end;
 		end;
 		MoneyStats:setActiveMoneyState(MoneyStats.STATE_NONE);		
+		MoneyStats.activeBga = nil;				
 	end;
 end
 function MoneyStats.Bga_extension(old) 
@@ -801,6 +802,7 @@ function MoneyStats.Bga_extension(old)
 		MoneyStats.activeBga = s;
 		old(s, v1, v2, v3, v4);
 		MoneyStats:setActiveMoneyState(MoneyStats.STATE_NONE);		
+		MoneyStats.activeBga = nil;				
 	end;
 end
 Bga.objectDeleteTriggerCallback = MoneyStats.Bga_objectDeleteTriggerCallback(Bga.objectDeleteTriggerCallback);
