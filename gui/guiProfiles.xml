@@ -2234,6 +2234,43 @@
         <Value name="textLineHeightScale" value="2"/>
     </Profile>
 	
+	<!-- MapScreen -->
+	<Profile name="mpManagerMapScreenUiBackground" parent="baseReference" >
+        <Value name="screenAlign" value="middleCenter" />
+        <Value name="positionOrigin" value="middleCenter" />
+        <Value name="size" value="680px 700px"/>
+        <Value name="imageColor" value="$preset_colorBlack3_70"/>
+    </Profile>
+    <Profile name="mpManagerMapScreenUiBackgroundMain" parent="baseReference" >
+        <Value name="screenAlign" value="middleCenter" />
+        <Value name="positionOrigin" value="middleCenter" />
+        <Value name="size" value="660px 680px"/>
+        <Value name="imageColor" value="$preset_colorDarkGrey"/>
+    </Profile>	
+    <Profile name="mpManagerMapScreenUiBackgroundHeader" parent="baseReference" >
+        <Value name="screenAlign" value="topCenter" />
+        <Value name="positionOrigin" value="topCenter" />
+        <Value name="position" value="0px 0px" />
+        <Value name="size" value="660px 40px"/>
+        <Value name="alignmentX" value="center" />
+        <Value name="alignmentY" value="middle" />
+        <Value name="imageColor" value="$preset_colorBlack"/>
+    </Profile>
+    <Profile name="mpManagerMapScreenPda" parent="dialogWarning">
+        <Value name="size" value="640px 580px"/>
+        <Value name="position" value="0px 0px"/>
+        <Value name="screenAlign" value="middleCenter" />
+        <Value name="positionOrigin" value="middleCenter" />
+        <Value name="imageFilename" value="g_baseUIFilename"/>
+    </Profile>
+    <Profile name="mpManagerMapScreenPoint" parent="baseReference">
+        <Value name="size" value="10px 10px"/>
+        <Value name="position" value="0px 0px"/>
+        <Value name="screenAlign" value="middleCenter" />
+        <Value name="positionOrigin" value="middleCenter" />
+        <Value name="imageColor" value="$preset_colorRed"/>
+        <Value name="imageUVs" value="638px 706px 100px 100px"/>
+    </Profile>
 	
 	
 </GUIProfiles>    
