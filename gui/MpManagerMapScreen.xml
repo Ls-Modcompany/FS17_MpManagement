@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<GUI onOpen="onOpen" onClose="onClose" onCreate="onCreate">	
+    <GuiElement type="empty" profile="newLayer" />
+    <GuiElement type="bitmap" profile="mpManagerMapScreenUiBackground">	
+        <GuiElement type="bitmap" profile="mpManagerMapScreenUiBackgroundMain">				
+			<GuiElement type="bitmap" profile="mpManagerMapScreenUiBackgroundHeader">
+				<GuiElement type="text" profile="headerText" id="gui_header" />
+            </GuiElement>							
+			<GuiElement type="bitmap" profile="mpManagerMapScreenPda" id="gui_pda" />	
+            <GuiElement type="bitmap" profile="mpManagerMapScreenPoint" id="gui_point" />
+			<GuiElement type="button" profile="buttonOK" id="buttonOK" size="660px 40px" text="$l10n_mpManagerInfo_button" onClick="onClickOk" focusId="1" focusInit="onOpen"/>
+		</GuiElement>
+    </GuiElement>
+</GUI>
