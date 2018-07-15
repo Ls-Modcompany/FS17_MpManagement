@@ -22,6 +22,7 @@ local guis = {
 	"MpManagerBillScreen",
 	"MpManagerTransferScreen",
 	"MpManagerSelectionScreen",
+	--"MpManagerMapScreen",
 }
 
 function MpManagerGui:load()
@@ -68,7 +69,7 @@ function MpManagerGui:update(dt)
 			-- MpManagerGui.guis[gui] = class:new();
 			-- g_gui:loadGui(guiPath .. ".xml", gui, MpManagerGui.guis[gui]);
 		-- end;
-		-- g_gui:showGui("MpManagerScreen")
+		-- g_gui:showGui("MpManagerMapScreen")
 	-- else
 		-- MpManagerGui.timer = MpManagerGui.timer + 1;
 	-- end;
